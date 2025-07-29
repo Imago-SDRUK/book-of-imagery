@@ -1,8 +1,7 @@
-# 🌟 Contributing Guidelines
+# Contributing Guidelines
 
 Thank you for your interest in contributing to this project! We welcome all kinds of contributions—code, documentation, ideas, and more. This guide will help you get started.
 
----
 
 ## 🚀 How to Contribute
 
@@ -41,14 +40,12 @@ Thank you for your interest in contributing to this project! We welcome all kind
    - Click **Compare & pull request**.
    - Fill out the PR template and submit.
 
----
 
 ## 💡 Using Issue & PR Templates
 
 - When reporting a bug or requesting a feature, please use the provided **issue templates** for clear and helpful reports.
 - When submitting a pull request, fill out the **PR template** to describe your changes and link related issues.
 
----
 
 ## ✨ Acknowledging Contributors with All Contributors Bot
 
@@ -70,7 +67,6 @@ We use the [All Contributors Bot](https://allcontributors.org/) to recognize eve
 
 See the [emoji key](https://allcontributors.org/docs/en/emoji-key) for all the ways you can be recognized.
 
----
 
 ## 🐛 Reporting Issues
 
@@ -79,7 +75,6 @@ See the [emoji key](https://allcontributors.org/docs/en/emoji-key) for all the w
 - Provide a clear title, description, and steps to reproduce (if applicable).
 - Screenshots and error messages are helpful!
 
----
 
 ## 🔄 Resolving Merge Conflicts
 
@@ -103,13 +98,11 @@ Sometimes, your PR may have conflicts with the main branch. To resolve:
    git push origin my-feature-branch
    ```
 
----
 
 ## 💬 Code of Conduct
 
 Be respectful and considerate in all interactions.  
 See our [Code of Conduct](CODE_OF_CONDUCT.md) for details.
 
----
   
-We appreciate your contributions and support in building a vibrant community around this project. If you have any questions, feel free to reach out via issues or discussions.
+We appreciate your contributions and support in building a vibrant community around this project. If you have any questions, feel free to reach out via issues.
