@@ -1,9 +1,9 @@
 
 <img src="assets/Imago-logo.png" alt="Imago Logo" width="300"/>
 
-# Imago Book of Imagery
+# Book of Imagery
 
-Welcome to the Imago Book of Imagery, this is a living, open reference for all things satellite imagery—especially as it applies to social science, health, and policy in the UK and beyond. 
+Welcome to the Imago's Book of Imagery, this is a living, open reference for all things satellite imagery—especially as it applies to social science, health, and policy in the UK and beyond. 
 
 ## 🛠️ Contributing
 The core Imago team will put together the very first version (or issue) of the Book of Imagery to set things in motion. After that, everyone’s welcome to get involved—whether it’s code, documentation, or sharing ideas.
