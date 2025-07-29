@@ -1,0 +1,23 @@
+{
+  "projectName": "Template",
+  "projectOwner": "Imago-SDRUK",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "repo": "https://github.com/Imago-SDRUK/Template",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "batoolMM",
+      "name": "Batool",
+      "avatar_url": "https://github.com/batoolMM.png",
+      "profile": "https://github.com/batoolMM",
+      "contributions": ["code", "doc", "maintenance"]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "badgeTemplate": "flat"
+}
