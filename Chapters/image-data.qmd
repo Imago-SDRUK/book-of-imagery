@@ -1,0 +1,100 @@
+# Overview of Satellite Imagery Data
+
+RG and RM to lead
+
+Introduce and describe satellite data: the various sensors and types of data
+
+## Limitations of satellite imagery
+
+Discuss what remote sensing can and cannot do
+
+######################################################################
+# Possible structure - Work in progress
+
+## **Introduction**
+
+-   Definition and scope of imagery data
+
+-   Comparison to traditional modes of data collection
+
+-   Importance of satellite imagery within broader geospatial and imagery data
+
+-   Historical context and evolution of satellite imagery
+
+-   Objectives and structure of the chapter
+
+## **Fundamentals of Satellite Imagery**
+
+-   Types of satellite imagery
+
+    -   Optical (e.g. multispectral, panchromatic)
+
+    -   Radar (e.g. SAR)
+
+    -   Thermal and hyperspectral imaging
+
+-   Key satellite platforms and missions
+
+    -   Governmental (e.g. Landsat, Sentinel)
+
+    -   Commercial (e.g. Maxar, Planet)
+
+-   Resolution
+
+    -   Spatial, temporal, spectral, and radiometric
+
+## **Data Acquisition and Accessibility**
+
+-   Sources of satellite imagery (open-access vs. commercial)
+
+-   Access platforms and APIs (e.g. Google Earth Engine, Copernicus Open Access Hub)
+
+-   Licensing, cost, and ethical considerations
+
+-   Cloud-based repositories and big data challenges
+
+## **Pre-processing and Calibration**
+
+-   Georeferencing and orthorectification
+
+-   Radiometric and atmospheric corrections
+
+-   Cloud masking and data fusion
+
+-   Handling noise and inconsistencies
+
+## **Analytical Methods and Tools**
+
+-   Image classification (supervised, unsupervised, deep learning approaches)
+
+-   Change detection techniques
+
+-   Object-based image analysis (OBIA)
+
+-   Time-series analysis and spatio-temporal modelling
+
+-   Software and programming libraries (e.g. QGIS, ENVI, SNAP, Python)
+
+## **Emerging Trends and Why Imagery Matters Now**
+
+-   High-frequency and high-resolution satellites
+
+-   AI and machine learning integration
+
+-   Integration with other data sources (e.g. Census, social media)
+
+-   Real-time and near-real-time monitoring systems
+
+-   Policy and governance implications in satellite data use
+
+
+#LATER CHAPTER ######################
+## **Challenges and Considerations** \[Might be more suitable for a later chapter towards the end\]
+
+-   Data volume and processing power needs
+
+-   Technical limitations (e.g. cloud cover, revisit times)
+
+-   Interpretation biases and accuracy concerns
+
+-   Equity in data access and usage rights

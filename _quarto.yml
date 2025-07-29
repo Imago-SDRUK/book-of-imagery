@@ -1,0 +1,39 @@
+project:
+  type: book
+
+book:
+  title: "Book of Imagery"
+  reader-mode: true
+  
+  author: "Francisco Rowe, Rachel Gaulton, Ron Mahabir and Imago team"
+  date: today
+  
+  page-footer:
+    left: |
+      Imago | UKRI Imagery Data Service
+    right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
+  cover-image: assets/Imago-logo.png
+  favicon: assets/Imago-logo.png
+  repo-url: https://github.com/Imago-SDRUK/boi
+  repo-branch: main
+  repo-actions: [edit, issue]
+  
+  chapters:
+    - Chapters/index.qmd
+    - Chapters/intro.qmd
+    - Chapters/image-data.qmd
+    - Chapters/01_use-case-x.qmd
+    - Chapters/synthesis.qmd
+    - Chapters/way-forward.qmd
+    - Chapters/references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual

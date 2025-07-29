@@ -1,0 +1,9 @@
+# Use Case 1
+
+Describe the process of creation of a given set of indicators with a clear use case.
+
+## Methodology
+
+## Application
+
+## Policy

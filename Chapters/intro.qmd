@@ -1,0 +1,55 @@
+# Introduction to Remote Sensing
+
+FR and OB to lead
+
+This chapter provides a high level introduction to remote sensing for researchers in policy applications.
+
+## What is remote sensing?
+
+Explain remote sensing at an intuitive level, describing that images are a collection of pixels encoding colour and they can be used to extract valuable information about the social environment.
+
+Remote sensing can be done in a variety of ways, such as satellite imagery, aerial photography, and drone imagery. In each case the images may be at different resolutions, and the data may be collected at different times (See ??? for more detail). 
+
+## Remote sensing for researchers
+
+Remote sensing is a powerful tool for social scientists, public health researchers and policymakers as it can provide a source of data covering a wide area without having to carry out primary data collection. This, in combination with the increasing understanding of how the environment impacts health and wellbeing, makes it the ideal time to explore the potential of remote sensing for research and policy applications.
+
+### Uses in isolation
+
+The images collected with remote sensing, and the data derived from them, can be used in isolation to extract information about the environment, for instance, the amount of vegetation in a given area, or the amount of light pollution in a city, or the number of cars parked in an area. If the remote sensing images are taken at different times, they can be used to track changes over time e.g. to see if light pollution is getting worse over a period of years. This infomation is valuable in its own right to inform research and policly decisions, but they can also be linked to other data.
+
+ADD A FEW PUBLISHED EXAMPLES HERE WITH A SUMMARY OF THEIR FINDINGS
+
+### Linking remote sensing images to other data
+
+Linking remote sensing images to other data can provide insight to how the environment impacts health and wellbeing. For example, remote sensing images can be used to quantify vegetation cover and then linked to health data to determine if there is a correlation between vegetation cover and health outcomes. This can help inform policy decisions about urban planning and green space development.
+
+ADD A FEW PUBLISHED EXAMPLES HERE WITH A SUMMARY OF THEIR FINDINGS
+
+- Rodgers paper https://doi.org/10.1016/S2542-5196(23)00212-7
+
+### Linkage geographical resolution
+
+The resolution of the imagery and the data to be linked have an impact on how the linking is done. If a single pixel in the image corresponds to a large geographical area then the same value for this area will correspond to e.g. a large number of households. This approach is prone to the ecological fallacy however. If very high resolution imagery is used then values for each household may be derived separately, when linked with other household data this may provide a more realistic representation of underlying correlation.
+
+## Available data to link
+
+Some examples of data that can be linked to remote sensing images are:
+
+### Health and wellbeing
+- Most NHS data has LSOA of residence
+- Some NHS data has UPRN in England
+- SAIL (Welsh NHS data) has UPRNs
+- Scottish NHS data has UPRNs
+- Connected Bradford has UPRNs
+
+### Social science
+- ONS has UPRNs
+- CLS are geocoding their cohorts
+
+
+# Risks with linking remote sensing images to other data
+
+Often the data to be linked to remote sensing data is not routinely made available with geographic identifiers. These identifiers will exist in the data but not be made available to researchers as it may disclose e.g. where a patient or cohort study participant lives. When the data is linked, care needs to be taken to ensure that a disclosure route is not introduced, e.g. if publicly available satellite imagery is used to derived the area of all rooftops in a city, then linked to NHS data with the same UPRN, then made available to researchers (without the UPRN), it is possible that only one house in the city has a rooftop with that area. This would introduce a disclosure route for the NHS data since it would be possible for a reseracher to reverse engineer the data and discover the address for patients who live at that address. 
+
+To mitigate this risk, it is important to understand the data and linkage process, and to put in place appropriate mitigations at the time data is linked.

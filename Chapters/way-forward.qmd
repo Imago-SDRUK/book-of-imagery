@@ -1,0 +1,3 @@
+# Way Forward {.unnumbered}
+
+Provide discussion of likely next steps on AI and how it could change the landscape on deriving data products from imagery
