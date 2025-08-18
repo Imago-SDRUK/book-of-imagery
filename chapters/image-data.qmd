@@ -2,7 +2,7 @@
 title: "Satellite Imagery Data"
 author: "Ron Mahabir"
 format: html
-bibliography: references.bib
+bibliography: ../references.bib
 #csl: apa.csl   # optional, for citation style
 ---
 
