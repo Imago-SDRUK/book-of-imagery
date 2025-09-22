@@ -30,6 +30,19 @@
         "content",
         "ideas"
       ]
+    },
+    {
+      "login": "fcorowe",
+      "name": "Francisco Rowe",
+      "avatar_url": "https://avatars.githubusercontent.com/u/28450210?v=4",
+      "profile": "http://franciscorowe.com",
+      "contributions": [
+        "content",
+        "infra",
+        "code",
+        "ideas",
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
