@@ -35,6 +35,14 @@ Thank you for helping us build open & collaborative open source with Imago!
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/batoolMM"><img src="https://github.com/batoolMM.png?s=100" width="100px;" alt="Batool"/><br /><sub><b>Batool</b></sub></a><br /><a href="https://github.com/Imago-SDRUK/book-of-imagery/commits?author=batoolMM" title="Code">💻</a> <a href="https://github.com/Imago-SDRUK/book-of-imagery/commits?author=batoolMM" title="Documentation">📖</a> <a href="#maintenance-batoolMM" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/rsmahabir"><img src="https://avatars.githubusercontent.com/u/5866668?v=4?s=100" width="100px;" alt="Islander"/><br /><sub><b>Islander</b></sub></a><br /><a href="#content-rsmahabir" title="Content">🖋</a> <a href="#ideas-rsmahabir" title="Ideas, Planning, & Feedback">🤔</a></td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
