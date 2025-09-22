@@ -31,3 +31,9 @@ After your PR is merged, comment on an issue or PR:
 See the [emoji key](https://allcontributors.org/docs/en/emoji-key) for available contribution types.
 
 Thank you for helping us build open & collaborative open source with Imago!
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
