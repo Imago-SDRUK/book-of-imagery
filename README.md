@@ -33,7 +33,12 @@ See the [emoji key](https://allcontributors.org/docs/en/emoji-key) for available
 Thank you for helping us build open & collaborative open source with Imago!
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
 
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
+
 
