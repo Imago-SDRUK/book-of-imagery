@@ -1,5 +1,5 @@
 {
-  "projectName": "Template",
+  "projectName": "book-of-imagery",
   "projectOwner": "Imago-SDRUK",
   "repoType": "github",
   "repoHost": "https://github.com",
@@ -15,9 +15,24 @@
       "name": "Batool",
       "avatar_url": "https://github.com/batoolMM.png",
       "profile": "https://github.com/batoolMM",
-      "contributions": ["code", "doc", "maintenance"]
+      "contributions": [
+        "code",
+        "doc",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "rsmahabir",
+      "name": "Islander",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5866668?v=4",
+      "profile": "https://github.com/rsmahabir",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
-  "badgeTemplate": "flat"
+  "badgeTemplate": "flat",
+  "commitType": "docs",
+  "commitConvention": "angular"
 }
