@@ -1,56 +1,170 @@
-# Introduction to Remote Sensing
+---
+title: "Introduction: Why Imagery, Why Now?"
+author: "Francisco Rowe"
+format: html
+---
 
-FR and OB to lead
 
-This chapter provides a high level introduction to remote sensing for researchers in policy applications.
+## The promise of imagery for social science and policy
 
-## What is remote sensing?
+<!-- - Set the scene: social scientists and policymakers face urgent questions (inequalities, sustainability, wellbeing, climate adaptation) but lack timely and spatially rich data.\ -->
 
-Explain remote sensing at an intuitive level, describing that images are a collection of pixels encoding colour and they can be used to extract valuable information about the social environment.
+<!-- - Position satellite imagery as an underused yet transformative source. \ -->
 
-Remote sensing can be done in a variety of ways, such as satellite imagery, aerial photography, and drone imagery. In each case the images may be at different resolutions, and the data may be collected at different times (See ??? for more detail).
+<!-- - Brief anecdote/example (e.g., using night-time lights for economic growth, greenspace for health outcomes) to show relevance. \ -->
 
-## Remote sensing for researchers
+We are living in a fast changing society needing timely, spatially granular, and consistent information to aquately address complex social, economic, climatic, health and policy challenges. Challenges such as widening inequalities, uneven economic development, environmental vulnerability and persistent health disparities represent fundamentally questions about places and how they change. Traditional sources, including censuses, household surveys and administrative registers remain indispensable. Yet, they are limited by cost, infrequency, selective coverage and latency in their collection and release. As a result, decision-makers and researchers often lack the evidence needed to monitor rapid change, anticipate emerging challenges, and evaluate the local effects of interventions.
 
-Remote sensing is a powerful tool for social scientists, public health researchers and policymakers as it can provide a source of data covering a wide area without having to carry out primary data collection. This, in combination with the increasing understanding of how the environment impacts health and wellbeing, makes it the ideal time to explore the potential of remote sensing for research and policy applications.
+Satellite imagery offers a powerful and underexploited data solution. For more than half a century, satellites have circled the Earth, capturing detailed records of its surface and atmosphere. Initially designed for environmental monitoring, these data now represent an unparalleled observational archive of human and natural systems. Imagery captures the physical fabric of places, density of buildings, presence of green and blue spaces, road networks and informal settlements. It does this consistently across globally and can capture change at multiple scales from local neighbourhood areas to national borders or entire continents. Unlike most traditional forms of social data, which are geographically fragmented and slow to update, imagery is comprehensive, timely and replicable.
 
-### Uses in isolation
+An increasing volumne of research has already demonstrated the promise of satellite imagery. Night-time lights have been used as proxies for economic activity and inequality across the globe (Henderson, Storeygard, & Weil, 2012) and sense changes in urban energy consumption (Rowe, Robinson & Patias 2022). Multispectral imagery has enabled the mapping of urban deprivation (Arribas-Bel, Patino, & Duque, 2017) and the monitoring of land use change in fast-growing regions (Brown et al., 2004). More recent advances in computer vision and machine learning further enhance our capacity to derive meaningful indicators from raw pixels, opening a new frontier for social science. The challenge (and opportunity) lies in integrating these data into the mainstream of research and policy to illuminate processes that have long remained in the shadows. Key to this challenge is making imagery more accessible and usable.
 
-The images collected with remote sensing, and the data derived from them, can be used in isolation to extract information about the environment, for instance, the amount of vegetation in a given area, or the amount of light pollution in a city, or the number of cars parked in an area. If the remote sensing images are taken at different times, they can be used to track changes over time e.g. to see if light pollution is getting worse over a period of years. This infomation is valuable in its own right to inform research and policly decisions, but they can also be linked to other data.
+## What makes satellite imagery unique?
 
-ADD A FEW PUBLISHED EXAMPLES HERE WITH A SUMMARY OF THEIR FINDINGS
+<!-- - Comprehensiveness: global coverage, consistent revisits.\ -->
+<!-- - Spatial detail: from 30m to sub-metre, enabling local and neighbourhood-level insights. \ -->
+<!-- - Timeliness: daily to weekly revisits, enabling nowcasting. \ -->
+<!-- - Retrospective power: archives spanning decades (e.g., Landsat since 1970s). \ -->
+<!-- - Bias-resilience: unlike surveys/app data, less affected by self-selection. \ -->
+<!-- - Multi-sensor richness: optical, SAR, LiDAR, thermal, hyperspectral. \ -->
 
-### Linking remote sensing images to other data
+Satellite imagery is unlike most other forms of data used in the social sciences. The uniqueness of satellite imagery comes in the way multiple dictintive attributes compound to provide an observational resource that is comprehensive, consistent, granular and increasingly accessible. These qualities allow imagery to transcend the limitations of conventional social data sources and open new opportunities for analysis and policymaking.
 
-Linking remote sensing images to other data can provide insight to how the environment impacts health and wellbeing. For example, remote sensing images can be used to quantify vegetation cover and then linked to health data to determine if there is a correlation between vegetation cover and health outcomes. This can help inform policy decisions about urban planning and green space development.
+### Comprehensive coverage
 
-ADD A FEW PUBLISHED EXAMPLES HERE WITH A SUMMARY OF THEIR FINDINGS
+Satellites view the entire Earth, offering data that extend across countries, regions and communities. This comprehensiveness can complement traditional data streams, like surveys, which are often limited by sample size, response bias or geographic reach. They can also enhance administrative registers in territories where governments maintain robust data infrastructures. Satellite imagery generates systematic records of all visible surfaces within its sensor range, covering remote rural areas, informal settlements and conflict-affected regions where social data are especially scarce (Kugler et al., 2019).
 
--   Rodgers paper https://doi.org/10.1016/S2542-5196(23)00212-7
+### Spatial resolution
 
-### Linkage geographical resolution
+Modern satellite platforms capture imagery at a range of spatial resolutions from kilometres to less than one metre per pixel, such as WorldView-3. Coarser imagery provides consistent monitoring of land cover and climate-related variables at regional and national scales. Very high-resolution imagery can reveal building footprints, street patterns and even the configuration of green spaces at the neighbourhood level. This multi-scale capacity makes imagery a flexible resource: it can illuminate both macro-level transformations such as urban sprawl (Brown et al., 2004) and micro-scale differences in the built environment associated with health or wellbeing **[REF]**.
 
-The resolution of the imagery and the data to be linked have an impact on how the linking is done. If a single pixel in the image corresponds to a large geographical area then the same value for this area will correspond to e.g. a large number of households. This approach is prone to the ecological fallacy however. If very high resolution imagery is used then values for each household may be derived separately, when linked with other household data this may provide a more realistic representation of underlying correlation.
+### Temporal frequency and timeliness
 
-## Available data to link
+Satellite missions provide regular and predictable revisits ranging from daily (e.g. PlanetScope) to a few days or weeks (e.g. Sentinel-2 and Landsat). This cadence allows researchers and policymakers to generate consistent time series and monitor rapid changes in near real-time. For example, vegetation indices derived from multispectral imagery can track seasonal dynamics in urban greenness, while radar imagery can detect flood extents immediately after a storm. Such timeliness is difficult to achieve with traditional data sources, which are often updated only every few years.
 
-Some examples of data that can be linked to remote sensing images are:
+### Retrospective power
 
-### Health and wellbeing
+Satellite programmes, such as Landsat have been operating since the 1970s, creating an unparalleled archive of the Earth’s surface. These historical datasets allow researchers to reconstruct long-term patterns of land cover, urbanisation and environmental change, offering insights into trajectories that no survey or census could capture. The ability to``look back in time'' makes imagery especially valuable for understanding the cumulative effects of policies, economic shifts and climate change across decades (National Research Council, 1998).
 
--   Most NHS data has LSOA of residence
--   Some NHS data has UPRN in England
--   SAIL (Welsh NHS data) has UPRNs
--   Scottish NHS data has UPRNs
--   Connected Bradford has UPRNs
+### Robustness to common data biases
 
-### Social science
+Unlike survey data, which rely on voluntary participation and may exclude hard-to-reach groups, satellite imagery does not require human consent or response to be generated. This makes it relatively immune to self-selection bias and more representative across space. While imagery has its own challenges (e.g. cloud cover and sensor noise), its systematic and global character ensures a level of consistency that complements traditional data sources (De Sherbinin et al., 2002).
 
--   ONS has UPRNs
--   CLS are geocoding their cohorts
+### Multi-sensor richness
 
-# Risks with linking remote sensing images to other data
+Imagery is not limited to visible light. Satellites measure across the electromagnetic spectrum, producing data on heat, vegetation health, surface water and air pollutants. Synthetic Aperture Radar (SAR) captures structural features through cloud and darkness; LiDAR provides three-dimensional representations of terrain and vegetation; and hyperspectral sensors enable fine-grained detection of material properties. This diversity of sensors allows the derivation of novel indicators, for example, from rooftop solar potential to urban heat island intensity that can directly inform pressing policy agendas in sustainability, prosperity and wellbeing **[REF]**.
 
-Often the data to be linked to remote sensing data is not routinely made available with geographic identifiers. These identifiers will exist in the data but not be made available to researchers as it may disclose e.g. where a patient or cohort study participant lives. When the data is linked, care needs to be taken to ensure that a disclosure route is not introduced, e.g. if publicly available satellite imagery is used to derived the area of all rooftops in a city, then linked to NHS data with the same UPRN, then made available to researchers (without the UPRN), it is possible that only one house in the city has a rooftop with that area. This would introduce a disclosure route for the NHS data since it would be possible for a reseracher to reverse engineer the data and discover the address for patients who live at that address.
+Together, the above identified attributes position satellite imagery as a uniquely powerful form of smart data. Its comprehensiveness, resolution, timeliness, retrospective depth and sensor diversity create a multidimensional evidence base that is unmatched by conventional sources. What makes imagery transformative is not just its technical sophistication, but its capacity to bridge long-standing evidence gaps in the social sciences and policymaking, providing the foundations for more informed and timely decisions.
 
-To mitigate this risk, it is important to understand the data and linkage process, and to put in place appropriate mitigations at the time data is linked.
+::: {.column-margin .callout-tip title="Box 1.1: Mapping Urban Greenspace Inequalities"}
+Urban greenspace is increasingly recognised as a determinant of health and wellbeing. Yet official statistics on its distribution are often fragmented, inconsistent or outdated. Satellite imagery provides a systematic alternative. Using freely available Sentinel-2 multispectral data, researchers can derive the Normalised Difference Vegetation Index (NDVI) to estimate vegetation cover at fine spatial scales.
+
+By linking these imagery-derived measures to administrative health records, studies in the UK and elsewhere have shown systematic disparities in access to urban greenery, with deprived communities often having less exposure (Rugel et al., 2019; **[REF]**). For policymakers, this information is critical: it identifies ``green deserts`` within cities, supports the design of equitable planning policies and provides indicators to monitor the effectiveness of urban greening initiatives.
+
+The key advantage is comprehensiveness and comparability. Unlike local audits or surveys, satellite imagery captures greenspace consistently across entire cities and regions, enabling cross-neighbourhood benchmarking and long-term monitoring. This makes it a unique input into strategies for healthy and sustainable urban development.
+:::
+
+## Why now? The timely confluence of technological advances and shifting societal needs
+
+<!-- - Proliferation of satellites: growth in number, lower launch costs. \ -->
+<!-- - Improved resolution & new sensors: finer spatial, temporal, and spectral resolution. \ -->
+<!-- - Computational revolutions: AI/ML, cloud computing, open data platforms. \ -->
+<!-- - Accessibility: open missions (Sentinel, Landsat), user-friendly APIs. \ -->
+<!-- - Integration readiness: linkages with surveys, administrative data, mobile phone data. \ -->
+<!-- - Key message: Imagery is moving from niche to mainstream, with lowered barriers to entry. \ -->
+
+For decades, the potential of satellite imagery to transform the social sciences and inform public policy has been recognised (Rindfuss & Stern, 1998; National Research Council, 1998). Yet until recently, this potential remained largely aspirational. The barriers were formidable: imagery was expensive, technically complex and difficult to process at scale. Expertise was confined to environmental sciences and engineering, and the social science community lacked both the tools and the training to make effective use of complex and unstructured imagery data. Key developments have transformed the landscape. We are witnessing a convergence of technological institutional and societal changes that together create a perfect scenario for mainstreaming imagery in social science and policymaking.
+
+::: {.column-margin .callout-tip title="Box 1.2: From Pixels to Policy: Monitoring Rooftop Solar for Net Zero"}
+A example that illustrates why satellite imagery is at an inflection point for social science and policy. Achieving net zero requires detailed knowledge of how households and businesses are adopting renewable technologies, yet official statistics on rooftop solar installation are often incomplete, delayed, or inconsistently reported across regions.
+
+Recent advances in computer vision and high-resolution imagery now allow automated detection of solar panels from space. Convolutional neural networks can be trained to recognise the distinctive spectral and geometric patterns of panels, producing accurate counts at building level and aggregating them to neighbourhoods or local authorities (e.g. Malof et al., 2016; Yu et al., 2018). When combined with socio-economic and housing data, these imagery-derived indicators help identify where adoption is lagging, highlight inequalities in access to green technology and guide targeted policy incentives.
+
+Crucially, these analyses can be updated regularly, tracking quarterly or even monthly uptake, and providing policymakers with near real-time evidence that would be prohibitively costly through surveys or administrative reporting alone. This example demonstrates how the convergence of new sensors, machine learning and demand for localised evidence makes imagery not just a complementary resource but a core component of the evidence infrastructure for sustainability and wellbeing.
+:::
+
+### Proliferation and democratisation of satellites
+
+The number of satellites orbiting the Earth has grown exponentially. Public programmes such as the European Space Agency’s Sentinel missions and NASA’s Landsat archive provide high-quality data freely and openly, while private constellations like Planet or Maxar deliver near-daily high-resolution imagery. Launch costs have plummeted, fuelled by commercial providers and advances in satellite miniaturisation **[REF]**. The result is not only more satellites but more diverse sensors—optical, radar, hyperspectral and thermal, offering unparalleled coverage of the Earth’s surface. What was once the preserve of specialised agencies is now accessible to researchers, policymakers and even the general public.
+
+### Advances in resolution and sensor capability
+
+Alongside this expansion of satellite technology has come a dramatic improvement in the quality of imagery. Spatial resolution has increased from kilometres to sub-metre detail; temporal resolution has improved to daily or even multiple daily revisits; and spectral resolution has diversified, enabling the measurement of heat, vegetation stress, air pollutants and urban morphology. These advances expand the analytical frontier: for example, estimating the solar potential of rooftops **[REF]**, tracking micro-greenspaces **[REF]**, or monitoring the impacts of heatwaves on vulnerable populations **[REF]**. Such detail is key for understanding the intersection of environmental exposures, health and social inequality at scales that matter for policy.
+
+### Revolution in computation and artificial intelligence
+
+Raw pixels alone are not enough. The primary value of imagery relates to the transformation of raw pixels into meaningful indicators. This is what *Imago* terms the “pixel-to-metric” challenge. Until recently, this process was limited by computational bottlenecks. Advances in machine learning and computer vision, combined with the rise of cloud computing and high-performance infrastructures, have fundamentally altered this landscape. Convolutional neural networks can now extract building footprints, classify land cover or estimate deprivation with remarkable accuracy (Arribas-Bel, Patino, & Duque, 2017). Cloud platforms such as Google Earth Engine and open-source libraries in Python and R make it possible to analyse terabytes of imagery without local supercomputers, lowering barriers to entry for social scientists and policymakers.
+
+### Easier access and integration with existing data ecosystems
+
+Equally transformative are the changes in data access. Imagery is increasingly delivered through portals, APIs and interoperable formats (Jacobsen et al., 2020). This accessibility means that imagery can be linked directly to household surveys, administrative records or longitudinal cohort studies, allowing researchers to integrate contextual measures of environment, housing, or infrastructure into existing datasets. Such integration bridges the long-standing gap between social data on individuals and contextual data on places, creating powerful opportunities for spatially-explicit analysis and evidence-based policymaking. Yet, while an increasing number of satelite datasets are more accessible, this level of accessibility is relative and their volume, complex and unstructured form remain a major challenge for most social scientists and policy markers to use and analyse imagery. This is a key barrier that *Imago* will tackle.
+
+### Growing societal demand for timely, granular evidence
+
+Technological advances alone would not be sufficient if demand were absent. The societal context has shifted dramatically. Pressing challenges, such as the climate emergency, health inequalities, housing crises and uneven regional development all require data that are timely, spatially detailed and robust. Policymakers seek indicators that can capture the dynamics of local communities, monitor change in near real time and evaluate the impacts of interventions. Imagery is uniquely placed to meet this demand, offering consistent coverage at scales from a national to neighbourhood scale. In this sense, the ``supply`` of new imagery technologies coincides with an urgent ``demand`` for better evidence in sustainability, prosperity and wellbeing.
+
+### An inflection point for social science and policy
+
+Taken together, these changes may mark an inflection point. The barriers that historically confined imagery to niche environmental applications are dminishing. The convergence of cheaper and plentiful satellites, improved sensors, powerful computational methods, more accessible platforms and pressing policy needs creates a window of opportunity. For the first time, imagery can be a mainstream data source for social sciences and policymaking. The challenge now is to ensure that this opportunity is seized: to build the infrastructure, capacity, and community that can make imagery usable, useful, and used across disciplines.
+
+
+## The case for social science and policy use
+
+<!-- - Persistent data gaps: inequalities, wellbeing, prosperity, urban development.\ -->
+<!-- - Policy needs: localised, timely, reliable evidence.\ -->
+<!-- - Existing uptake: economics (Henderson et al., 2012), demography (Weeks et al., 2000), health-environment (greenspace studies).\ -->
+<!-- - Limitations of conventional data: surveys (expensive, slow), administrative data (uneven coverage, privacy concerns), app data (bias). \ -->
+<!-- - How imagery complements existing sources: linking to survey microdata, augmenting spatial models, providing contextual measures. \ -->
+<!-- - Highlight IMAGO’s mission: to make imagery usable, useful, and used for these communities. \ -->
+
+::: {.column-margin .callout-tip title="Box 1.3: Detecting Informal Settlements for Inclusive Policy"}
+Informal settlements house over a billion people globally. Yet, they are often absent from official statistics and maps. This invisibility perpetuates exclusion, making it difficult for governments and international organisations to target investments in housing, sanitation, and health.
+
+Satellite imagery offers a way forward. High-resolution optical data, combined with machine learning classifiers, can detect the dense, irregular patterns characteristic of informal housing. Studies in sub-Saharan Africa and South Asia have demonstrated that imagery-based maps of settlement extent align closely with ground surveys, but can be produced faster, at lower cost, and with full coverage (Kuffer et al., 2016; Mahabir et al., 2018).
+
+For policymakers, this capacity is transformative. Imagery can reveal previously unmapped communities, track their expansion over time, and help allocate resources more equitably. By integrating imagery with household surveys or administrative records, it becomes possible to link population characteristics with environmental exposures, providing a fuller picture of vulnerability and need.
+
+This example illustrates the central case for imagery in social science and policy. It addresses critical data gaps in contexts where conventional sources are absent, unreliable or prohibitively expensive, enabling more inclusive and responsive decision-making.
+:::
+
+### Persistent gaps in evidence
+
+Across social science and policy, an enduring challenge is the lack of timely, reliable and spatially detailed data. Inequalities in health, prosperity and wellbeing often manifest at local scales: between neighbourhoods, across urban–rural divides or within regions. Yet, the data streams traditionally used to study these questions rarely provide the necessary resolution or frequency. Censuses are comprehensive but infrequent. Household surveys are costly and often geographically limited. Administrative data can be inconsistent or inaccessible due to privacy and governance restrictions. These gaps are especially acute in areas where policy demand is greatest: monitoring the uneven impacts of climate hazards, evaluating local housing markets, or designing interventions to address health disparities.
+
+Satellite imagery directly addresses these shortcomings. Its global, repeated coverage provides a spatial and temporal granularity rarely achievable with traditional data, offering opportunities to fill evidence gaps that constrain research and policymaking.
+
+### Applications across domains
+
+The potential of imagery has been demonstrated through a growing body of research showcasing its promise across multiple relevant domains, for example:
+
+*Economic development and inequality*: Night-time light intensity has been used as a proxy for local economic activity, enabling estimates of growth in regions lacking reliable national accounts (Henderson et al., 2012). Studies combine multispectral imagery with machine learning to predict poverty at high spatial resolution (e.g. Jean et al., 2016), supporting targeted development interventions.
+
+*Urbanisation and housing*: Imagery provides indicators of urban expansion, building density, and settlement form. These measures are critical for understanding sprawl, housing affordability, and infrastructure provision (Brown et al., 2004). They also allow policymakers to track progress towards sustainable urban development goals.
+
+*Environment and health*: Imagery-derived measures of greenness, heat and pollution exposure can be derived and linked to individual and population health outcomes. These insights reveal systematic inequalities in environmental quality, with direct implications for urban planning and public health policy **[REF]**.
+
+*Disaster response and climate adaptation*: Rapid imagery analysis following floods, fires, or earthquakes enables near-real-time damage assessment. Such evidence supports humanitarian response and informs longer-term resilience planning **[REF]**.
+
+### Complementarity and integration
+
+The greatest potential of imagery lies in data integration with other data sources. Imagery-derived indicators can be linked with household or cohort surveys to provide rich contextual measures of local environment, infrastructure and housing conditions. For example, linking greenspace indices to health records can illuminate associations between neighbourhood environments and mental wellbeing. Similarly, combining imagery-based poverty maps with demographic data can support more equitable allocation of resources.
+
+This integrative capacity allows imagery to act as a bridge between individual-level data and the broader characteristics of places, enabling multilevel analyses that capture the interaction between people and their environments. It also aligns with the growing demand in policymaking for place-based evidence that reflects the lived experience of communities rather than national averages **[REF]**.
+
+### Barriers and challenges
+
+Despite its promise, the mainstream adoption of imagery in social science and policy remains constrained. Key barriers are identified. First is the *technical complexity* of working with imagery. Imagery is large in volume, stored in arcane formats and requires specialist knowledge to process. Second, imagery is *computational demanding*. Extracting metrics from pixels involves terabytes of data and advanced processing pipelines. Third, there is a *translation gap*. Social scientists and policymakers need interpretable measures (e.g. building density, greenspace exposure), not raw imagery. Fourth is *capacity limitations*. Training in imagery analysis is largely absent from social science curricula. Training needs to be developed to starget the specific needs of social scientists. Fifth, *ethical and governance* concerns should also be considered. Very high-resolution imagery raises privacy issues, particularly when combined with other sensitive data sources. Appropriate protocol for data access, analysis and output release are needed.
+
+Despite decades of availability, these barriers have presented the key constraints as to why imagery has yet to enter the mainstream of social science and policy. Addressing these constraints requires sustained investment in infrastructure, capacity building and ethical governance. Imago has been designed to tackle these challanges.
+
+### Towards usable, useful and used imagery
+
+The case for social science and policy use can be summarised as a matter of timing and translation. The technological advances described in Section 2.3 imply that, for the first time, imagery is poised to become a routine part of the evidence base. But realising this potential requires making imagery usable, useful, and used:
+
+* Usable, by lowering technical barriers through open platforms, user-friendly interfaces, and interoperable data formats.
+
+* Useful, by co-producing data products with stakeholders to ensure relevance to research and policy questions.
+
+* Used, by embedding imagery into established data ecosystems, training communities of practice, and demonstrating impact through visible policy applications.
+
+By addressing these three pillars, imagery can evolve from a promising niche resource to a cornerstone of evidence-based social science and policymaking. The case is not only academic, it is practical and aligned with the growing demand for timely, localised and equitable data infrastructures.
