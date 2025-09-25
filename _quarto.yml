@@ -5,7 +5,7 @@ book:
   title: "Book of Imagery"
   reader-mode: true
   
-  author: "Francisco Rowe, Rachel Gaulton, Ron Mahabir and Imago team"
+  author: "Francisco Rowe, Ron Mahabir and Imago team"
   date: today
   
   page-footer:
@@ -20,7 +20,7 @@ book:
   repo-actions: [edit, issue]
   
   chapters:
-    - chapters/index.qmd
+    - index.qmd
     - chapters/intro.qmd
     - chapters/image-data.qmd
     - chapters/01_use-case-x.qmd

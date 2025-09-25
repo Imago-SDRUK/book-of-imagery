@@ -1,0 +1,18 @@
+---
+title: "Preface"
+format: html
+---
+
+# Preface {.unnumbered}
+
+Proposed guiding principles for the book:
+
+-   Audience / end users: academic and policy makers
+
+-   Individual chapters: technical + application / implications
+
+For now, drop any relevant references below:
+
+-   [@patino2013a]
+
+-   [Remote sensing tutorials](Remote%20Sensing%20Tutorials)
