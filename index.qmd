@@ -5,14 +5,24 @@ format: html
 
 # Preface {.unnumbered}
 
-Proposed guiding principles for the book:
+TO BE WRITTEN
 
--   Audience / end users: academic and policy makers
+Proposed structure
 
--   Individual chapters: technical + application / implications
+-   Aim\
+-   Audience\
+-   Uses\
+-   Guiding principles\
+-   How the book should be read and used.\
 
-For now, drop any relevant references below:
+<!-- Proposed guiding principles for the book: -->
 
--   [@patino2013a]
+<!-- -   Audience / end users: academic and policy makers -->
 
--   [Remote sensing tutorials](Remote%20Sensing%20Tutorials)
+<!-- -   Individual chapters: technical + application / implications -->
+
+<!-- For now, drop any relevant references below: -->
+
+<!-- -   [@patino2013a] -->
+
+<!-- -   [Remote sensing tutorials](Remote%20Sensing%20Tutorials) -->
