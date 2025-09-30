@@ -4,7 +4,6 @@ author: "Francisco Rowe"
 format: html
 ---
 
-
 ## The promise of imagery for social science and policy
 
 <!-- - Set the scene: social scientists and policymakers face urgent questions (inequalities, sustainability, wellbeing, climate adaptation) but lack timely and spatially rich data.\ -->
@@ -22,10 +21,15 @@ An increasing volumne of research has already demonstrated the promise of satell
 ## What makes satellite imagery unique?
 
 <!-- - Comprehensiveness: global coverage, consistent revisits.\ -->
+
 <!-- - Spatial detail: from 30m to sub-metre, enabling local and neighbourhood-level insights. \ -->
+
 <!-- - Timeliness: daily to weekly revisits, enabling nowcasting. \ -->
+
 <!-- - Retrospective power: archives spanning decades (e.g., Landsat since 1970s). \ -->
+
 <!-- - Bias-resilience: unlike surveys/app data, less affected by self-selection. \ -->
+
 <!-- - Multi-sensor richness: optical, SAR, LiDAR, thermal, hyperspectral. \ -->
 
 Satellite imagery is unlike most other forms of data used in the social sciences. The uniqueness of satellite imagery comes in the way multiple dictintive attributes compound to provide an observational resource that is comprehensive, consistent, granular and increasingly accessible. These qualities allow imagery to transcend the limitations of conventional social data sources and open new opportunities for analysis and policymaking.
@@ -36,7 +40,7 @@ Satellites view the entire Earth, offering data that extend across countries, re
 
 ### Spatial resolution
 
-Modern satellite platforms capture imagery at a range of spatial resolutions from kilometres to less than one metre per pixel, such as WorldView-3. Coarser imagery provides consistent monitoring of land cover and climate-related variables at regional and national scales. Very high-resolution imagery can reveal building footprints, street patterns and even the configuration of green spaces at the neighbourhood level. This multi-scale capacity makes imagery a flexible resource: it can illuminate both macro-level transformations such as urban sprawl (Brown et al., 2004) and micro-scale differences in the built environment associated with health or wellbeing **[REF]**.
+Modern satellite platforms capture imagery at a range of spatial resolutions from kilometres to less than one metre per pixel, such as WorldView-3. Coarser imagery provides consistent monitoring of land cover and climate-related variables at regional and national scales. Very high-resolution imagery can reveal building footprints, street patterns and even the configuration of green spaces at the neighbourhood level. This multi-scale capacity makes imagery a flexible resource: it can illuminate both macro-level transformations such as urban sprawl (Brown et al., 2004) and micro-scale differences in the built environment associated with health or wellbeing **\[REF\]**.
 
 ### Temporal frequency and timeliness
 
@@ -44,7 +48,7 @@ Satellite missions provide regular and predictable revisits ranging from daily (
 
 ### Retrospective power
 
-Satellite programmes, such as Landsat have been operating since the 1970s, creating an unparalleled archive of the Earth’s surface. These historical datasets allow researchers to reconstruct long-term patterns of land cover, urbanisation and environmental change, offering insights into trajectories that no survey or census could capture. The ability to``look back in time'' makes imagery especially valuable for understanding the cumulative effects of policies, economic shifts and climate change across decades (National Research Council, 1998).
+Satellite programmes, such as Landsat have been operating since the 1970s, creating an unparalleled archive of the Earth’s surface. These historical datasets allow researchers to reconstruct long-term patterns of land cover, urbanisation and environmental change, offering insights into trajectories that no survey or census could capture. The ability to\`\`look back in time'' makes imagery especially valuable for understanding the cumulative effects of policies, economic shifts and climate change across decades (National Research Council, 1998).
 
 ### Robustness to common data biases
 
@@ -52,14 +56,14 @@ Unlike survey data, which rely on voluntary participation and may exclude hard-t
 
 ### Multi-sensor richness
 
-Imagery is not limited to visible light. Satellites measure across the electromagnetic spectrum, producing data on heat, vegetation health, surface water and air pollutants. Synthetic Aperture Radar (SAR) captures structural features through cloud and darkness; LiDAR provides three-dimensional representations of terrain and vegetation; and hyperspectral sensors enable fine-grained detection of material properties. This diversity of sensors allows the derivation of novel indicators, for example, from rooftop solar potential to urban heat island intensity that can directly inform pressing policy agendas in sustainability, prosperity and wellbeing **[REF]**.
+Imagery is not limited to visible light. Satellites measure across the electromagnetic spectrum, producing data on heat, vegetation health, surface water and air pollutants. Synthetic Aperture Radar (SAR) captures structural features through cloud and darkness; LiDAR provides three-dimensional representations of terrain and vegetation; and hyperspectral sensors enable fine-grained detection of material properties. This diversity of sensors allows the derivation of novel indicators, for example, from rooftop solar potential to urban heat island intensity that can directly inform pressing policy agendas in sustainability, prosperity and wellbeing **\[REF\]**.
 
 Together, the above identified attributes position satellite imagery as a uniquely powerful form of smart data. Its comprehensiveness, resolution, timeliness, retrospective depth and sensor diversity create a multidimensional evidence base that is unmatched by conventional sources. What makes imagery transformative is not just its technical sophistication, but its capacity to bridge long-standing evidence gaps in the social sciences and policymaking, providing the foundations for more informed and timely decisions.
 
 ::: {.column-margin .callout-tip title="Box 1.1: Mapping Urban Greenspace Inequalities"}
 Urban greenspace is increasingly recognised as a determinant of health and wellbeing. Yet official statistics on its distribution are often fragmented, inconsistent or outdated. Satellite imagery provides a systematic alternative. Using freely available Sentinel-2 multispectral data, researchers can derive the Normalised Difference Vegetation Index (NDVI) to estimate vegetation cover at fine spatial scales.
 
-By linking these imagery-derived measures to administrative health records, studies in the UK and elsewhere have shown systematic disparities in access to urban greenery, with deprived communities often having less exposure (Rugel et al., 2019; **[REF]**). For policymakers, this information is critical: it identifies ``green deserts`` within cities, supports the design of equitable planning policies and provides indicators to monitor the effectiveness of urban greening initiatives.
+By linking these imagery-derived measures to administrative health records, studies in the UK and elsewhere have shown systematic disparities in access to urban greenery, with deprived communities often having less exposure (Rugel et al., 2019; **\[REF\]**). For policymakers, this information is critical: it identifies `green deserts` within cities, supports the design of equitable planning policies and provides indicators to monitor the effectiveness of urban greening initiatives.
 
 The key advantage is comprehensiveness and comparability. Unlike local audits or surveys, satellite imagery captures greenspace consistently across entire cities and regions, enabling cross-neighbourhood benchmarking and long-term monitoring. This makes it a unique input into strategies for healthy and sustainable urban development.
 :::
@@ -67,10 +71,15 @@ The key advantage is comprehensiveness and comparability. Unlike local audits or
 ## Why now? The timely confluence of technological advances and shifting societal needs
 
 <!-- - Proliferation of satellites: growth in number, lower launch costs. \ -->
+
 <!-- - Improved resolution & new sensors: finer spatial, temporal, and spectral resolution. \ -->
+
 <!-- - Computational revolutions: AI/ML, cloud computing, open data platforms. \ -->
+
 <!-- - Accessibility: open missions (Sentinel, Landsat), user-friendly APIs. \ -->
+
 <!-- - Integration readiness: linkages with surveys, administrative data, mobile phone data. \ -->
+
 <!-- - Key message: Imagery is moving from niche to mainstream, with lowered barriers to entry. \ -->
 
 For decades, the potential of satellite imagery to transform the social sciences and inform public policy has been recognised (Rindfuss & Stern, 1998; National Research Council, 1998). Yet until recently, this potential remained largely aspirational. The barriers were formidable: imagery was expensive, technically complex and difficult to process at scale. Expertise was confined to environmental sciences and engineering, and the social science community lacked both the tools and the training to make effective use of complex and unstructured imagery data. Key developments have transformed the landscape. We are witnessing a convergence of technological institutional and societal changes that together create a perfect scenario for mainstreaming imagery in social science and policymaking.
@@ -85,11 +94,11 @@ Crucially, these analyses can be updated regularly, tracking quarterly or even m
 
 ### Proliferation and democratisation of satellites
 
-The number of satellites orbiting the Earth has grown exponentially. Public programmes such as the European Space Agency’s Sentinel missions and NASA’s Landsat archive provide high-quality data freely and openly, while private constellations like Planet or Maxar deliver near-daily high-resolution imagery. Launch costs have plummeted, fuelled by commercial providers and advances in satellite miniaturisation **[REF]**. The result is not only more satellites but more diverse sensors—optical, radar, hyperspectral and thermal, offering unparalleled coverage of the Earth’s surface. What was once the preserve of specialised agencies is now accessible to researchers, policymakers and even the general public.
+The number of satellites orbiting the Earth has grown exponentially. Public programmes such as the European Space Agency’s Sentinel missions and NASA’s Landsat archive provide high-quality data freely and openly, while private constellations like Planet or Maxar deliver near-daily high-resolution imagery. Launch costs have plummeted, fuelled by commercial providers and advances in satellite miniaturisation **\[REF\]**. The result is not only more satellites but more diverse sensors—optical, radar, hyperspectral and thermal, offering unparalleled coverage of the Earth’s surface. What was once the preserve of specialised agencies is now accessible to researchers, policymakers and even the general public.
 
 ### Advances in resolution and sensor capability
 
-Alongside this expansion of satellite technology has come a dramatic improvement in the quality of imagery. Spatial resolution has increased from kilometres to sub-metre detail; temporal resolution has improved to daily or even multiple daily revisits; and spectral resolution has diversified, enabling the measurement of heat, vegetation stress, air pollutants and urban morphology. These advances expand the analytical frontier: for example, estimating the solar potential of rooftops **[REF]**, tracking micro-greenspaces **[REF]**, or monitoring the impacts of heatwaves on vulnerable populations **[REF]**. Such detail is key for understanding the intersection of environmental exposures, health and social inequality at scales that matter for policy.
+Alongside this expansion of satellite technology has come a dramatic improvement in the quality of imagery. Spatial resolution has increased from kilometres to sub-metre detail; temporal resolution has improved to daily or even multiple daily revisits; and spectral resolution has diversified, enabling the measurement of heat, vegetation stress, air pollutants and urban morphology. These advances expand the analytical frontier: for example, estimating the solar potential of rooftops **\[REF\]**, tracking micro-greenspaces **\[REF\]**, or monitoring the impacts of heatwaves on vulnerable populations **\[REF\]**. Such detail is key for understanding the intersection of environmental exposures, health and social inequality at scales that matter for policy.
 
 ### Revolution in computation and artificial intelligence
 
@@ -101,20 +110,24 @@ Equally transformative are the changes in data access. Imagery is increasingly d
 
 ### Growing societal demand for timely, granular evidence
 
-Technological advances alone would not be sufficient if demand were absent. The societal context has shifted dramatically. Pressing challenges, such as the climate emergency, health inequalities, housing crises and uneven regional development all require data that are timely, spatially detailed and robust. Policymakers seek indicators that can capture the dynamics of local communities, monitor change in near real time and evaluate the impacts of interventions. Imagery is uniquely placed to meet this demand, offering consistent coverage at scales from a national to neighbourhood scale. In this sense, the ``supply`` of new imagery technologies coincides with an urgent ``demand`` for better evidence in sustainability, prosperity and wellbeing.
+Technological advances alone would not be sufficient if demand were absent. The societal context has shifted dramatically. Pressing challenges, such as the climate emergency, health inequalities, housing crises and uneven regional development all require data that are timely, spatially detailed and robust. Policymakers seek indicators that can capture the dynamics of local communities, monitor change in near real time and evaluate the impacts of interventions. Imagery is uniquely placed to meet this demand, offering consistent coverage at scales from a national to neighbourhood scale. In this sense, the `supply` of new imagery technologies coincides with an urgent `demand` for better evidence in sustainability, prosperity and wellbeing.
 
 ### An inflection point for social science and policy
 
 Taken together, these changes may mark an inflection point. The barriers that historically confined imagery to niche environmental applications are dminishing. The convergence of cheaper and plentiful satellites, improved sensors, powerful computational methods, more accessible platforms and pressing policy needs creates a window of opportunity. For the first time, imagery can be a mainstream data source for social sciences and policymaking. The challenge now is to ensure that this opportunity is seized: to build the infrastructure, capacity, and community that can make imagery usable, useful, and used across disciplines.
 
-
 ## The case for social science and policy use
 
 <!-- - Persistent data gaps: inequalities, wellbeing, prosperity, urban development.\ -->
+
 <!-- - Policy needs: localised, timely, reliable evidence.\ -->
+
 <!-- - Existing uptake: economics (Henderson et al., 2012), demography (Weeks et al., 2000), health-environment (greenspace studies).\ -->
+
 <!-- - Limitations of conventional data: surveys (expensive, slow), administrative data (uneven coverage, privacy concerns), app data (bias). \ -->
+
 <!-- - How imagery complements existing sources: linking to survey microdata, augmenting spatial models, providing contextual measures. \ -->
+
 <!-- - Highlight IMAGO’s mission: to make imagery usable, useful, and used for these communities. \ -->
 
 ::: {.column-margin .callout-tip title="Box 1.3: Detecting Informal Settlements for Inclusive Policy"}
@@ -141,15 +154,15 @@ The potential of imagery has been demonstrated through a growing body of researc
 
 *Urbanisation and housing*: Imagery provides indicators of urban expansion, building density, and settlement form. These measures are critical for understanding sprawl, housing affordability, and infrastructure provision (Brown et al., 2004). They also allow policymakers to track progress towards sustainable urban development goals.
 
-*Environment and health*: Imagery-derived measures of greenness, heat and pollution exposure can be derived and linked to individual and population health outcomes. These insights reveal systematic inequalities in environmental quality, with direct implications for urban planning and public health policy **[REF]**.
+*Environment and health*: Imagery-derived measures of greenness, heat and pollution exposure can be derived and linked to individual and population health outcomes. These insights reveal systematic inequalities in environmental quality, with direct implications for urban planning and public health policy **\[REF\]**.
 
-*Disaster response and climate adaptation*: Rapid imagery analysis following floods, fires, or earthquakes enables near-real-time damage assessment. Such evidence supports humanitarian response and informs longer-term resilience planning **[REF]**.
+*Disaster response and climate adaptation*: Rapid imagery analysis following floods, fires, or earthquakes enables near-real-time damage assessment. Such evidence supports humanitarian response and informs longer-term resilience planning **\[REF\]**.
 
 ### Complementarity and integration
 
 The greatest potential of imagery lies in data integration with other data sources. Imagery-derived indicators can be linked with household or cohort surveys to provide rich contextual measures of local environment, infrastructure and housing conditions. For example, linking greenspace indices to health records can illuminate associations between neighbourhood environments and mental wellbeing. Similarly, combining imagery-based poverty maps with demographic data can support more equitable allocation of resources.
 
-This integrative capacity allows imagery to act as a bridge between individual-level data and the broader characteristics of places, enabling multilevel analyses that capture the interaction between people and their environments. It also aligns with the growing demand in policymaking for place-based evidence that reflects the lived experience of communities rather than national averages **[REF]**.
+This integrative capacity allows imagery to act as a bridge between individual-level data and the broader characteristics of places, enabling multilevel analyses that capture the interaction between people and their environments. It also aligns with the growing demand in policymaking for place-based evidence that reflects the lived experience of communities rather than national averages **\[REF\]**.
 
 ### Barriers and challenges
 
@@ -161,10 +174,10 @@ Despite decades of availability, these barriers have presented the key constrain
 
 The case for social science and policy use can be summarised as a matter of timing and translation. The technological advances described in Section 2.3 imply that, for the first time, imagery is poised to become a routine part of the evidence base. But realising this potential requires making imagery usable, useful, and used:
 
-* Usable, by lowering technical barriers through open platforms, user-friendly interfaces, and interoperable data formats.
+-   Usable, by lowering technical barriers through open platforms, user-friendly interfaces, and interoperable data formats.
 
-* Useful, by co-producing data products with stakeholders to ensure relevance to research and policy questions.
+-   Useful, by co-producing data products with stakeholders to ensure relevance to research and policy questions.
 
-* Used, by embedding imagery into established data ecosystems, training communities of practice, and demonstrating impact through visible policy applications.
+-   Used, by embedding imagery into established data ecosystems, training communities of practice, and demonstrating impact through visible policy applications.
 
 By addressing these three pillars, imagery can evolve from a promising niche resource to a cornerstone of evidence-based social science and policymaking. The case is not only academic, it is practical and aligned with the growing demand for timely, localised and equitable data infrastructures.
