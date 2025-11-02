@@ -43,6 +43,16 @@
         "ideas",
         "maintenance"
       ]
+    },
+    {
+      "login": "darribas",
+      "name": "Dani Arribas-Bel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/417363?v=4",
+      "profile": "http://darribas.org",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
