@@ -1,0 +1,112 @@
+// :root {
+//   --primary: #4a4a49;
+//   --primary-accent: color-mix(in oklab, var(--primary) 80%, white 20%);
+//   --primary-muted: color-mix(in oklab, var(--primary) 80%, black 20%);
+//   --secondary: #8c91a8;
+//   --secondary-accent: color-mix(in oklab, var(--secondary) 80%, white 20%);
+//   --secondary-muted: color-mix(in oklab, var(--secondary) 80%, black 20%);
+//   --tertiary: #24226f;
+//   --tertiary-accent: color-mix(in oklab, var(--tertiary) 80%, white 20%);
+//   --tertiary-muted: color-mix(in oklab, var(--tertiary) 80%, black 20%);
+//   --quarternary: #ff8f42;
+//   --quarternary-accent: color-mix(in oklab, var(--quarternary) 80%, white 20%);
+//   --quarternary-muted: color-mix(in oklab, var(--quarternary) 80%, black 20%);
+//   --quinary: #03cea3;
+//   --quinary-accent: color-mix(in oklab, var(--quinary) 80%, white 20%);
+//   --quinary-muted: color-mix(in oklab, var(--quinary) 80%, black 20%);
+//   --text: #ffffff;
+//   --text-accent: color-mix(in oklab, var(--text) 80%, white 20%);
+//   --text-muted: color-mix(in oklab, var(--text) 80%, black 20%);
+//   --border: var(--quinary);
+//   --border-accent: color-mix(in oklab, var(--border) 80%, white 20%);
+//   --border-muted: color-mix(in oklab, var(--border) 70%, black 30%);
+//   --background: var(--primary);
+//   --background-accent: color-mix(in oklab, var(--background) 80%, white 20%);
+//   --background-muted: color-mix(in oklab, var(--background) 80%, black 20%);
+//   --highlight: var(--quinary);
+//   --highlight-accent: color-mix(in oklab, var(--highlight) 80%, white 20%);
+//   --highlight-muted: color-mix(in oklab, var(--highlight) 80%, black 20%);
+//   --positive: #b2ffa9;
+//   --positive-accent: color-mix(in oklab, var(--positive) 80%, white 20%);
+//   --positive-muted: color-mix(in oklab, var(--positive) 80%, black 20%);
+//   --negative: #8d2113;
+//   --negative-accent: color-mix(in oklab, var(--negative) 80%, white 20%);
+//   --negative-muted: color-mix(in oklab, var(--negative) 80%, black 20%);
+//   --warning: #ffaf39;
+//   --warning-accent: color-mix(in oklab, var(--warning) 80%, white 20%);
+//   --warning-muted: color-mix(in oklab, var(--warning) 80%, black 20%);
+//   --danger: #ff2233;
+//   --danger-accent: color-mix(in oklab, var(--danger) 80%, white 20%);
+//   --danger-muted: color-mix(in oklab, var(--danger) 80%, black 20%);
+//   --disabled: var(--secondary);
+//   --disabled-accent: color-mix(in oklab, var(--disabled) 80%, white 20%);
+//   --disabled-muted: color-mix(in oklab, var(--disabled) 80%, black 20%);
+//   --radius-sm: 0.15rem;
+//   --radius: 0.25rem;
+//   --radius-lg: 0.35rem;
+//   --radius-xl: 0.65rem;
+//   --radius-2xl: 1rem;
+//   --padding-sm: 0.15rem;
+//   --padding: 0.25rem;
+//   --padding-lg: 0.35rem;
+//   --padding-xl: 0.65rem;
+//   --padding-2xl: 1rem;
+//   --title: "Figtree Variable";
+//   --subtitle: "Quicksand Variable";
+//   --paragraph: "Noto Sans Variable";
+//   --accent: "Space Grotesk Variable";
+//   --animation-time: 300ms;
+// }
+//
+
+@font-face {
+  font-family: "Figtree Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300 900;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/figtree:vf@latest/latin-wght-normal.woff2")
+    format("woff2-variations");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Space Grotesk Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300 700;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/space-grotesk:vf@latest/latin-wght-normal.woff2")
+    format("woff2-variations");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+
+/*-- scss:defaults --*/
+// Base document colors
+$body-bg: #ffffff;
+$body-color: #24226f;
+$link-color: #ff8f42;
+$callout-color-note: #24226f;
+$callout-color-tip: #03cea3;
+$callout-color-warning: #ffaf39;
+$callout-color-important: #8d2113;
+$callout-color-caution: #ff8f42;
+$font-family-sans-serif: "Figtree Variable";
+$font-family-monospace: "Space Grotesk Variable";
+
+// $h2-font-size: 1.6rem !default;
+// $headings-font-weight: 500 !default;
+//
+// /*-- scss:rules --*/
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+// }
