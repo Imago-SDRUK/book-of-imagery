@@ -209,3 +209,9 @@ __marimo__/
 /.quarto/
 .Rproj.user
 .gitignore
+
+**/*.quarto_ipynb
+
+.DS_Store
+_book/
+_quarto_internal_scss_error.scss
