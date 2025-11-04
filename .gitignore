@@ -208,3 +208,4 @@ __marimo__/
 
 /.quarto/
 .Rproj.user
+.gitignore
