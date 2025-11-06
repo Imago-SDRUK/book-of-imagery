@@ -6,8 +6,7 @@ format: html
 
 ## Introduction
 
-[DAB: this first para feels a bit too technical for a start. Massage to do a bit more hand-holding of the reader.]{.mark}
-Satellite imagery constitutes one of the most powerful sources of information for understanding the Earth’s surface and its dynamic processes. Defined broadly as grid-based or raster data, where the Earth's surface is represented as a matrix of pixels (or “grid cells”), each with a value corresponding to a specific measurement, captured by sensors mounted on orbital platforms. These data encompass a range of spectral, spatial, temporal, and radiometric characteristics that distinguish them from traditional, ground-based environmental observations. Unlike airborne systems that typically conduct surveys using aircraft such as small to medium-sized planes, helicopters, or drones (UAVs), or *in situ* field measurements, satellite data provide consistent, synoptic coverage across national and continental scales, enabling systematic monitoring over time.
+[DAB: this first para feels a bit too technical for a start. Massage to do a bit more hand-holding of the reader.]{.mark} Satellite imagery constitutes one of the most powerful sources of information for understanding the Earth’s surface and its dynamic processes. Defined broadly as grid-based or raster data, where the Earth's surface is represented as a matrix of pixels (or “grid cells”), each with a value corresponding to a specific measurement, captured by sensors mounted on orbital platforms. These data encompass a range of spectral, spatial, temporal, and radiometric characteristics that distinguish them from traditional, ground-based environmental observations. Unlike airborne systems that typically conduct surveys using aircraft such as small to medium-sized planes, helicopters, or drones (UAVs), or *in situ* field measurements, satellite data provide consistent, synoptic coverage across national and continental scales, enabling systematic monitoring over time.
 
 Since the launch of Sputnik 1[^image-data-1] in 1957 and Landsat 1[^image-data-2] in 1972, the satellite industry has experienced profound change. Satellite remote sensing has rapidly advanced alongside improvements in sensor technology, data storage over the last seventy years. What used to be a domain comprising a few national space agencies has evolved into a vibrant ecosystem that also encompasses private companies, public–private partnerships, and small satellite constellations [@undseth2021evolving]. Today, hundreds of satellites operated by governments and private companies provide images with a level of detail and frequency that would have been impossible just a decade ago. Simultaneously, developments in cloud computing and machine learning have substantially simplified the storage, processing and analysis of large volumes of high-resolution data. For researchers, these advances mean unparalleled access to timely and detailed observations of the Earth’s surface, frequently updated on a daily or even hourly basis. This chapter introduces the main types of satellite imagery, how they are collected and prepared for analysis, and common methods used to interpret them.
 
@@ -32,13 +31,13 @@ DAB: I really like the practice of setting out the chapter with a short section 
 ### Resolution Dimensions
 
 ::: {.column-margin .callout-warning title="Review comment"}
-DAB: Expand/reshape into "how to think about satellite resolution" as a social scientist. One way could be by starting with a definition of resolution that is relevant for social scientists, then mapping that onto satellites, and providing much of the detail that's already below. 
+DAB: Expand/reshape into "how to think about satellite resolution" as a social scientist. One way could be by starting with a definition of resolution that is relevant for social scientists, then mapping that onto satellites, and providing much of the detail that's already below.
 :::
 
 Understanding the concept of resolution is critical when working with satellite imagery. For social scientists, it is crucial to select a level of detail that allows social and economic processes to be observed meaningfully. Such choices might involve choosing a spatial resolution fine enough to capture local variation in livelihoods or a temporal resolution frequent enough to measure environmental or economic change over time. Each type of resolution describes a different aspect of how satellite data captures and represents features on the Earth's surface. Together, they determine the usefulness of the imagery for particular applications. The four main types of resolution are spatial, temporal, spectral, and radiometric resolution. A summary of these differences is presented in @tbl-resolution_comparison along with a visual depiction of their main differences in @fig-imagery_resolution_types.
 
 | **Resolution Type** | **Definition** | **Example Satellites / Sensors** | **Typical Applications** |
-|---------------|---------------|------------------|-------------------------|
+|-----------------|-----------------|-----------------|---------------------|
 | Spatial Resolution | Size of ground area represented by each pixel. | WorldView-3 (0.31 m), Sentinel-2 (10 m), MODIS (250–1000 m) | Urban planning, infrastructure monitoring, land cover classification |
 | Temporal Resolution | Frequency with which a satellite revisits the same location. | PlanetScope (daily), Sentinel-2 (5 days with constellation), Landsat 8 (16 days) | Change detection, crop monitoring, disaster response |
 | Spectral Resolution | Number and width of spectral bands captured. | Sentinel-2 (13 bands), Hyperion (220 bands) | Vegetation health, mineral mapping, environmental analysis |
@@ -57,7 +56,7 @@ Spatial resolution, one of the most commonly considered indicators of imagery us
 ------------------------------------------------------------------------
 
 ::: {.column-margin .callout-warning title="Review comment"}
-DAB: [Applying to the rest of this section] This is a great start on how to introduce these concepts here. I think it needs a further pass to turn it into something that retains the message but it's conveyed in a way that resonates more with social researchers, with the concepts they're used to, and with the realities they work with. In part I think it's about the tone, in part is about how we translate foreign concepts (e.g., spectral, wavelengths, bands). Perhaps it's also about being less heavy on the technical stuff of "how it works" and a bit more on "what that means" for how it can be used in relevant use cases.
+DAB: \[Applying to the rest of this section\] This is a great start on how to introduce these concepts here. I think it needs a further pass to turn it into something that retains the message but it's conveyed in a way that resonates more with social researchers, with the concepts they're used to, and with the realities they work with. In part I think it's about the tone, in part is about how we translate foreign concepts (e.g., spectral, wavelengths, bands). Perhaps it's also about being less heavy on the technical stuff of "how it works" and a bit more on "what that means" for how it can be used in relevant use cases.
 :::
 
 Temporal resolution defines how frequently a satellite captures imagery of the same geographic location. This is essential for observing changes over time, particularly in dynamic or rapidly evolving environments. Satellites with high temporal resolution, such as PlanetScope, can image locations on a near-daily basis, which is valuable for monitoring crop growth, flood events, or wildfire spread. Others, such as Landsat 8, revisit the same location every 16 days, making them more appropriate for long-term environmental monitoring [@wulder2012opening].
@@ -67,7 +66,6 @@ Spectral resolution is the ability of a sensor to detect and differentiate betwe
 Radiometric resolution refers to the sensitivity of a sensor in detecting slight differences in the intensity of radiation energy or brightness. It is expressed in bits, where higher values indicate a greater capacity to capture subtle variations in reflectance. For instance, an 8-bit sensor can record 256 levels of intensity, while a 12-bit sensor, like that on Landsat 8, can distinguish 4,096 levels. Higher radiometric resolution is especially useful in detecting nuanced surface conditions such as vegetation health or surface temperature gradients [@roy2014landsat].
 
 Each resolution type plays a unique role in how satellite imagery can be interpreted and applied. For instance, high spatial resolution is vital for mapping urban features, while high spectral resolution is critical for distinguishing vegetation types or detecting subtle land changes. Most practical applications require balancing these types of resolution according to user needs and available data sources.
-
 
 ### Sensor Types
 
@@ -138,11 +136,8 @@ As satellite imagery becomes more detailed and abundant, managing these large da
 
 Despite these advances, challenges remain. High storage and download costs can limit how much data users can afford to access. In addition, inconsistent metadata—how data is described and labelled—makes it harder to work across different systems. Most critically, access to cloud computing resources is uneven. Many researchers, especially in low-resource settings, may not have the internet connectivity or funding to take full advantage of these platforms [@lowndes2017our]. [DAB: I think it'd be worth expanding this paragraph a bit by tayloring it to social researchers. How do these general challenges map onto more specific issues social scientists experience when dealing with satellite imagery?]{.mark}
 
-
 ::: {.column-margin .callout-warning title="Review comment"}
-DAB:
-1. At some point in this section, it'd be good to add a paragraph on how this landscape of data access compares to that in the social sciences (where access mostly through the download of tables), what the key differences are, and some of the reasons behind it (e.g., data volume). This will help the reader connect with the message and relate to the new content.
-2. I've brough into this section what used to be 3.4.4 because I think it fits the narrative and makes the text more coherent overall.
+DAB: 1. At some point in this section, it'd be good to add a paragraph on how this landscape of data access compares to that in the social sciences (where access mostly through the download of tables), what the key differences are, and some of the reasons behind it (e.g., data volume). This will help the reader connect with the message and relate to the new content. 2. I've brough into this section what used to be 3.4.4 because I think it fits the narrative and makes the text more coherent overall.
 :::
 
 ### Licensing and Cost
@@ -190,7 +185,7 @@ Satellite images can sometimes contain unwanted errors or ‘noise’ that make 
 ### Derivation of Indices
 
 ::: {.column-margin .callout-warning title="Review comment"}
-DAB: I'd suggest to turn this into its own section (e.g., 3.7). This is very core to what Imago is about, and we should be able to write a good one on this that gives this step the relevance and credit we think it deserves. We will also be able to pull from all the experience in the product teams to write this well. 
+DAB: I'd suggest to turn this into its own section (e.g., 3.7). This is very core to what Imago is about, and we should be able to write a good one on this that gives this step the relevance and credit we think it deserves. We will also be able to pull from all the experience in the product teams to write this well.
 :::
 
 Satellite images capture different types of light reflected from the Earth's surface. By combining these light measurements in special ways called “indices,” it becomes easier to see and understand certain features. One common example is the Normalised Difference Vegetation Index (NDVI), which uses light reflected from plants to show how healthy the vegetation is. Healthy plants reflect more near-infrared light and less red light, so NDVI highlights areas with thriving greenery [@huete2002overview]. Other indices help detect water, assess fire damage, or identify urban areas. These tools turn complex satellite data into simple, meaningful pictures that support environmental monitoring and decision-making.
@@ -198,7 +193,7 @@ Satellite images capture different types of light reflected from the Earth's sur
 ## Analytical Methods and Tools
 
 ::: {.column-margin .callout-warning title="Review comment"}
-DAB: I think we should make this into a separate chapter. It feels like _so_ much for a single one to cover properly. We will also be working more on this as we advance data products and workshops, and there's a lot of scope to do a really good job on this one. I'd suggest to take the content as it is now, and stuff it in a separate chapter on methods that we do _not_ release officially on v0.1 in December, but that we keep to continue building on as we develop more workshop material, etc.
+DAB: I think we should make this into a separate chapter. It feels like *so* much for a single one to cover properly. We will also be working more on this as we advance data products and workshops, and there's a lot of scope to do a really good job on this one. I'd suggest to take the content as it is now, and stuff it in a separate chapter on methods that we do *not* release officially on v0.1 in December, but that we keep to continue building on as we develop more workshop material, etc.
 
 I think there's a really good opportunity here to turn this chapter into something super useful by presenting some of the standard stuff in satellite imagery but with a social science twist that really speaks to our audience and that cannot be found elsewhere. Let's build on top of this in that direction.
 :::
@@ -230,7 +225,7 @@ DAB: I wonder if this sub-section could also be expanded into a separate (shorte
 
 [`https://geographicdata.science/book/notebooks/02_geospatial_computational_environment.html`](https://geographicdata.science/book/notebooks/02_geospatial_computational_environment.html)
 
-We will also have to build _something_ like this for some of the workshops we'll deliver, so I think it makes sense to consider from the start as its own chapter we can point all sorts of folks to.
+We will also have to build *something* like this for some of the workshops we'll deliver, so I think it makes sense to consider from the start as its own chapter we can point all sorts of folks to.
 :::
 
 Specialised software and programming languages help experts manage, analyse, and visualise satellite data. Tools like QGIS, ENVI, and SNAP provide user-friendly interfaces for working with geospatial data, while programming languages such as Python enable custom analyses through libraries like `rasterio` [@rasterio] and `scikit-learn` [@scikit-learn]. Cloud platforms, including Google Earth Engine (GEE), have further expanded access by allowing large-scale processing without needing powerful local computers [@gorelick2017google].
