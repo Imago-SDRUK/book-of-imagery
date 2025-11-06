@@ -8,7 +8,7 @@ format: html
 ::: {.column-margin .callout-warning title="Review comment"}
 SP: A simplified introduction :
 
-"Open a picture on your computer and zoom in until you cannot anymore. What you see are pixels—the building blocks of any digital image. Your picture captures visible light. Satellite data does the same thing, but for the entire world.Satellite imagery is "raster" data: a grid where each pixel holds a value representing a specific measurement. Satellites carry multiple sensors, each designed to capture different types of information—spectral (which wavelengths?), spatial (how detailed?), temporal (how often?), and radiometric (how precise?). Unlike aircraft surveys or ground-based field measurements, satellites provide consistent, large-scale coverage across regions and continents, enabling systematic monitoring over time."
+"Open a picture on your computer and zoom in until you cannot anymore. What you see are pixels—the building blocks of any digital image. Your picture captures visible light. Satellite data is the result of a similar exercise, but for the entire world for a wide variety of signals. Satellite imagery is "raster" data: a grid where each pixel holds a value representing a specific measurement. Satellites carry multiple sensors, designed to capture different types of information — spectral (which wavelengths?), spatial (how detailed?), temporal (how often?), and radiometric (how precise?). Unlike aircraft surveys or ground-based field measurements, satellites provide consistent, large-scale coverage across regions and continents, enabling systematic monitoring over time."
 :::
 
 [DAB: this first para feels a bit too technical for a start. Massage to do a bit more hand-holding of the reader.]{.mark} Satellite imagery constitutes one of the most powerful sources of information for understanding the Earth’s surface and its dynamic processes. Defined broadly as grid-based or raster data, where the Earth's surface is represented as a matrix of pixels (or “grid cells”), each with a value corresponding to a specific measurement, captured by sensors mounted on orbital platforms. These data encompass a range of spectral, spatial, temporal, and radiometric characteristics that distinguish them from traditional, ground-based environmental observations. Unlike airborne systems that typically conduct surveys using aircraft such as small to medium-sized planes, helicopters, or drones (UAVs), or *in situ* field measurements, satellite data provide consistent, synoptic coverage across national and continental scales, enabling systematic monitoring over time.
@@ -41,6 +41,14 @@ DAB: I really like the practice of setting out the chapter with a short section 
 DAB: Expand/reshape into "how to think about satellite resolution" as a social scientist. One way could be by starting with a definition of resolution that is relevant for social scientists, then mapping that onto satellites, and providing much of the detail that's already below.
 :::
 
+::: {.column-margin .callout-warning title ="Review comment"}
+SP: I took a shot at expanding this in response to the comment above. 
+__________________________________
+"Social scientists and policy makers think about resolution all the time — they just don't call it that. When choosing data, they constantly ask: what scale of analysis matches my question? @carozzi2016sending studied transfers to Italian municipalities using both city-level data and information on individual politicians — a choice about spatial and administrative granularity driven by their question. @pana2021country analyzed COVID-19 causalities using country-level aggregates because national determinants was their focus. The fundamental question driving these choices is always: *what level of detail do I need to answer my research question?*
+
+Satellite imagery works the same way. "Resolution" is simply the satellite equivalent of choosing your unit of analysis. Just as a researcher decides whether to work with individual, neighborhood, city, or country-level data, satellite users must choose imagery that matches the scale of the social or environmental processes they want to observe.""
+:::
+
 Understanding the concept of resolution is critical when working with satellite imagery. For social scientists, it is crucial to select a level of detail that allows social and economic processes to be observed meaningfully. Such choices might involve choosing a spatial resolution fine enough to capture local variation in livelihoods or a temporal resolution frequent enough to measure environmental or economic change over time. Each type of resolution describes a different aspect of how satellite data captures and represents features on the Earth's surface. Together, they determine the usefulness of the imagery for particular applications. The four main types of resolution are spatial, temporal, spectral, and radiometric resolution. A summary of these differences is presented in @tbl-resolution_comparison along with a visual depiction of their main differences in @fig-imagery_resolution_types.
 
 | **Resolution Type** | **Definition** | **Example Satellites / Sensors** | **Typical Applications** |
@@ -64,6 +72,10 @@ Spatial resolution, one of the most commonly considered indicators of imagery us
 
 ::: {.column-margin .callout-warning title="Review comment"}
 DAB: \[Applying to the rest of this section\] This is a great start on how to introduce these concepts here. I think it needs a further pass to turn it into something that retains the message but it's conveyed in a way that resonates more with social researchers, with the concepts they're used to, and with the realities they work with. In part I think it's about the tone, in part is about how we translate foreign concepts (e.g., spectral, wavelengths, bands). Perhaps it's also about being less heavy on the technical stuff of "how it works" and a bit more on "what that means" for how it can be used in relevant use cases.
+:::
+
+::: {.column-margin .callout-warning title="Review comment"}
+SP: What if we describe some examples of these bands e.g. have a box describing the 13 bands for Sentinel?
 :::
 
 Temporal resolution defines how frequently a satellite captures imagery of the same geographic location. This is essential for observing changes over time, particularly in dynamic or rapidly evolving environments. Satellites with high temporal resolution, such as PlanetScope, can image locations on a near-daily basis, which is valuable for monitoring crop growth, flood events, or wildfire spread. Others, such as Landsat 8, revisit the same location every 16 days, making them more appropriate for long-term environmental monitoring [@wulder2012opening].

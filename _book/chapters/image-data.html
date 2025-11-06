@@ -255,10 +255,25 @@ div.csl-indent {
 </header>
 
 
-<section id="introduction" class="level2" data-number="3.1">
+<section id="introduction" class="level2 page-columns page-full" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">3.1</span> Introduction</h2>
-<p><mark>DAB: this first para feels a bit too technical for a start. Massage to do a bit more hand-holding of the reader.</mark> Satellite imagery constitutes one of the most powerful sources of information for understanding the Earth’s surface and its dynamic processes. Defined broadly as grid-based or raster data, where the Earth’s surface is represented as a matrix of pixels (or “grid cells”), each with a value corresponding to a specific measurement, captured by sensors mounted on orbital platforms. These data encompass a range of spectral, spatial, temporal, and radiometric characteristics that distinguish them from traditional, ground-based environmental observations. Unlike airborne systems that typically conduct surveys using aircraft such as small to medium-sized planes, helicopters, or drones (UAVs), or <em>in situ</em> field measurements, satellite data provide consistent, synoptic coverage across national and continental scales, enabling systematic monitoring over time.</p>
-<p>Since the launch of Sputnik 1<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> in 1957 and Landsat 1<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> in 1972, the satellite industry has experienced profound change. Satellite remote sensing has rapidly advanced alongside improvements in sensor technology, data storage over the last seventy years. What used to be a domain comprising a few national space agencies has evolved into a vibrant ecosystem that also encompasses private companies, public–private partnerships, and small satellite constellations <span class="citation" data-cites="undseth2021evolving">(<a href="references.html#ref-undseth2021evolving" role="doc-biblioref">Undseth, Jolly, and Olivari 2021</a>)</span>. Today, hundreds of satellites operated by governments and private companies provide images with a level of detail and frequency that would have been impossible just a decade ago. Simultaneously, developments in cloud computing and machine learning have substantially simplified the storage, processing and analysis of large volumes of high-resolution data. For researchers, these advances mean unparalleled access to timely and detailed observations of the Earth’s surface, frequently updated on a daily or even hourly basis. This chapter introduces the main types of satellite imagery, how they are collected and prepared for analysis, and common methods used to interpret them.</p>
+
+<div class="no-row-height column-margin column-container"><div class="callout callout-style-default callout-warning callout-titled" title="Review comment">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Review comment
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>SP: A simplified introduction :</p>
+<p>“Open a picture on your computer and zoom in until you cannot anymore. What you see are pixels—the building blocks of any digital image. Your picture captures visible light. Satellite data is the result of a similar exercise, but for the entire world for a wide variety of signals. Satellite imagery is”raster” data: a grid where each pixel holds a value representing a specific measurement. Satellites carry multiple sensors, designed to capture different types of information — spectral (which wavelengths?), spatial (how detailed?), temporal (how often?), and radiometric (how precise?). Unlike aircraft surveys or ground-based field measurements, satellites provide consistent, large-scale coverage across regions and continents, enabling systematic monitoring over time.”</p>
+</div>
+</div></div><p><mark>DAB: this first para feels a bit too technical for a start. Massage to do a bit more hand-holding of the reader.</mark> Satellite imagery constitutes one of the most powerful sources of information for understanding the Earth’s surface and its dynamic processes. Defined broadly as grid-based or raster data, where the Earth’s surface is represented as a matrix of pixels (or “grid cells”), each with a value corresponding to a specific measurement, captured by sensors mounted on orbital platforms. These data encompass a range of spectral, spatial, temporal, and radiometric characteristics that distinguish them from traditional, ground-based environmental observations. Unlike airborne systems that typically conduct surveys using aircraft such as small to medium-sized planes, helicopters, or drones (UAVs), or <em>in situ</em> field measurements, satellite data provide consistent, synoptic coverage across national and continental scales, enabling systematic monitoring over time.</p>
+<p>Since the launch of Sputnik 1<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> in 1957 and Landsat 1<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> in 1972, the satellite industry has experienced profound change. Satellite remote sensing has rapidly advanced alongside improvements in sensor technology, data storage over the last seventy years. What used to be a domain comprising a few national space agencies has evolved into a vibrant ecosystem that also encompasses private companies, public–private partnerships, and small satellite constellations <span class="citation" data-cites="undseth2021evolving">(<a href="references.html#ref-undseth2021evolving" role="doc-biblioref">Undseth, Jolly, and Olivari 2021</a>)</span>. Today, hundreds of satellites operated by governments and private companies provide images with a level of detail and frequency that would have been impossible just a decade ago.</p>
+<p>Simultaneously, developments in cloud computing and machine learning have substantially simplified the storage, processing and analysis of large volumes of high-resolution data. For researchers, these advances mean unparalleled access to timely and detailed observations of the Earth’s surface, frequently updated on a daily or even hourly basis. This chapter introduces the main types of satellite imagery, how they are collected and prepared for analysis, and common methods used to interpret them.</p>
 </section>
 <section id="chapter-objectives" class="level2 page-columns page-full" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="chapter-objectives"><span class="header-section-number">3.2</span> Chapter Objectives</h2>
@@ -304,7 +319,21 @@ div.csl-indent {
 <div class="callout-body-container callout-body">
 <p>DAB: Expand/reshape into “how to think about satellite resolution” as a social scientist. One way could be by starting with a definition of resolution that is relevant for social scientists, then mapping that onto satellites, and providing much of the detail that’s already below.</p>
 </div>
-</div></div><p>Understanding the concept of resolution is critical when working with satellite imagery. For social scientists, it is crucial to select a level of detail that allows social and economic processes to be observed meaningfully. Such choices might involve choosing a spatial resolution fine enough to capture local variation in livelihoods or a temporal resolution frequent enough to measure environmental or economic change over time. Each type of resolution describes a different aspect of how satellite data captures and represents features on the Earth’s surface. Together, they determine the usefulness of the imagery for particular applications. The four main types of resolution are spatial, temporal, spectral, and radiometric resolution. A summary of these differences is presented in <a href="#tbl-resolution_comparison" class="quarto-xref">Table&nbsp;<span>3.1</span></a> along with a visual depiction of their main differences in <a href="#fig-imagery_resolution_types" class="quarto-xref">Figure&nbsp;<span>3.1</span></a>.</p>
+</div><div class="callout callout-style-default callout-warning callout-titled" title="Review comment">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Review comment
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>SP: I took a shot at expanding this in response to the comment above. __________________________________ “Social scientists and policy makers think about resolution all the time — they just don’t call it that. When choosing data, they constantly ask: what scale of analysis matches my question? <span class="citation" data-cites="carozzi2016sending">Carozzi and Repetto (<a href="references.html#ref-carozzi2016sending" role="doc-biblioref">2016</a>)</span> studied transfers to Italian municipalities using both city-level data and information on individual politicians — a choice about spatial and administrative granularity driven by their question. <span class="citation" data-cites="pana2021country">Pana et al. (<a href="references.html#ref-pana2021country" role="doc-biblioref">2021</a>)</span> analyzed COVID-19 causalities using country-level aggregates because national determinants was their focus. The fundamental question driving these choices is always: <em>what level of detail do I need to answer my research question?</em></p>
+<p>Satellite imagery works the same way. “Resolution” is simply the satellite equivalent of choosing your unit of analysis. Just as a researcher decides whether to work with individual, neighborhood, city, or country-level data, satellite users must choose imagery that matches the scale of the social or environmental processes they want to observe.””</p>
+</div>
+</div></div>
+<p>Understanding the concept of resolution is critical when working with satellite imagery. For social scientists, it is crucial to select a level of detail that allows social and economic processes to be observed meaningfully. Such choices might involve choosing a spatial resolution fine enough to capture local variation in livelihoods or a temporal resolution frequent enough to measure environmental or economic change over time. Each type of resolution describes a different aspect of how satellite data captures and represents features on the Earth’s surface. Together, they determine the usefulness of the imagery for particular applications. The four main types of resolution are spatial, temporal, spectral, and radiometric resolution. A summary of these differences is presented in <a href="#tbl-resolution_comparison" class="quarto-xref">Table&nbsp;<span>3.1</span></a> along with a visual depiction of their main differences in <a href="#fig-imagery_resolution_types" class="quarto-xref">Figure&nbsp;<span>3.1</span></a>.</p>
 <div id="tbl-resolution_comparison" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-resolution_comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -313,10 +342,10 @@ Table&nbsp;3.1: Comparison of the four key resolution dimensions in satellite im
 <div aria-describedby="tbl-resolution_comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 23%">
-<col style="width: 23%">
-<col style="width: 23%">
-<col style="width: 28%">
+<col style="width: 24%">
+<col style="width: 24%">
+<col style="width: 24%">
+<col style="width: 27%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -747,6 +776,9 @@ Campbell, James B, and Randolph H Wynne. 2011. <em>Introduction to Remote Sensin
 <div id="ref-cardille2024cloud" class="csl-entry" role="listitem">
 Cardille, Jeffrey A, Morgan A Crowley, David Saah, and Nicholas E Clinton. 2024. <span>“Cloud-Based Remote Sensing with Google Earth Engine: Fundamentals and Applications.”</span> Springer Nature.
 </div>
+<div id="ref-carozzi2016sending" class="csl-entry" role="listitem">
+Carozzi, Felipe, and Luca Repetto. 2016. <span>“Sending the Pork Home: Birth Town Bias in Transfers to Italian Municipalities.”</span> <em>Journal of Public Economics</em> 134: 42–52.
+</div>
 <div id="ref-curzi2020large" class="csl-entry" role="listitem">
 Curzi, Giacomo, Dario Modenini, and Paolo Tortora. 2020. <span>“Large Constellations of Small Satellites: A Survey of Near Future Challenges and Missions.”</span> <em>Aerospace</em> 7 (9): 133.
 </div>
@@ -803,6 +835,9 @@ Missions, Landsat. 2019. <span>“Landsat 8 Data Users Handbook.”</span> <em>L
 </div>
 <div id="ref-mutanga2019google" class="csl-entry" role="listitem">
 Mutanga, Onisimo, and Lalit Kumar. 2019. <span>“Google Earth Engine Applications.”</span> <em>Remote Sensing</em>. MDPI.
+</div>
+<div id="ref-pana2021country" class="csl-entry" role="listitem">
+Pana, Tiberiu A, Sohinee Bhattacharya, David T Gamble, Zahra Pasdar, Weronika A Szlachetka, Jesus A Perdomo-Lampignano, Kai D Ewers, David J McLernon, and Phyo K Myint. 2021. <span>“Country-Level Determinants of the Severity of the First Global Wave of the COVID-19 Pandemic: An Ecological Study.”</span> <em>BMJ Open</em> 11 (2): e042034.
 </div>
 <div id="ref-scikit-learn" class="csl-entry" role="listitem">
 Pedregosa et al. 2011. <em>Scikit-Learn: Machine Learning in Python</em>. <em>Journal of Machine Learning Research</em>. Vol. 12. <a href="https://scikit-learn.org/stable/">https://scikit-learn.org/stable/</a>.
