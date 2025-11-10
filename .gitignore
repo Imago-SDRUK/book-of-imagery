@@ -208,3 +208,5 @@ __marimo__/
 
 /.quarto/
 .Rproj.user
+
+**/*.quarto_ipynb
