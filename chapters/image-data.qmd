@@ -3,7 +3,7 @@ title: "Satellite Imagery Data"
 author: "Ron Mahabir"
 format: html
 ---
-kkkkk
+
 ## Introduction
 ::: {.column-margin .callout-warning title="Review comment"}
 SP: A simplified introduction :
