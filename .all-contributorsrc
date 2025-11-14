@@ -64,6 +64,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "itsshaonlee",
+      "name": "Shaonlee Patranabis",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45726549?v=4",
+      "profile": "https://github.com/itsshaonlee",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
