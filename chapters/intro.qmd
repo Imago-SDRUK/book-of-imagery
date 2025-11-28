@@ -22,11 +22,13 @@ We are living in a fast changing society needing timely, spatially granular, and
 MVP: The statement underexploited, not sure if it is entirely correct especially nowadays with everyone using satellite data. Perhaps if you wanted to say that it is underexplored for social scientists and policy makers, in a way that they would need something ready to use rather than have experience on processing images. Somehow if you could make it more specific in this first sentence would look better. I know that we have social science and policy as a title but stil I think this sentence needs to be more specific.
 :::
 
-Satellite imagery offers a powerful and underexploited data solution. For more than half a century, satellites have orbited the Earth, capturing a detailed record of its surface and atmosphere. Initially designed for environmental monitoring, these data now represent an unparalleled observational archive of human and natural systems. Imagery captures the physical fabric of places, density of buildings, presence of green and blue spaces, road networks and informal settlements. 
 ::: {.column-margin .callout-warning title="Review comment"}
-MVP: Should you also say here and many other features of the Earth's surface? Satellite data represent more than what the sentence says.
+EP: I agree we should be careful about the term underexploited here. I would rephrase to something slightly softer
 :::
-It does this consistently across the globe and can capture change at multiple scales from local neighbourhood areas to national borders or entire continents. Unlike most traditional forms of social data, which are geographically fragmented and slow to update, imagery is comprehensive, timely and replicable.
+
+Satellite imagery offers a powerful and underexploited data solution. For more than half a century, satellites have orbited the Earth, capturing a detailed record of its surface and atmosphere. Initially designed for environmental monitoring, these data now represent an unparalleled observational archive of human and natural systems. Imagery captures the physical fabric of places, density of buildings, presence of green and blue spaces, road networks and informal settlements. ::: {.column-margin .callout-warning title="Review comment"} MVP: Should you also say here and many other features of the Earth's surface? Satellite data represent more than what the sentence says. ::: It does this consistently across the globe and can capture change at multiple scales from local neighbourhood areas to national borders or entire continents. Unlike most traditional forms of social data, which are geographically fragmented and slow to update, imagery is comprehensive, timely and replicable.
+
+::: {.column-margin .callout-warning title="Review comment"} MVP: Should you also say here and many other features of the Earth's surface? Satellite data represent more than what the sentence says. :::
 
 An increasing volume of research has already demonstrated the promise of satellite imagery. Night-time lights have been used as proxies for economic activity and inequality across the globe (Henderson, Storeygard, & Weil, 2012) and sense changes in urban energy consumption (Rowe, Robinson & Patias 2022). Multispectral imagery has enabled the mapping of urban deprivation (Arribas-Bel, Patino, & Duque, 2017) and the monitoring of land use change in fast-growing regions (Brown et al., 2004). More recent advances in computer vision and machine learning further enhance our capacity to derive meaningful indicators from raw pixels, opening a new frontier for social research and policy. The challenge (and opportunity) lies in integrating these data into the mainstream to illuminate processes that have long remained in the shadows, to take satellites into the standard toolkit. Key to this challenge is making imagery more accessible and usable.
 
@@ -61,7 +63,7 @@ Satellites view the entire Earth, offering data that extend across countries, re
 ### Spatial resolution
 
 ::: {.column-margin .callout-warning title="Review comment"}
-MVP: I am thinking that from the intro we need to specify what is coarse =, high resolution and very high resolution imagery because it might be different in people's mind. We can say coarse (km) medium (10s of metres) high (metre level) very high (decimetre to cm level). The earlier we specify this the better for the reader. 
+MVP: I am thinking that from the intro we need to specify what is coarse =, high resolution and very high resolution imagery because it might be different in people's mind. We can say coarse (km) medium (10s of metres) high (metre level) very high (decimetre to cm level). The earlier we specify this the better for the reader.
 :::
 
 Modern satellite platforms capture imagery at a range of spatial resolutions from kilometres to less than one metre per pixel. Coarser imagery provides consistent monitoring of land cover and climate-related variables at regional and national scales. Very high-resolution imagery can reveal building footprints, street patterns and even the configuration of green spaces at the neighbourhood level. This multi-scale capacity makes imagery a flexible resource: it can illuminate both macro-level transformations such as urban sprawl (Brown et al., 2004) and micro-scale differences in the built environment associated with health or wellbeing (Metzler et al., 2023).
@@ -69,12 +71,12 @@ Modern satellite platforms capture imagery at a range of spatial resolutions fro
 ### Temporal frequency and timeliness
 
 ::: {.column-margin .callout-warning title="Review comment"}
-MVP: At some point in the future would be nice to add a graph that shows various temporal vs spatial resolution per satellite for different applications, there are graphs like that but perhaps we could focus on social type of applications, because most graphs are on ecology or environmental etc. 
+MVP: At some point in the future would be nice to add a graph that shows various temporal vs spatial resolution per satellite for different applications, there are graphs like that but perhaps we could focus on social type of applications, because most graphs are on ecology or environmental etc.
 :::
 
-Satellite missions provide regular and predictable revisits ranging from daily (e.g. PlanetScope) to a few days or weeks (e.g. Sentinel-2 and Landsat). This cadence allows researchers and policymakers to generate consistent time series and monitor rapid changes in near real-time. For example, vegetation indices derived from multispectral imagery can track seasonal dynamics in urban greenness, while radar imagery can detect flood extents immediately after a storm. Such timeliness is difficult to achieve with traditional data sources, which are often updated only every few years. There is often a trade-off in satellite data between resolution and frequency, but technological advances such as nanosat constellations[^intro-1] are constantly pushing outwards the frontier at which this trade-off takes place.
+Satellite missions provide regular and predictable revisits ranging from daily (e.g. PlanetScope) to a few days or weeks (e.g. Sentinel-2 and Landsat). This cadence allows researchers and policymakers to generate consistent time series and monitor rapid changes in near real-time. For example, vegetation indices derived from multispectral imagery can track seasonal dynamics in urban greenness, while radar imagery can detect flood extents immediately after a storm. Such timeliness is difficult to achieve with traditional data sources, which are often updated only every few years. There is often a trade-off in satellite data between resolution and frequency, but technological advances such as nanosat constellations[^1] are constantly pushing outwards the frontier at which this trade-off takes place.
 
-[^intro-1]: Fleets of shoe-box sized satellites that can obtain ever higher resolution at very high frequencies.
+[^1]: Fleets of shoe-box sized satellites that can obtain ever higher resolution at very high frequencies.
 
 ### Retrospective power
 
@@ -103,6 +105,11 @@ By linking these imagery-derived measures to administrative health records, stud
 
 The key advantage is comprehensiveness and comparability. Unlike local audits or surveys, satellite imagery captures greenspace consistently across entire cities and regions, enabling cross-neighbourhood benchmarking and long-term monitoring. This makes it a unique input into strategies for healthy and sustainable urban development.
 :::
+
+::: {.column-margin .callout-warning title="Review comment"}
+EP: I would suggest the above needs repositioning now that we are going with RGB - even from now, so that it addresses both green and built environments and their effects on health and well being. Concrete vs. parks story.
+:::
+
 
 ## Why now? The timely confluence of technological advances and shifting societal needs {#sec-intro_whynow}
 
@@ -173,7 +180,6 @@ Taken together, these changes may mark an inflection point. The barriers that hi
 <!-- - Highlight IMAGO’s mission: to make imagery usable, useful, and used for these communities. \ -->
 
 ::: {.column-margin .callout-tip title="Box 1.3: Detecting Informal Settlements and Housing Inequality for Inclusive Policy"}
-
 Currently, informal settlements house over a billion people globally, with this number expected to increase substantially over the next 30 years (United Nations, 2023). Yet, they are often absent from official statistics and maps. This invisibility perpetuates exclusion, making it difficult for governments and international organisations to target investments in housing, sanitation, and health.
 
 Satellite imagery offers a way forward. High-resolution optical data, combined with machine learning classifiers, can detect the dense, irregular patterns characteristic of informal housing. Studies in sub-Saharan Africa and South Asia have demonstrated that imagery-based maps of settlement extent align closely with ground surveys, but can be produced faster, at lower cost, and with full coverage (Kuffer et al., 2016; Mahabir et al., 2018).
@@ -188,8 +194,13 @@ This example illustrates the central case for imagery in social science and poli
 Every second of human existence is now recorded from space. The challenge is no longer availability — it's use. Despite a world of data being generated, a persistent gap remains between what satellites capture and what reaches policy makers' hands. Pioneers have already shown how imagery can move the needle. Yet broader impact requires removing the frictions that keep this data out of reach. Imago bridges this gap.
 
 ### Persistent gaps in evidence
+
 ::: {.column-margin .callout-warning title="Review comment"}
 SP: I feel this sub section is too far down, it should be up in the beginning. It is the gap we are bridging, and therefore the raison d'etre for the BoI. If we justify it in the penultimate subsection, it feels too late to talk about it. My vote would be to put it in the intro to 2.2.
+:::
+
+::: {.column-margin .callout-warning title="Review comment"}
+EP: I agree with Shaonlee - the gap being addressed should come higher up.
 :::
 
 Across social research and policy, an enduring challenge is the lack of timely, reliable and spatially detailed data. Inequalities in health, prosperity and wellbeing often manifest at local scales: between neighbourhoods, across urban–rural divides or within regions. Yet, the data streams traditionally used to study these questions rarely provide the necessary resolution or frequency. Censuses are comprehensive but infrequent. Household surveys are costly and often geographically limited. Administrative data can be inconsistent or inaccessible due to privacy and governance restrictions. These gaps are especially acute in areas where policy demand is greatest: monitoring the uneven impacts of climate hazards, evaluating local housing markets, or designing interventions to address health disparities.
@@ -201,6 +212,11 @@ Satellite imagery directly addresses these shortcomings. Its global, repeated co
 ::: {.column-margin .callout-warning title="Review comment"}
 DAB: This section feel a bit unfinished. Perhaps it needs a better intro to show it is a list of areas where satellites have already moved the needle.
 :::
+
+::: {.column-margin .callout-warning title="Review comment"}
+EP: I know this is a work in progress but I think eventually, perhaps not in the intro this list of applications needs to be more structured and at least a bit more complete. Feels a bit like random (although very notable) examples. Needs tobe substantiated.
+:::
+
 
 The potential of imagery has been demonstrated through a growing body of research showcasing its promise across multiple relevant domains, for example:
 
@@ -235,6 +251,7 @@ By addressing these three pillars, imagery can evolve from a promising niche res
 ::: {.column-margin .callout-warning title="Review comment"}
 DAB: add additional pass
 :::
+
 ::: {.column-margin .callout-warning title="Review comment"}
 SP: Made edits for flow and readability, please check.
 :::
@@ -243,9 +260,9 @@ SP: Made edits for flow and readability, please check.
 MVP: I have a similar feeling that this has been rushed a bit.
 :::
 
-Despite its promise, the widespread adoption of imagery in social science and policy remains constrained. There are broadly three classes of frictions - in processing, in understanding, and finally, in use. 
+Despite its promise, the widespread adoption of imagery in social science and policy remains constrained. There are broadly three classes of frictions - in processing, in understanding, and finally, in use.
 
-Processing satellite data is *technically complex*, imagery is large in volume, stored in arcane formats, and requires technical expertise as well as specialist computing infrastructure to use. Extracting metrics from pixels involves terabytes of data and advanced processing pipelines. 
+Processing satellite data is *technically complex*, imagery is large in volume, stored in arcane formats, and requires technical expertise as well as specialist computing infrastructure to use. Extracting metrics from pixels involves terabytes of data and advanced processing pipelines.
 
 There is a *translation gap*, in as much as a pixel is meaningless to a policy maker. The practitioners in need of this data do not work with raw imagery, but with interpretable measures (e.g. building density, greenspace exposure). The process of making raw imagery useful is often as demanding as processing it. Moreover, training in imagery analysis is largely absent from social science curricula, leaving potential users without the skills or resources to engage with these data.
 
