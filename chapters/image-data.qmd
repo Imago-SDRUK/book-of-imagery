@@ -27,6 +27,10 @@ Simultaneously, developments in cloud computing and machine learning have substa
 DAB: I really like the practice of setting out the chapter with a short section like this frontloading what the reader will learn in it. Perhaps we should make it part of the standard "chapter template"? To be discussed as a team.
 :::
 
+::: {.column-margin .callout-warning title="Review comment"}
+EP: I would agree, setting out what reader will learn + find a way to capture their imagination. 
+:::
+
 1.  Introduce key concepts and terminology associated with satellite imagery.\
 2.  Situate satellite data within the wider geospatial data ecosystem, comparing it with traditional data collection methods.\
 3.  Describe the main sensor types, platforms, and missions, highlighting their strengths and constraints.\
