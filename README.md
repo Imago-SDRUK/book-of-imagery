@@ -46,6 +46,9 @@ Thank you for helping us build open & collaborative open source with Imago!
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/itsshaonlee"><img src="https://avatars.githubusercontent.com/u/45726549?v=4?s=100" width="100px;" alt="Shaonlee Patranabis"/><br /><sub><b>Shaonlee Patranabis</b></sub></a><br /><a href="#content-itsshaonlee" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://www.pietrostefani.com"><img src="https://avatars.githubusercontent.com/u/92875867?v=4?s=100" width="100px;" alt="Elisabetta Pietrostefani"/><br /><sub><b>Elisabetta Pietrostefani</b></sub></a><br /><a href="#content-pietrostefani" title="Content">🖋</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.ncl.ac.uk/engineering/staff/profile/maria-valasiapeppa.html#background"><img src="https://avatars.githubusercontent.com/u/10121324?v=4?s=100" width="100px;" alt="Maria Valasia Peppa"/><br /><sub><b>Maria Valasia Peppa</b></sub></a><br /><a href="https://github.com/Imago-SDRUK/book-of-imagery/commits?author=mvpeppa" title="Documentation">📖</a></td>
+    </tr>
   </tbody>
 </table>
 
