@@ -15,7 +15,7 @@ book:
       This book was built with <a href="https://quarto.org/">Quarto</a>.
   # cover-image: assets/Imago-logo.png
   favicon: assets/Imago-logo.png
-  repo-url: https://github.com/Imago-SDRUK/boi
+  repo-url: https://github.com/Imago-SDRUK/book-of-imagery
   repo-branch: main
   repo-actions: [edit, issue]
 
