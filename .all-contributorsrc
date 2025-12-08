@@ -82,6 +82,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "mvpeppa",
+      "name": "Maria Valasia Peppa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10121324?v=4",
+      "profile": "https://www.ncl.ac.uk/engineering/staff/profile/maria-valasiapeppa.html#background",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
