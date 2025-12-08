@@ -46,7 +46,11 @@ What unites these readers is a shared need to move from *technical possibility t
 ## Uses of this book {.unnumbered}
 
 The book is designed for multiple uses:\
-• *Foundational learning*: understanding how imagery works, what it measures, and how it aligns with social and policy constructs. • *Technical training*: implementing algorithms, workflows and validation procedures used to produce analysis-ready data. • *Applied analysis*: integrating imagery with surveys, administrative data and longitudinal studies to enable spatially informed research. • *Decision support*: using imagery-derived indicators to design, target, evaluate and adapt interventions across policy domains. • *Capacity building*: supporting teams and institutions seeking to embed imagery within their analytical and governance systems.
+• *Foundational learning*: understanding how imagery works, what it measures, and how it aligns with social and policy constructs.\
+• *Technical training*: implementing algorithms, workflows and validation procedures used to produce analysis-ready data.\
+• *Applied analysis*: integrating imagery with surveys, administrative data and longitudinal studies to enable spatially informed research.\
+• *Decision support*: using imagery-derived indicators to design, target, evaluate and adapt interventions across policy domains.\
+• *Capacity building*: supporting teams and institutions seeking to embed imagery within their analytical and governance systems.
 
 ## How to read this book {.unnumbered}
 
