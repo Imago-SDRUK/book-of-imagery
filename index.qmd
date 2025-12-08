@@ -19,7 +19,7 @@ The BoI is also a living, open document. As new algorithms, data products and an
 
 The BoI is also a deliberate instrument for *community- and capacity-building* within *Imago* and the wider ecosystem of users. Imagery is not simply a technical asset. It is a capability when shared understandings, common standards and collective expertise emerge around it. The BoI helps cultivate that shared foundation. By providing a common language, transparent methodologies and reproducible workflows, it supports the formation of a community of practice across disciplines linking remote-sensing specialists, social scientists, data engineers, policy analysts and public-sector practitioners. The BoI contribute to ensuring that users can access imagery-derived data products and also understand how they are produced, how to evaluate their fitness for purpose and apply them responsibly. The BoI is thus part of Imago’s broader commitment to building an enduring, open and skilled community capable of sustaining and advancing the use of imagery-enabled evidence.
 
-## Aim of the Book {.unnumbered}
+## Vision and aims {.unnumbered}
 
 The aim of the *BoI* is threefold:\
 1. To democratise access to imagery by clarifying its potential, limitations and appropriate use.\
@@ -32,7 +32,7 @@ Underlying these goals are several *guiding principles*:\
 • *Transparency and reproducibility*: promoting open methods, open data and clear documentation.\
 • *Ethical responsibility*: ensuring that imagery is used in ways that respect privacy, minimise harm and strengthen equity.\
 
-## Who This Book is for {.unnumbered}
+## Who this book is for {.unnumbered}
 
 The *BoI* is written for a diverse audience that reflects the widening relevance of Earth observation:\
 • Social scientists seeking robust, spatially explicit indicators of environments, infrastructure and inequalities.\
@@ -43,12 +43,12 @@ The *BoI* is written for a diverse audience that reflects the widening relevance
 
 What unites these readers is a shared need to move from *technical possibility to applied insight from pixels to policy*.
 
-## Uses of This Book {.unnumbered}
+## Uses of this book {.unnumbered}
 
 The book is designed for multiple uses:\
 • *Foundational learning*: understanding how imagery works, what it measures, and how it aligns with social and policy constructs. • *Technical training*: implementing algorithms, workflows and validation procedures used to produce analysis-ready data. • *Applied analysis*: integrating imagery with surveys, administrative data and longitudinal studies to enable spatially informed research. • *Decision support*: using imagery-derived indicators to design, target, evaluate and adapt interventions across policy domains. • *Capacity building*: supporting teams and institutions seeking to embed imagery within their analytical and governance systems.
 
-## How to Read This Book {.unnumbered}
+## How to read this book {.unnumbered}
 
 The book can be approached in several ways:\
 • Sequentially, to build a comprehensive understanding of imagery from principles to applications.\
