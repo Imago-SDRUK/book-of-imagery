@@ -1,3 +1,12 @@
+_book/
+.DS_Store
+.Rhistory
+.Rproj.user
+.Rproj.lock
+.qt/
+*.html
+*.log
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -207,3 +216,16 @@ marimo/_lsp/
 __marimo__/
 
 /.quarto/
+.Rproj.user
+<<<<<<< HEAD
+
+**/*.quarto_ipynb
+=======
+.gitignore
+
+**/*.quarto_ipynb
+
+.DS_Store
+_book/
+_quarto_internal_scss_error.scss
+>>>>>>> pr-17-style

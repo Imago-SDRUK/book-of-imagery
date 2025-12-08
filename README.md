@@ -31,3 +31,30 @@ After your PR is merged, comment on an issue or PR:
 See the [emoji key](https://allcontributors.org/docs/en/emoji-key) for available contribution types.
 
 Thank you for helping us build open & collaborative open source with Imago!
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/batoolMM"><img src="https://github.com/batoolMM.png?s=100" width="100px;" alt="Batool"/><br /><sub><b>Batool</b></sub></a><br /><a href="https://github.com/Imago-SDRUK/book-of-imagery/commits?author=batoolMM" title="Code">💻</a> <a href="https://github.com/Imago-SDRUK/book-of-imagery/commits?author=batoolMM" title="Documentation">📖</a> <a href="#maintenance-batoolMM" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/rsmahabir"><img src="https://avatars.githubusercontent.com/u/5866668?v=4?s=100" width="100px;" alt="Islander"/><br /><sub><b>Islander</b></sub></a><br /><a href="#content-rsmahabir" title="Content">🖋</a> <a href="#ideas-rsmahabir" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://franciscorowe.com"><img src="https://avatars.githubusercontent.com/u/28450210?v=4?s=100" width="100px;" alt="Francisco Rowe"/><br /><sub><b>Francisco Rowe</b></sub></a><br /><a href="#content-fcorowe" title="Content">🖋</a> <a href="#infra-fcorowe" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/Imago-SDRUK/book-of-imagery/commits?author=fcorowe" title="Code">💻</a> <a href="#ideas-fcorowe" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-fcorowe" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://darribas.org"><img src="https://avatars.githubusercontent.com/u/417363?v=4?s=100" width="100px;" alt="Dani Arribas-Bel"/><br /><sub><b>Dani Arribas-Bel</b></sub></a><br /><a href="https://github.com/Imago-SDRUK/book-of-imagery/commits?author=darribas" title="Code">💻</a> <a href="https://github.com/Imago-SDRUK/book-of-imagery/commits?author=darribas" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/mpardy"><img src="https://avatars.githubusercontent.com/u/44445841?v=4?s=100" width="100px;" alt="mp"/><br /><sub><b>mp</b></sub></a><br /><a href="https://github.com/Imago-SDRUK/book-of-imagery/pulls?q=is%3Apr+reviewed-by%3Ampardy" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/Imago-SDRUK/book-of-imagery/commits?author=mpardy" title="Code">💻</a> <a href="https://github.com/Imago-SDRUK/book-of-imagery/commits?author=mpardy" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/itsshaonlee"><img src="https://avatars.githubusercontent.com/u/45726549?v=4?s=100" width="100px;" alt="Shaonlee Patranabis"/><br /><sub><b>Shaonlee Patranabis</b></sub></a><br /><a href="#content-itsshaonlee" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.pietrostefani.com"><img src="https://avatars.githubusercontent.com/u/92875867?v=4?s=100" width="100px;" alt="Elisabetta Pietrostefani"/><br /><sub><b>Elisabetta Pietrostefani</b></sub></a><br /><a href="#content-pietrostefani" title="Content">🖋</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.ncl.ac.uk/engineering/staff/profile/maria-valasiapeppa.html#background"><img src="https://avatars.githubusercontent.com/u/10121324?v=4?s=100" width="100px;" alt="Maria Valasia Peppa"/><br /><sub><b>Maria Valasia Peppa</b></sub></a><br /><a href="https://github.com/Imago-SDRUK/book-of-imagery/commits?author=mvpeppa" title="Documentation">📖</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+

@@ -1,9 +1,9 @@
 {
-  "projectName": "Template",
+  "projectName": "book-of-imagery",
   "projectOwner": "Imago-SDRUK",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "repo": "https://github.com/Imago-SDRUK/Template",
+  "repo": "https://github.com/Imago-SDRUK/book-of-imagery",
   "files": [
     "README.md"
   ],
@@ -15,9 +15,86 @@
       "name": "Batool",
       "avatar_url": "https://github.com/batoolMM.png",
       "profile": "https://github.com/batoolMM",
-      "contributions": ["code", "doc", "maintenance"]
+      "contributions": [
+        "code",
+        "doc",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "rsmahabir",
+      "name": "Islander",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5866668?v=4",
+      "profile": "https://github.com/rsmahabir",
+      "contributions": [
+        "content",
+        "ideas"
+      ]
+    },
+    {
+      "login": "fcorowe",
+      "name": "Francisco Rowe",
+      "avatar_url": "https://avatars.githubusercontent.com/u/28450210?v=4",
+      "profile": "http://franciscorowe.com",
+      "contributions": [
+        "content",
+        "infra",
+        "code",
+        "ideas",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "darribas",
+      "name": "Dani Arribas-Bel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/417363?v=4",
+      "profile": "http://darribas.org",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "mpardy",
+      "name": "mp",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44445841?v=4",
+      "profile": "https://github.com/mpardy",
+      "contributions": [
+        "review",
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "itsshaonlee",
+      "name": "Shaonlee Patranabis",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45726549?v=4",
+      "profile": "https://github.com/itsshaonlee",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "pietrostefani",
+      "name": "Elisabetta Pietrostefani",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92875867?v=4",
+      "profile": "http://www.pietrostefani.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "mvpeppa",
+      "name": "Maria Valasia Peppa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10121324?v=4",
+      "profile": "https://www.ncl.ac.uk/engineering/staff/profile/maria-valasiapeppa.html#background",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
-  "badgeTemplate": "flat"
+  "badgeTemplate": "flat",
+  "commitType": "docs",
+  "commitConvention": "angular"
 }

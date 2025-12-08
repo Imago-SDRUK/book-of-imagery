@@ -4,23 +4,23 @@ project:
 book:
   title: "Book of Imagery"
   reader-mode: true
-  
-  author: "Francisco Rowe, Rachel Gaulton, Ron Mahabir and Imago team"
+
+  author: "Francisco Rowe, Ron Mahabir and Imago team"
   date: today
-  
+
   page-footer:
     left: |
       Imago | UKRI Imagery Data Service
     right: |
       This book was built with <a href="https://quarto.org/">Quarto</a>.
-  cover-image: assets/Imago-logo.png
+  # cover-image: assets/Imago-logo.png
   favicon: assets/Imago-logo.png
-  repo-url: https://github.com/Imago-SDRUK/boi
+  repo-url: https://github.com/Imago-SDRUK/book-of-imagery
   repo-branch: main
   repo-actions: [edit, issue]
-  
+
   chapters:
-    - chapters/index.qmd
+    - index.qmd
     - chapters/intro.qmd
     - chapters/image-data.qmd
     - chapters/01_use-case-x.qmd
@@ -32,8 +32,28 @@ bibliography: references.bib
 
 format:
   html:
-    theme: cosmo
+    theme:
+      light:
+        - style/theme.scss
+      dark:
+        - style/dark.scss
+    include-in-header:
+      text: |
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            var sidebar = document.getElementById('quarto-sidebar');
+            const anchor = document.createElement("a")
+            anchor.setAttribute('href', 'https://imago.ac.uk')
+            anchor.style.width = "100%"
+            const image = document.createElement('img') 
+            image.setAttribute('src', '/assets/Imago-logo.png')
+            image.style.width = "100%"
+            anchor?.appendChild(image)
+            sidebar?.prepend(anchor)
+          });
+        </script>
   pdf:
     documentclass: scrreprt
 
 editor: visual
+
