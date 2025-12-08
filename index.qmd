@@ -26,7 +26,7 @@ The aim of the *BoI* is threefold:\
 2. To build capacity by training researchers, analysts and decision-makers in the methods and principles required to process, interpret and apply imagery-derived data products.\
 3. To integrate imagery into mainstream evidence practice, ensuring its insights contribute to social understanding, public policy design and equitable decision-making.
 
-Underlying these goals are several *guiding principles*:\
+Underlying these goals are four key *guiding principles*:\
 • *Accessibility*: lowering technical and conceptual barriers so that imagery becomes usable by non-specialists.\
 • *Interpretability*: emphasising indicators and methods that align with social-science constructs and policy needs.\
 • *Transparency and reproducibility*: promoting open methods, open data and clear documentation.\
