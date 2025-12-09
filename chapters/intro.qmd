@@ -12,6 +12,17 @@ Satellite imagery offers a powerful and underused data solution particularly in 
 
 An increasing volume of research has already demonstrated the promise of satellite imagery. Night-time lights have been used as proxies for economic activity and inequality across the globe [@henderson2012], sense changes in urban energy consumption [@rowe2022] and delineate labour markets [@soto2025]. Multispectral imagery has enabled the mapping of urban deprivation [@arribas-bel2017] and the monitoring of land use change in fast-growing regions [@brown2012]. More recent advances in computer vision and machine learning further enhance our capacity to derive meaningful indicators from raw pixels, opening a new frontier for social research and policy. The challenge (and opportunity) lies in integrating these data into the mainstream to illuminate processes that have long remained in the shadows, to take satellites into the standard toolkit. Key to this challenge is making imagery more accessible and usable.
 
+## Chapter objectives
+
+This chapter seeks to provide readers with an understanding the conceptual foundations that motivate the use of satellite imagery in social science and public policy. Specifically, the chapter aims to:\
+1.	Explain why imagery matters for observing social, environmental and infrastructural inequalities, and why its relevance has grown at this particular technological and policy moment.\
+2. 	Identify the unique strengths of imagery, including its spatial reach, temporal depth and consistency, and how these complement traditional data sources such as surveys, administrative registers and censuses.\
+3.	Describe the recent convergence of technological advances that now make imagery feasible, scalable and policy-relevant.\
+4.	Highlight imagery’s emerging role in addressing societal challenges from climate resilience to infrastructure planning and environmental justice.\
+5.	Introduce the barriers and challenges that have historically limited the uptake of imagery in the social sciences, setting the scene for how *Imago* seeks to overcome them.
+
+After reading this chapter, readers should have a clear understanding of the motivations behind the BoI, the conceptual value of satellite data for social research and the broader landscape in which Imago’s data products and analytical tools are situated.
+
 ## What makes satellite imagery unique? {#sec-intro_unique}
 
 ::: {.column-margin .callout-note icon="false" title="Six Unique Features of Satellite Imagery"}
