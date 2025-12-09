@@ -3,10 +3,32 @@ project:
 
 book:
   title: "Book of Imagery"
+  subtitle: "Translating imagery into meaningful social and policy measures"
   reader-mode: true
 
-  author: "Francisco Rowe, Ron Mahabir and Imago team"
-  date: today
+  author: 
+    - Francisco Rowe
+    - Ron Mahabir
+    - Oily Butters
+    - Batool Almarzouq
+    - Daniel Arribas-Bel
+    - Fang Chen
+    - Jon Elsey
+    - Rachel Franklin
+    - Arturo Guzman Perez
+    - Richard Kingston
+    - Vitaly Kryukov
+    - Shaonlee Patranabis
+    - Martina Pardy
+    - Maria Peppa
+    - Elisabetta Pietrostephani
+    - Emma Radoux
+    - Sarah Rodgers
+    - Behzad Valipour Shokouhi
+    - Paul Watson
+  date: "2025"
+  publisher: "Imago - Data Service for Imagery"
+  edition: "Version 1.0"
 
   page-footer:
     left: |
