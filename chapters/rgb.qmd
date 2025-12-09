@@ -1,0 +1,66 @@
+# RGB: Resources in Green and Built environments
+
+::: {.callout-warning icon="false"}
+The text in this chapter has also been included in the State of Imagery.
+:::
+
+## Introduction
+
+*RGB* (Resources in Green and Built environments) aims to revolutionise our understanding of green and built environments.
+
+The presence of nature and the configuration of
+built environments is a critical determinant of health,
+wellbeing and sustainability across the UK. Exposure
+to conducive environments has been shown to
+support physical activity, reduce stress and mitigate
+(the effects of) air pollution and extreme heat, with
+broader relevance for research on car dependence,
+deprivation, health inequality and prosperity.
+
+Our Resources in *Green and Built environments (RGB)* data product lowers the barrier for researchers
+and policymakers by translating complex satellite
+imagery into accessible, tabular indicators
+characterising a given environment. RGB can then be
+easily linked with datasets covering social, economic,
+and health dimensions.
+
+## What does RGB offer?
+
+*RGB* provides harmonised information on the
+presence, quality and characteristics of different types
+of green and built environments across the UK.
+
+Drawing on sources such as 10-metre-resolution
+Sentinel-2 satellite imagery, it provides a consistent
+and regularly updated national view of the location,
+distribution, and temporal variation of components of
+the built environment, supporting comparisons across
+both places and time.
+
+Our initial release will be at the LSOA level, and
+subsequent updates will broaden the menu of
+geographies available to best accommodate
+researchers’ needs.
+
+## What do we gain from understanding exposure to nature and built form?
+
+Understanding questions such as where and
+whether green space is present, how compact urban
+development is, or to what extent both goals are
+compatible is essential for tackling health inequalities,
+designing for sustainability, and obtaining a more
+comprehensive picture of prosperity. *RGB* turns
+satellite data into insights that are useful, usable
+and widely used by researchers, urban planners and
+public health organisations exploring how exposure to
+nature and various built-up forms connects to health
+outcomes, social inclusion and environmental justice.
+
+For policymakers, it highlights where investments
+could yield the greatest social benefits, particularly
+in communities facing multiple forms of deprivation.
+By translating satellite data into a usable, accessible
+format, *RGB* bridges the gap between environmental
+science, urban planning, and economics, providing a
+foundation for more equitable and sustainable urban
+and regional development.
