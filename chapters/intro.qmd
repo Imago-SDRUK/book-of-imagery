@@ -1,6 +1,5 @@
 # "Introduction: Why Imagery, Why Now?"
 
-
 ## The promise of imagery for social science and policy {#sec-intro_promise}
 
 We are living in a fast changing society needing timely, spatially granular, and consistent information to adequately address complex social, economic, climatic, health and policy challenges. Challenges such as widening inequalities, uneven economic development, environmental vulnerability and persistent health disparities represent fundamental questions about places and how they change. Traditional sources, including censuses, household surveys and administrative registers remain indispensable. Yet, they are limited by cost, infrequency, selective coverage and latency in their collection and release. As a result, decision-makers and researchers often lack the evidence needed to monitor rapid change, anticipate emerging challenges, and evaluate the local effects of interventions.
