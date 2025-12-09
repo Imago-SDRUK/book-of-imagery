@@ -20,15 +20,13 @@ This chapter introduces the main types of satellite imagery, how they are collec
 
 ## Chapter Objectives
 
-::: {.column-margin .callout-warning title="Review comment"}
-DAB: I really like the practice of setting out the chapter with a short section like this frontloading what the reader will learn in it. Perhaps we should make it part of the standard "chapter template"? To be discussed as a team.
-:::
+This chapter provides an overview of how satellite imagery is produced, accessed, and used in research and applied settings. By the end of the chapter, readers will be able to:
 
-1.  Introduce key concepts and terminology associated with satellite imagery.\
-2.  Situate satellite data within the wider geospatial data ecosystem, comparing it with traditional data collection methods.\
-3.  Describe the main sensor types, platforms, and missions, highlighting their strengths and constraints.\
-4.  Explain acquisition pathways, preprocessing workflows, and common analytical approaches.\
-5.  Highlight the value of satellite imagery for environmental monitoring, urban planning, and disaster response, emphasising its role in supporting informed decision-making at multiple scales.
+1. Understand core concepts and terminology related to satellite imagery, including key forms of resolution and what they reveal about the Earth’s surface.
+2. Situate satellite imagery within the wider geospatial and social science data ecosystems, recognising how it complements more familiar sources such as surveys and administrative records.
+3. Identify the main sensor types, satellite platforms, and missions, and assess their respective strengths, limitations, and relevance for different research questions.
+4. Explain how satellite imagery is accessed, including the role of open-access repositories, commercial providers, cloud platforms, APIs, and licensing models.
+5. Evaluate appropriate uses of satellite imagery for social, environmental, and policy applications, including how resolution choices, data characteristics, and ethical considerations shape what can be meaningfully observed.
 
 ## Fundamentals of Satellite Imagery
 
