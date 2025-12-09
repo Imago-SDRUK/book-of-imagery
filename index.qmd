@@ -2,17 +2,17 @@
 
 ## Why the Book of Imagery {.unnumbered}
 
-Satellite imagery has long promised to transform how social scientists and policymakers understand the world. It provides a consistent, global and spatially detailed record of human and environmental change. Yet, for many years, it remained technically distant from the questions and methods that animate the social sciences. Imagery was costly, complex to process and embedded in specialised workflows far removed from mainstream empirical practice. Today, however, advances in cloud computing, machine learning, open data infrastructures and sensor technology have converged, lowering barriers and creating unprecedented opportunities to integrate imagery into social research and public decision-making.
+Satellite imagery has long promised to transform how social researchers and policymakers understand the world. It provides a consistent, global and spatially detailed record of human and environmental change. Yet, for many years, it remained technically distant from the questions and methods that animate the social sciences. Imagery was costly, complex to process and embedded in specialised workflows far removed from mainstream empirical practice. Today, however, advances in cloud computing, machine learning, open data infrastructures and sensor technology have converged, lowering barriers and creating unprecedented opportunities to integrate imagery into social research and public decision-making.
 
-The *Book of Imagery (BoI)* responds to this opportunity. It seeks to articulate why imagery matters, why now, and why it should become part of the core evidence infrastructure used to diagnose social processes, monitor inequalities and inform targeted interventions.
+The *Book of Imagery (BoI)* responds to this opportunity. It seeks to articulate why imagery matters, now, why and how it should become part of the core evidence infrastructure used to diagnose social processes, monitor inequalities and inform targeted interventions.
 
-## What the Book of Imagery is {.unnumbered}
+## What is the Book of Imagery? {.unnumbered}
 
-This book is a coherent, practical and conceptually grounded guide to using satellite imagery in social science and policy. It is not a remote sensing manual. Instead, it focuses on the *translation* of imagery into meaningful measures of environments, infrastructure, exposure and wellbeing, making clear how raw pixels become socially interpretable indicators.
+This Book is a coherent, practical and conceptually grounded guide to using satellite imagery in social research and policy. It is not a remote sensing manual. Instead, it focuses on the *translation* of imagery into meaningful measures of environments, infrastructure, exposure and wellbeing, making clear how raw pixels become socially interpretable indicators.
 
 The BoI is also a living, open document. As new algorithms, data products and analytical standards emerge, particularly through the Imago programme, the content of this book will evolve. It is designed both as a conceptual framework and a training resource, supporting readers who wish to implement workflows, understand the logic behind derived indicators and make appropriate analytical or policy decisions based on imagery-enabled evidence.
 
-The BoI is also a deliberate instrument for *community- and capacity-building* within *Imago* and the wider ecosystem of users. Imagery is not simply a technical asset. It is a capability when shared understandings, common standards and collective expertise emerge around it. The BoI helps cultivate that shared foundation. By providing a common language, transparent methodologies and reproducible workflows, it supports the formation of a community of practice across disciplines linking remote-sensing specialists, social scientists, data engineers, policy analysts and public-sector practitioners. The BoI contribute to ensuring that users can access imagery-derived data products and also understand how they are produced, how to evaluate their fitness for purpose and apply them responsibly. The BoI is thus part of Imago’s broader commitment to building an enduring, open and skilled community capable of sustaining and advancing the use of imagery-enabled evidence.
+The BoI is also a deliberate instrument for *community- and capacity-building* within *Imago* and the wider ecosystem of users. Imagery is not simply a technical asset. It can be a capability that emerges when shared understandings and collective expertise are cultivated. The BoI helps cultivate that shared foundation. By providing a common language, transparent methodologies and reproducible workflows, it supports the formation of a community of practice across disciplines linking remote-sensing specialists, social scientists, data engineers, policy analysts and public-sector practitioners. The BoI contributes to ensuring that users can access imagery-derived data products and also understand how these are produced, how to evaluate their fitness for purpose and apply them responsibly. The BoI is thus part of Imago’s broader commitment to building an enduring, open and skilled community capable of sustaining and advancing the use of imagery-enabled evidence.
 
 ## Vision and aims {.unnumbered}
 
@@ -22,15 +22,15 @@ The aim of the *BoI* is threefold:\
 3. To integrate imagery into mainstream evidence practice, ensuring its insights contribute to social understanding, public policy design and equitable decision-making.
 
 Underlying these goals are four key *guiding principles*:\
-• *Accessibility*: lowering technical and conceptual barriers so that imagery becomes usable by non-specialists.\
-• *Interpretability*: emphasising indicators and methods that align with social-science constructs and policy needs.\
-• *Transparency and reproducibility*: promoting open methods, open data and clear documentation.\
-• *Ethical responsibility*: ensuring that imagery is used in ways that respect privacy, minimise harm and strengthen equity.\
+• **Accessibility**: lowering technical and conceptual barriers so that imagery becomes usable by non-specialists.\
+• **Interpretability**: emphasising indicators and methods that align with social-science constructs and policy needs.\
+• **Transparency and reproducibility**: promoting open methods, open data and clear documentation.\
+• **Ethical responsibility**: ensuring that imagery is used in ways that respect privacy, minimise harm and strengthen equity.\
 
 ## Who this book is for {.unnumbered}
 
 The *BoI* is written for a diverse audience that reflects the widening relevance of Earth observation:\
-• Social scientists seeking robust, spatially explicit indicators of environments, infrastructure and inequalities.\
+• Social researchers seeking robust, spatially explicit indicators of environments, infrastructure and inequalities.\
 • Policy analysts and public-sector organisations aiming to strengthen place-based analysis, climate adaptation, service planning and wellbeing measurement.\
 • Students and early-career researchers who require an accessible, rigorous introduction to imagery.\
 • Data scientists and geospatial practitioners interested in how technical methods connect to social questions.\
@@ -41,11 +41,11 @@ What unites these readers is a shared need to move from *technical possibility t
 ## Uses of this book {.unnumbered}
 
 The book is designed for multiple uses:\
-• *Foundational learning*: understanding how imagery works, what it measures, and how it aligns with social and policy constructs.\
-• *Technical training*: implementing algorithms, workflows and validation procedures used to produce analysis-ready data.\
-• *Applied analysis*: integrating imagery with surveys, administrative data and longitudinal studies to enable spatially informed research.\
-• *Decision support*: using imagery-derived indicators to design, target, evaluate and adapt interventions across policy domains.\
-• *Capacity building*: supporting teams and institutions seeking to embed imagery within their analytical and governance systems.
+• **Foundational learning**: understanding how imagery works, what it measures, and how it aligns with social and policy constructs.\
+• **Technical training**: implementing algorithms, workflows and validation procedures used to produce analysis-ready data.\
+• **Applied analysis**: integrating imagery with surveys, administrative data and longitudinal studies to enable spatially informed research.\
+• **Decision support**: using imagery-derived indicators to design, target, evaluate and adapt interventions across policy domains.\
+• **Capacity building**: supporting teams and institutions seeking to embed imagery within their analytical and governance systems.
 
 ## How to read this book {.unnumbered}
 
@@ -61,14 +61,4 @@ As a living document, this book will evolve alongside Imago’s data products an
 
 This book reflects the work of many people across the Imago programme and the wider community of researchers, public-sector partners and practitioners committed to improving the evidence base for social science and policy. We are grateful for their insight, collaboration and shared ambition to make satellite imagery accessible, interpretable and impactful. Their technical, conceptual and practical contributions have shaped and will keep shaping this book and the wider effort to bring imagery into the mainstream of research and decision-making.
 
-<!-- Proposed guiding principles for the book: -->
 
-<!-- -   Audience / end users: academic and policy makers -->
-
-<!-- -   Individual chapters: technical + application / implications -->
-
-<!-- For now, drop any relevant references below: -->
-
-<!-- -   [@patino2013a] -->
-
-<!-- -   [Remote sensing tutorials](Remote%20Sensing%20Tutorials) -->
