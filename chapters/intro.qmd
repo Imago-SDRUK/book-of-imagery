@@ -1,8 +1,5 @@
----
-title: "Introduction: Why Imagery, Why Now?"
-author: "Francisco Rowe"
-format: html
----
+# "Introduction: Why Imagery, Why Now?"
+
 
 ## The promise of imagery for social science and policy {#sec-intro_promise}
 
@@ -15,11 +12,11 @@ An increasing volume of research has already demonstrated the promise of satelli
 ## Chapter objectives
 
 This chapter seeks to provide readers with an understanding the conceptual foundations that motivate the use of satellite imagery in social science and public policy. Specifically, the chapter aims to:\
-1.	Explain why imagery matters for observing social, environmental and infrastructural inequalities, and why its relevance has grown at this particular technological and policy moment.\
-2. 	Identify the unique strengths of imagery, including its spatial reach, temporal depth and consistency, and how these complement traditional data sources such as surveys, administrative registers and censuses.\
-3.	Describe the recent convergence of technological advances that now make imagery feasible, scalable and policy-relevant.\
-4.	Highlight imagery’s emerging role in addressing societal challenges from climate resilience to infrastructure planning and environmental justice.\
-5.	Introduce the barriers and challenges that have historically limited the uptake of imagery in the social sciences, setting the scene for how *Imago* seeks to overcome them.
+1. Explain why imagery matters for observing social, environmental and infrastructural inequalities, and why its relevance has grown at this particular technological and policy moment.\
+2. Identify the unique strengths of imagery, including its spatial reach, temporal depth and consistency, and how these complement traditional data sources such as surveys, administrative registers and censuses.\
+3. Describe the recent convergence of technological advances that now make imagery feasible, scalable and policy-relevant.\
+4. Highlight imagery’s emerging role in addressing societal challenges from climate resilience to infrastructure planning and environmental justice.\
+5. Introduce the barriers and challenges that have historically limited the uptake of imagery in the social sciences, setting the scene for how *Imago* seeks to overcome them.
 
 After reading this chapter, readers should have a clear understanding of the motivations behind the BoI, the conceptual value of satellite data for social research and the broader landscape in which Imago’s data products and analytical tools are situated.
 

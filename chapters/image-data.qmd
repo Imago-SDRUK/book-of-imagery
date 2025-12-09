@@ -1,8 +1,4 @@
----
-title: "Satellite imagery data"
-author: "Ron Mahabir"
-format: html
----
+# "Satellite imagery data"
 
 ## Introduction
 
