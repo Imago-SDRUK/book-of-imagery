@@ -1,5 +1,5 @@
 ---
-title: "Satellite Imagery Data"
+title: "Satellite imagery data"
 author: "Ron Mahabir"
 format: html
 ---
@@ -28,9 +28,9 @@ This chapter provides an overview of how satellite imagery is produced, accessed
 4. Explain how satellite imagery is accessed, including the role of open-access repositories, commercial providers, cloud platforms, APIs, and licensing models.
 5. Evaluate appropriate uses of satellite imagery for social, environmental, and policy applications, including how resolution choices, data characteristics, and ethical considerations shape what can be meaningfully observed.
 
-## Fundamentals of Satellite Imagery
+## Fundamentals of satellite imagery
 
-### Resolution Dimensions
+### Resolution dimensions
 
 Understanding resolution is essential when working with satellite imagery, and the concept is already familiar to social scientists even if the terminology differs. In many areas of social research, choosing the correct scale of analysis is a fundamental step. Studies may draw on individual-level data, neighbourhood statistics, municipal indicators, or national aggregates, depending on the question being asked. These decisions reflect an underlying concern with the appropriate level of detail needed to capture the processes of interest.
 Satellite imagery follows the same logic. Resolution determines the scale at which features and changes on the Earth’s surface can be meaningfully observed. Selecting between fine, moderate, or coarse spatial detail mirrors the choice between analysing individuals, neighbourhoods, or cities. Temporal resolution parallels decisions about how frequently social or environmental processes must be measured, while spectral and radiometric resolution influence the types of distinctions that can be drawn within the data. In this sense, resolution is the satellite equivalent of selecting a unit of analysis: the choice that aligns the data with the processes under examination.
@@ -61,7 +61,7 @@ Radiometric resolution captures how sensitive a sensor is to small differences i
 
 Although presented separately, these forms of resolution work together. Most applications require balancing spatial, temporal, spectral, and radiometric considerations so that the imagery chosen matches both the scale of the research question and the nature of the phenomenon being observed.
 
-### Sensor Types
+### Sensor types
 
 Satellite sensors measure different kinds of energy reflected or emitted from the Earth’s surface, and each type provides distinct information about social and environmental conditions. Although the underlying physics can be complex, the practical distinction is straightforward: different sensors reveal different aspects of the landscape, much like how social datasets provide different perspectives on population, infrastructure, or economic activity. Sensors vary mainly in the wavelengths they measure and in whether they rely on external illumination or generate their own signal [@jensen2009remote].
 
@@ -83,7 +83,7 @@ A summary of these sensor types is provided in @tbl-sensor_types. Each type offe
 
 : Comparison of satellite sensor types. {#tbl-sensor_types}
 
-### Key Satellite Platforms and Missions
+### Key satellite platforms and missions
 
 Satellite imagery is produced by a wide range of organisations, from long-established national space agencies to commercial companies launching constellations of small satellites. Understanding this landscape helps social researchers identify which systems align with their questions, whether they concern long-term environmental change, rapid-onset crises, or fine-grained patterns of urban development. The field has expanded rapidly, and the combination of public and commercial missions now underpins applications across development, governance, planning, climate adaptation, and humanitarian response.
 
@@ -99,11 +99,11 @@ Other new space actors focus on novel sensing capabilities rather than scaling t
 
 Together, public missions, old-space operators, and new-space companies offer complementary strengths: long-term continuity, high spatial detail, frequent revisit rates, and an increasingly diverse range of sensing technologies. This combination supports more flexible and robust analysis across disciplines. Live orbital positions of many satellites can be viewed on platforms such as satellitemap.space\footnote{https://satellitemap.space/}.
 
-## Data Acquisition and Accessibility
+## Data acquisition and accessibility
 
 Satellite imagery is now available through an expanding ecosystem of public repositories, commercial providers, and cloud-based platforms. For many social researchers, this landscape can feel unfamiliar because it differs markedly from the traditional model of acquiring data as pre-packaged tables or survey files. The goal of this section is to introduce the main pathways through which satellite imagery can be accessed, explain how these systems have evolved, and highlight what they mean for researchers who may be new to Earth observation data. The section also outlines practical considerations such as licensing, cost, and ethical use.
 
-### Sources of Satellite Imagery
+### Sources of satellite imagery
 
 Satellite imagery is available through a combination of open-access government missions and commercial providers, each offering different levels of detail, frequency, and accessibility. For many social researchers, this structure differs from the more familiar landscape of statistical agencies and survey organisations, making it useful to understand the main pathways through which imagery can be obtained.
 
@@ -131,13 +131,12 @@ For many social researchers, this model of accessing satellite imagery contrasts
 Despite these advances, challenges remain. Storage and compute costs can limit access for sustained or large-scale projects. Metadata inconsistencies across missions and providers can make it difficult to combine datasets. Access to high-bandwidth internet and cloud computing resources is uneven globally, presenting barriers for researchers in low-resource settings [@lowndes2017our]. For social scientists, these issues can make satellite imagery appear more complex than traditional datasets, even though the insights it provides can be highly valuable for understanding spatial and environmental processes.
 
 
-### Licensing and Cost
+### Licensing and cost
 
-::: {.column-margin .callout-warning title="Review comment"}
-DAB: here again, it might be good to draw a connection to how licensing operates in the social sciences to help folks understand this landscape.
-:::
+Licensing models vary considerably and determine how satellite imagery can be used, shared, or modified. A licence is a legal agreement that outlines what users are permitted to do with a dataset. Open-access missions such as Landsat and Sentinel typically provide imagery under licences that allow free download, reuse, and redistribution [@wulder2012opening; @harris2015open]. These licences support transparency, reproducibility, and collaboration, mirroring the norms that social scientists may recognise from openly accessible survey datasets or administrative statistics.
 
-Licensing models vary considerably and determine how satellite imagery can be used, shared, or modified. A licence is a legal agreement that outlines what users are allowed to do with a dataset. Open-access datasets, such as those provided by the Landsat and Sentinel missions, typically come with licences that permit free download, use, and redistribution [@wulder2012opening; @harris2015open]. These open licences promote transparency, reproducibility, and collaboration, especially in research and public policy contexts. Conversely, commercial imagery is often constrained by licences that prohibit redistribution or require substantial payment [@kim2024commercial], posing barriers to open science.
+Commercial satellite imagery operates under a very different model. Access is often restricted by licences that prohibit redistribution, impose usage limits, or require significant payment [@kim2024commercial]. These conditions resemble proprietary datasets in the social sciences, such as consumer transaction data, mobile phone records, or commercial market intelligence, where access is controlled, costly, and shaped by contractual terms. For researchers accustomed to freely available census or survey data, the constraints attached to high-resolution imagery can affect project feasibility, reproducibility, and collaboration, and may require careful planning around budgeting and compliance.
+
 
 ### Ethics
 
