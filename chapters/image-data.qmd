@@ -18,7 +18,7 @@ This chapter introduces the main types of satellite imagery, how they are collec
 
 [^image-data-2]: Landsat 1: [`https://en.wikipedia.org/wiki/Landsat_1`](https://en.wikipedia.org/wiki/Landsat_1)
 
-## Chapter Objectives
+## Chapter objectives
 
 This chapter provides an overview of how satellite imagery is produced, accessed, and used in research and applied settings. By the end of the chapter, readers will be able to:
 
@@ -140,11 +140,12 @@ Commercial satellite imagery operates under a very different model. Access is of
 
 ### Ethics
 
-::: {.column-margin .callout-warning title="Review comment"}
-DAB: this is super interesting and one of the areas where we have legit advantage in covering. I'd expand this section a bit more (one or two more paragraphs) and try to bring in conversation with ethics debates in the social sciences.
-:::
+There are growing ethical concerns surrounding the use of satellite imagery. High-resolution images can capture detailed views of human activities and built environments, raising privacy issues when used in sensitive contexts such as humanitarian crises, armed conflict, or surveillance operations [@guida2021use; @avtar2021remote]. These concerns echo long-standing debates in the social sciences about the potential harms associated with observing or documenting communities without their knowledge or consent. However, satellite imagery introduces additional complexity because individuals cannot opt out of being imaged, and data collection is conducted remotely, often by organisations far removed from the places being observed.
 
-There are also growing ethical concerns surrounding the use of satellite imagery. High-resolution images can capture detailed views of human activities and built environments, which may raise privacy issues, especially when the data are used in sensitive contexts such as humanitarian crises, armed conflict, or surveillance operations [@guida2021use; @avtar2021remote]. In addition, a broader debate has emerged around the concept of data colonialism. This term refers to the idea that access to valuable data, in this context, commercial high-resolution imagery, is often dominated by institutions in wealthier countries [@thatcher2016data]. As a result, organisations and researchers in lower-income regions may face significant barriers to accessing the data needed for critical decision-making, scientific research, or disaster response. These imbalances risk reinforcing existing global inequalities in knowledge production and technological capacity.
+A related debate centres on data colonialism, where control over valuable datasets, including commercial high-resolution imagery, is concentrated among institutions in wealthier countries [@thatcher2016data]. This dynamic parallels critiques within the social sciences about unequal access to administrative data, proprietary geodemographic datasets, or corporate digital traces. Limited access to satellite data can constrain the ability of researchers, civil society organisations, and governments in lower-income regions to monitor land use, environmental change, or public infrastructure, potentially reinforcing global asymmetries in knowledge production and policy-making capacity.
+
+These concerns also connect to broader ethical principles familiar to social researchers, such as fairness, accountability, and the avoidance of harm. Satellite imagery can be used to expose human rights abuses, monitor environmental degradation, or support disaster response, but it can also enable intrusive monitoring, militarised applications, or discriminatory practices if misused. As with social data, the context in which imagery is applied matters greatly. Responsible use requires reflecting on who benefits, who is put at risk, and whose voices are included or excluded in data-driven decision making. Encouraging ethical frameworks tailored to Earth observation helps ensure that satellite technologies support equitable and socially responsible outcomes.
+
 
 ## Pre-processing and Calibration
 
