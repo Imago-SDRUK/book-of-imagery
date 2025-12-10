@@ -8,54 +8,23 @@ The text in this chapter has also been included in the State of Imagery.
 
 *SPF* (Sun Probability Framework) aims to measure sunlight exposure across the UK.
 
-Sunlight exposure shapes human behaviour, health,
-and wellbeing in profound ways. From mood and
-physical activity to the price of houses, the presence
-or absence of sunlight has measurable impacts on
-daily life. Despite its importance, researchers and
-policymakers have lacked accessible, high-resolution
-data on local sunlight conditions.
+Sunlight exposure shapes human behaviour, health, and wellbeing in profound ways. From mood and physical activity to the price of houses, the presence or absence of sunlight has measurable impacts on daily life. Despite its importance, researchers and policymakers have lacked accessible, high-resolution data on local sunlight conditions.
 
-Current approaches use regional data sets that are
-too broad, or sun-angle calculations that can be
-inaccessible and computationally expensive. The *SPF* toolkit addresses this
-gap by translating complex satellite cloud mask data
-into simple measures of sunlight probability at the
-geographic scales researchers already work with.
+Current approaches use regional data sets that are too broad, or sun-angle calculations that can be inaccessible and computationally expensive. The *SPF* toolkit addresses this gap by translating complex satellite cloud mask data into simple measures of sunlight probability at the geographic scales researchers already work with.
 
 ## How do we do it?
 
-*SPF* delivers processed sunlight exposure metrics
-based on cloud cover data using Sentinel-2 satellite
-imagery at 20-metre resolution, aggregated to
-Lower layer Super Output Area (LSOA) boundaries
-to match the geographic units used throughout UK
-administrative data. We calculate this using cloud
-mask layers, providing annual measures of sunlight
-availability that can be directly linked to census data,
-health records, survey responses, or any georeferenced
-dataset using standard LSOA codes.
+*SPF* delivers processed sunlight exposure metrics based on cloud cover data using Sentinel-2 satellite imagery at 20-metre resolution, aggregated to Lower layer Super Output Area (LSOA) boundaries to match the geographic units used throughout UK administrative data. We calculate this using cloud mask layers, providing annual measures of sunlight availability that can be directly linked to census data, health records, survey responses, or any georeferenced dataset using standard LSOA codes.
 
-Integration requires no GIS expertise — researchers
-and policymakers can merge exposure data with their
-existing datasets through straightforward table joins
-with geographic codes or administrative IDs. The toolkit
-includes documentation, sample integration code, and
-examples demonstrating the range of analyses this
-toolkit enables. Future releases will expand coverage to
-different aggregations and time periods.
+Integration requires no GIS expertise. Researchers and policymakers can merge exposure data with their existing datasets through straightforward table joins with geographic codes or administrative IDs. The toolkit includes documentation, sample integration code, and examples demonstrating the range of analyses this toolkit enables. Future releases will expand coverage to different aggregations and time periods.
 
 ## Why does it matter?
 
-Understanding how environmental conditions like
-sunlight affect human outcomes is essential for
-both understanding our societies and designing
-policy interventions targeting wellbeing and health
-inequalities.
+Understanding how environmental conditions like sunlight affect human outcomes is essential for both understanding our societies and designing policy interventions targeting wellbeing and health inequalities.
 
-*SPF* makes satellite-derived environmental data useful,
-usable and accessible for researchers working with UK
-administrative data. Whether exploring seasonal mood
-patterns, housing markets, or health service utilisation,
-researchers can now incorporate precise, localised
-sunlight measures into their analyses.
+*SPF* makes satellite-derived environmental data useful, usable and accessible for researchers working with UK administrative data. Whether exploring seasonal mood patterns, housing markets, or health service utilisation, researchers can now incorporate precise, localised sunlight measures into their analyses.
+
+@fig-cloud shows our derived annual cloud probability using surface reflectance imagery from Sentinel-2. It reveals the spatial pattern of established meteorological expectations. Upland areas like the Pennines and Scottish Highlands show higher cloud probability, while coastal regions—particularly along the south and east—experience clearer skies. This gradient reflects the British Isles' geographies, where moist air masses rise over elevated terrain and condense, creating persistent cloud cover over Britain's mountainous spine, and sunny spots along the southern coasts.
+
+
+![**Annual cloud probability across local super output areas, 2024, United Kingdom**. *Source: Created by the Data Service for Imagery - Imago using Sentinel-2 Level-2A Bottom-of-Atmosphere (BOA) surface reflectance imagery, Collection 1, accessed via [Element84 Earth Search STAC API](https://earth-search.aws.element84.com/v1)* ](images/spf-chp/cloud_prob_map_BoI.png){#fig-cloud width="300"}

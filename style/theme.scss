@@ -36,3 +36,7 @@ $callout-color-important: #8d2113;
 $callout-color-caution: #ff8f42;
 $font-family-sans-serif: "Figtree Variable";
 $font-family-monospace: "Space Grotesk Variable";
+
+figcaption::before {
+  font-weight: bold;
+}
