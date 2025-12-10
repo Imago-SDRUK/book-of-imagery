@@ -69,11 +69,11 @@ This book reflects the work of many people across the Imago programme and the wi
 
 > **APA (7th edition)**
 
-Rowe, F., Mahabir, R., Butters, O., Almarzouq, B., Arribas-Bel, D., Chen, F., Elsey, J., Franklin, R., Guzman Perez, A., Kingston, R., Kryukov, V., Patranabis, S., Pardy, M., Peppa, M., Pietrostephani, E., Radoux, E., Rodgers, S., Valipour Shokouhi, B., & Watson, P. (2025). The Book of Imagery: Translating imagery into meaningful social and policy measures (Version 1.0). Imago - Data Service for Imagery. DOI.
+Rowe, F., Mahabir, R., Butters, O., Almarzouq, B., Arribas-Bel, D., Chen, F., Elsey, J., Franklin, R., Guzman Perez, A., Kingston, R., Kryukov, V., Patranabis, S., Pardy, M., Peppa, M., Pietrostephani, E., Radoux, E., Rodgers, S., Valipour Shokouhi, B., & Watson, P. (2025). The Book of Imagery: Translating imagery into meaningful social and policy measures (Version 0.1). Imago - Data Service for Imagery. DOI.
 
 > **Harvard**
 
-Rowe, F., Mahabir, R., Butters, O., Almarzouq, B., Arribas-Bel, D., Chen, F., Elsey, J., Franklin, R., Guzman Perez, A., Kingston, R., Kryukov, V., Patranabis, S., Pardy, M., Peppa, M., Pietrostephani, E., Radoux, E., Rodgers, S., Valipour Shokouhi, B. and Watson, P. (2025) The Book of Imagery: Translating imagery into meaningful social and policy measures. Version 1.0. Imago - Data Service for Imagery. Available at: DOI.
+Rowe, F., Mahabir, R., Butters, O., Almarzouq, B., Arribas-Bel, D., Chen, F., Elsey, J., Franklin, R., Guzman Perez, A., Kingston, R., Kryukov, V., Patranabis, S., Pardy, M., Peppa, M., Pietrostephani, E., Radoux, E., Rodgers, S., Valipour Shokouhi, B. and Watson, P. (2025) The Book of Imagery: Translating imagery into meaningful social and policy measures. Version 0.1 Imago - Data Service for Imagery. Available at: DOI.
 
 > **BibTeX**
 ```
@@ -83,7 +83,7 @@ Rowe, F., Mahabir, R., Butters, O., Almarzouq, B., Arribas-Bel, D., Chen, F., El
   year      = {2025},
   publisher = {Imago - Data Service for Imagery},
   address   = {United Kingdom},
-  edition   = {Version 1.0},
+  edition   = {Version 0.1},
   url       = {INSERT_URL},
   doi       = {INSERT_DOI}
 }

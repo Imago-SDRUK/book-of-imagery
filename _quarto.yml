@@ -8,7 +8,7 @@ book:
   author: "Francisco Rowe, Ron Mahabir, Oily Butters, Batool Almarzouq, Daniel Arribas-Bel, Fang Chen, Jon Elsey, Rachel Franklin, Arturo Guzman Perez, Richard Kingston, Vitaly Kryukov, Shaonlee Patranabis, Martina Pardy, Maria Peppa, Elisabetta Pietrostephani, Emma Radoux, Sarah Rodgers, Behzad Valipour Shokouhi, Paul Watson"
   date: "2025"
   publisher: "Imago - Data Service for Imagery"
-  edition: "Version 1.0"
+  edition: "Version 0.1"
 
   page-footer:
     left: |
