@@ -1,4 +1,4 @@
-# "Satellite imagery data"
+# Satellite imagery data
 
 ## Introduction
 

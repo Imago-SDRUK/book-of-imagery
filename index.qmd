@@ -69,17 +69,17 @@ This book reflects the work of many people across the Imago programme and the wi
 
 > **APA (7th edition)**
 
-Rowe, F., Mahabir, R., Butters, O., Almarzouq, B., Arribas-Bel, D., Chen, F., Elsey, J., Franklin, R., Guzman Perez, A., Kingston, R., Kryukov, V., Patranabis, S., Pardy, M., Peppa, M., Pietrostephani, E., Radoux, E., Rodgers, S., Valipour Shokouhi, B., & Watson, P. (2025). The Book of Imagery: Translating imagery into meaningful social and policy measures (Version 0.1). Imago - Data Service for Imagery. DOI.
+Rowe, F., Mahabir, R., Butters, O., Almarzouq, B., Arribas-Bel, D., Chen, F., Elsey, J., Franklin, R., Guzman Perez, A., Kingston, R., Kryukov, V., Patranabis, S., Pardy, M., Peppa, M., Pietrostefani, E., Radoux, E., Rodgers, S., Valipour Shokouhi, B., & Watson, P. (2025). The Book of Imagery: Translating imagery into meaningful social and policy measures (Version 0.1). Imago - Data Service for Imagery. DOI.
 
 > **Harvard**
 
-Rowe, F., Mahabir, R., Butters, O., Almarzouq, B., Arribas-Bel, D., Chen, F., Elsey, J., Franklin, R., Guzman Perez, A., Kingston, R., Kryukov, V., Patranabis, S., Pardy, M., Peppa, M., Pietrostephani, E., Radoux, E., Rodgers, S., Valipour Shokouhi, B. and Watson, P. (2025) The Book of Imagery: Translating imagery into meaningful social and policy measures. Version 0.1 Imago - Data Service for Imagery. Available at: DOI.
+Rowe, F., Mahabir, R., Butters, O., Almarzouq, B., Arribas-Bel, D., Chen, F., Elsey, J., Franklin, R., Guzman Perez, A., Kingston, R., Kryukov, V., Patranabis, S., Pardy, M., Peppa, M., Pietrostefani, E., Radoux, E., Rodgers, S., Valipour Shokouhi, B. and Watson, P. (2025) The Book of Imagery: Translating imagery into meaningful social and policy measures. Version 0.1 Imago - Data Service for Imagery. Available at: DOI.
 
 > **BibTeX**
 ```
 @book{rowe2025bookofimagery,
   title     = {The Book of Imagery: Translating imagery into meaningful social and policy measures},
-  author    = {Rowe, Francisco and Mahabir, Ron and Butters, Oily and Almarzouq, Batool and Arribas-Bel, Daniel and Chen, Fang and Elsey, Jon and Franklin, Rachel and Guzman Perez, Arturo and Kingston, Richard and Kryukov, Vitaly and Patranabis, Shaonlee and Pardy, Martina and Peppa, Maria and Pietrostephani, Elisabetta and Radoux, Emma and Rodgers, Sarah and Valipour Shokouhi, Behzad and Watson, Paul},
+  author    = {Rowe, Francisco and Mahabir, Ron and Butters, Olly and Almarzouq, Batool and Arribas-Bel, Daniel and Chen, Fang and Elsey, Jon and Franklin, Rachel and Guzman Perez, Arturo and Kingston, Richard and Kryukov, Vitaly and Patranabis, Shaonlee and Pardy, Martina and Peppa, Maria and Pietrostefani, Elisabetta and Radoux, Emma and Rodgers, Sarah and Valipour Shokouhi, Behzad and Watson, Paul},
   year      = {2025},
   publisher = {Imago - Data Service for Imagery},
   address   = {United Kingdom},
