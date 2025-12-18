@@ -69,11 +69,11 @@ This book reflects the work of many people across the Imago programme and the wi
 
 > **APA (7th edition)**
 
-Rowe, F., Mahabir, R., Butters, O., Almarzouq, B., Arribas-Bel, D., Chen, F., Elsey, J., Franklin, R., Guzman Perez, A., Kingston, R., Kryukov, V., Patranabis, S., Pardy, M., Peppa, M., Pietrostefani, E., Radoux, E., Rodgers, S., Valipour Shokouhi, B., & Watson, P. (2025). The Book of Imagery: Translating imagery into meaningful social and policy measures (Version 0.1). Imago - Data Service for Imagery. DOI.
+Rowe, F., Mahabir, R., Butters, O., Almarzouq, B., Arribas-Bel, D., Chen, F., Elsey, J., Franklin, R., Guzman Perez, A., Kingston, R., Kryukov, V., Patranabis, S., Pardy, M., Peppa, M., Pietrostefani, E., Radoux, E., Rodgers, S., Valipour Shokouhi, B., & Watson, P. (2025). The Book of Imagery: Translating imagery into meaningful social and policy measures (Version 0.1). Imago - Data Service for Imagery. DOI: 10.5281/zenodo.17976055.
 
 > **Harvard**
 
-Rowe, F., Mahabir, R., Butters, O., Almarzouq, B., Arribas-Bel, D., Chen, F., Elsey, J., Franklin, R., Guzman Perez, A., Kingston, R., Kryukov, V., Patranabis, S., Pardy, M., Peppa, M., Pietrostefani, E., Radoux, E., Rodgers, S., Valipour Shokouhi, B. and Watson, P. (2025) The Book of Imagery: Translating imagery into meaningful social and policy measures. Version 0.1 Imago - Data Service for Imagery. Available at: DOI.
+Rowe, F., Mahabir, R., Butters, O., Almarzouq, B., Arribas-Bel, D., Chen, F., Elsey, J., Franklin, R., Guzman Perez, A., Kingston, R., Kryukov, V., Patranabis, S., Pardy, M., Peppa, M., Pietrostefani, E., Radoux, E., Rodgers, S., Valipour Shokouhi, B. and Watson, P. (2025) The Book of Imagery: Translating imagery into meaningful social and policy measures. Version 0.1 Imago - Data Service for Imagery. Available at: DOI: 10.5281/zenodo.17976055.
 
 > **BibTeX**
 ```
@@ -84,8 +84,8 @@ Rowe, F., Mahabir, R., Butters, O., Almarzouq, B., Arribas-Bel, D., Chen, F., El
   publisher = {Imago - Data Service for Imagery},
   address   = {United Kingdom},
   edition   = {Version 0.1},
-  url       = {INSERT_URL},
-  doi       = {INSERT_DOI}
+  url       = {www.boi.imago.ac.uk/},
+  doi       = {10.5281/zenodo.17976055}
 }
 ```
 :::
