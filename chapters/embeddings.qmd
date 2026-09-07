@@ -1,0 +1,50 @@
+---
+bibliography: ../references.bib
+format:
+  html:
+    html-math-method: katex
+    code-tools: true
+    self-contained: true
+---
+
+# Embeddings for the Rest of Us (ca. 3.5k words)
+
+## Introduction (500w)
+
+- Embeddings have moved from obscurity to mainstream in just a few years
+- This chapter presents the intuition of what embeddings are. For the
+  mathematical details, there are better references (include some of them)
+- Important to say this field is moving very rapidly, so it is likely some 
+  of the details here become obsolete in the near future. Our hope is the
+  fundamentals will remain useful for much longer.
+
+## What are (satellite) embeddings? (750 w)
+
+- Using (satellite) imagery as the common thread, but much of what we'll
+  discuss here extends to pretty much any type of data, including text or
+  sound.
+- Overview: autoencoders, an old idea whose time has come
+- Basics of autoencoders (80s, 90s)
+- Deep autoencoders (10s)
+- Foundation models (20s)
+- Embeddings definition and features [see @klemmer2025earthembeddings]
+
+## Why are (satellite) embeddings so powerful? (250 w)
+
+- To understand the relevance of embeddings today, it is useful first to step
+  back and consider the current context.
+- Embeddings promise
+
+## The Imago small area embeddings product (750w)
+
+- Let's talk about @imago2026satembedding.
+- We follow @brown2025alphaearthfoundationsembeddingfield.
+
+## Illustration (1k w)
+
+- Discuss w/ team
+
+## Conclusion (250w)
+
+:::{refs}
+:::
