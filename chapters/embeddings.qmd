@@ -1,0 +1,110 @@
+---
+bibliography: ../references.bib
+format:
+  html:
+    html-math-method: katex
+    code-tools: true
+    self-contained: true
+---
+
+# Embeddings for the Rest of Us (ca. 3.5k words)
+
+## Introduction (500w)
+
+This chapter provides an introduction to geospatial embeddings. We will cover _what_ they are, _how_ they work, and _why_ they have become so popular in the last few years. Because this is the Book of Imagery, we will focus on embeddings for satellite imagery. However, much of what we will discuss applies to other types of embeddings, such as those from text or other forms of geospatial data. The principles are very similar, the details can differ more. Also, in the spirit of this book, we will offer a perspective that is hopefully more atuned to the frameworks social scientists and less technical folks have in mind. 
+
+Although the word "embedding" has been a staple of statistical and machine learning parlance for a long time, its appearance in the mainstream is much more recent. All of a sudden, everyone is talking about embeddings. Word embeddings, embedding-based search engines, geospatial embeddings. Whenever a term becomes so widespread so quickly, the bit of knowledge it refers to both expands a little and also changes some. And so it becomes much more difficult to provide an accurate and full account of its meaning. We will not try to do so here. Instead, we will focus on three aspects: the _intuition_ of what an embedding is, where it comes from and how it is built; the _relevance_ of embeddings in an applied context, particularly for folks working in social research and applications; and on providing an _illustration_ that helps you the reader better grasp these ideas. A final disclaimer applies that this is a very rapidly-moving field and perhaps, by the time you read this, some will be partially obsolete. We try to focus on the fundamentals and core ideas precisely to minimise this risk. But even some of them may change in the future. Consider yourself warned.
+
+We have structured the chapter to build from the core ideas out to their current relevance. @sec-embeddings_what provides a conceptual overview of where embeddings came from and what they are. This part will feel a bit abstract and detached from any applications you as a social researcher or policy maker may be interested in. This is on purpose and, if you have a bit of faith, it will prove useful later on. @sec-embeddings_why makes the case for why embeddings, as described in the previous section, should be interesting to you. @sec-embeddings_product introduces the Imago embeddings data product and frames it against everything you will have read by then. @sec-embeddings_illustration provides an illustration using the Imago embeddings data product. And we wrap up the chapter with @sec-embeddings_conclusion. 
+
+## What are (satellite) embeddings? (750 w) {#sec-embeddings_what}
+
+### Autoencoders: an old idea whose time has come
+
+To understand the embeddings of today, one needs to learn about the autoencoders of the 1980s. Autoencoders are a type of self-supervised neural network that emerged in the latter part of the decade and beginning of the next one [e.g., @bourlard1988autoassociation; @baldi1989neural; @kramer1991nonlinear]. Since then, they have evolved greatly, and their variations have widened considerably. Their fundamentals however have remained rather consistent, and these are the important part for us in this chapter. 
+
+All the core building blocks of an autoencoder are represented in @fig-autoencoder_schema. At its most fundamental, an autoencoder has three parts: the input layer ($X$), the code (or latent representation, $h$), and the output layer ($X'$). The input layer is the block that takes the input data (e.g., image) and, through a series of mathematical transformations, turns it into $h$, a vector of smaller dimensionality. For example, think of an image that is 256 pixels wide, 256 pixels high and has three bands (e.g., red, green, and blue) for every pixel[^1]. This means that the image is made up of $256 \times 256 \times 3 = 196{,}608$ single values. In most applications, $h$ is of much smaller dimension (e.g., 128). This ($X + h$) is the _encoder_ part of the autoencoder and, once trained, it is typically the most useful part. The _decoder_ is then made up of $h + X'$ and is a block that begins with the latent representation and turns it into an output of the same dimension as the input data. In our example, it takes a vector of the dimension of $h$ (e.g., 128 values) and converts it into an array of $256 \times 256 \times 3$ values. 
+
+If this was a more mathematically-savvy chapter, we would spend much more time discussing the structure, properties, and neat tricks that the literature has proposed for $X$ and $X'$ (many of the advances over the last 40 years are indeed in this area). Since this is not the case, it will suffice to say both components are made up of mathematical transformations that take the required input data and deliver, at their respective ends, vectors or matrices of the expected shapes. Crucially, both the encoder and the decoder parts are "trainable": they contain parameters (weights) that can be tuned with data to minimise an objective function. In fact, when we "train" an autoencoder, we show it a bunch of data so that it can tune its weights in a way that makes the output of the decoder _as similar as possible_ to the input of the encoder. 
+
+[^1]: An image is really a large matrix of small pixels (or tiny squares), each of them of a single color. Since every color in the spectrum can be made up of a combination of red, green, and blue, an image can be mathematically represented as a three dimensional matrix, or array, with pixels along width and height, and three values (red, green, blue) assigned to each pixel to represent its color.
+
+::: {#fig-autoencoder_schema}
+![](images/embeddings-chp/autoencoder_schema.png){width="500"}
+
+**Schematic representation of an autoencoder**. *Source: [Michela Massi](https://commons.wikimedia.org/wiki/File:Autoencoder_schema.png), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), via Wikimedia Commons.*
+:::
+
+An autoencoder is thus a series of transformations that can take an image (expressed as an array of numbers) and turn it into another one that looks similar. Think of it as a series of pipes, filters, and splitters that take a bucket (structured array) of water (data) from the original bucket to another one that looks alike. But, _why?_ What is the point of this exercise in mathematical gymnastics?
+
+In our context[^2], autoencoders are useful because, through the process of encoding, they distil the "statistical essence" of an image into a dense and compressed version. Instead of working with a complex and cumbersome $256 \times 256 \times 3$ data array, you can use a simple sequence of 128 numbers that, together, capture most properties engraved in the original image. In statistics, this process is called _dimensionality reduction_, and is one of the areas autoencoders excel at.
+Note also that, although this process happens in the encoder part, the decoder is just as important to make it all happen. It is only through the decoder that an autoencoder can take a latent representation ($h$) and turn it back into an output that can be directly compared to the input. This is the way the autoencoder knows how good $h$ is and is a crucial step in training. And this is the other "killer app" of autoencoders: they are _self-supervised_, meaning that they can be trained with a goal (reconstructing the input as accurately as possible) without requiring additional information in the form of labels. Self-supervision is a neat trick that sits between the more traditional unsupervised and supervised types of machine learning. Keep this bit in mind as you read through, we will return to it later when we discuss why autoencoders (and embeddings) are so popular today.
+
+[^2]: Autoencoders are used in a variety of fields for many purposes, so our treatment here is unavoidingly reductionist. 
+
+There are two more aspects of autoencoders worth highlighting to social researchers. The first is flexibility. Note how, in our account of how they work, we have not put any constraint on the shape of the input data. We have worked with the example of an image; but any type of data that can be represented as a structured array (and _most_ data that we are interested in social science _can_ be represented this way) is fair play for an autoencoder. Think of very large and wide tables of Census data, or transcripts of interviews that are converted into word frequency tables, or even panel data of several dimensions. These are all structures an autoencoder can be designed for. The second is that, although there is a lot fancy math and other magic involved here, the core purpose of what we have described is not foreign to social scientists. Data reduction has been a trick in our bag for a long time. Think of principal components analysis [PCA, @jolliffe2002principal], a widely used approach to turn long lists of variables into a smaller, more compressed, version that is easier to work with. In essence, an autoencoder is doing a very similar thing to PCA. The main difference is that autoencoders do not impose the constraint of linearity that PCA does. Relying on linear transformations makes PCA extremely efficient (you can use it effectively in small datasets), but only at the cost of flexibility and performance. Using PCA made sense 50 years ago, when computing power was limited and datasets small. In an age when computers are much more powerful and datasets orders of magnitude bigger, an approach like autoencoders looks a lot more compelling.
+
+### From autoencoders to modern embeddings
+
+Autoencoders have changed a lot since the early proposals of the 1980s and 90s. Since this is not an exhaustive historical review, we will skip most of that progress here. However, at least two points in time are worth considering to understand where satellite embeddings are today: the decade of the 2010s, and the current moment we find ourselves at in the middle of the 2020s.
+
+In the 2010s, computer vision was revolutionised. A series of technological advances converged with algorithm development and refinement of decades-old ideas to produce a new class of models that effectively "solved" vision. Much of this progress relied on deep learning [@lecun2015deep], a subfield that developed "deeper" neural networks, networks with more layers in between the input and the output. Until the latter part of the decade, the main workhorse of these approaches were convolutional neural networks [CNNs, e.g., @lecun1998gradient; @krizhevsky2012imagenet], a class of networks that work particularly well with images. Autoencoders also benefitted from many of these advances, and convolutional autoencoders emerged as a significant step forward when working with images. Nevertheless, the most popular approach of the decade, and the main application of CNNs, was in supervised networks that predicted a set of labels of interest. This proved to work exceptionally well, once trained. However, the training process was computationally demanding, very data hungry, and hard to "recycle" for different applications. Training a CNN was thus an (expensive) sunk cost that forced you to consider carefully whether it was worth the effort.
+
+Towards the end of the decade, deep learning saw a second inflection point. The focus by then had moved from images to text, and a new paper [@vaswani2017attention] proposed the transformer, a new type of network architecture that would usher in a new generation of models[^3]. The transformer was part of a new series of innovations that moved the field from supervised neural networks, where the network was trained for a specific set of labels and transferability was limited[^4], to what we today call _foundation models_. These are a class of neural networks that, unlike the previous ones we have reviewed, are trained to be explicitly general-purpose. They are called "foundation" because they are built to be used in a variety of applications where you may combine them with different labels or additional data. We say foundation models are _pre-trained_[^5], and that we then _fine tune_ them for specific tasks with minor additional compute required. The key difference in this approach is that pre-training (the most expensive and computationally demanding part) happens once, and it can be leveraged in a large variety of use cases. Conceptually, the key differentiator between this class of models and the large CNNs of the previous phase is that, while those were fully supervised, foundation models are self-supervised. This is more than naming pedantry, it has clear practical implications. While training a fully supervised network from scratch requires a large amount of labels for the task you are interested in; a foundation model only demands lots of unlabelled data. 
+
+[^3]: The transformer would also become part of the zeitgeist of the early 2020s as the "T" in ChatGPT.
+
+[^4]: This is not entirely true as there was a fair amount of work on transfer learning, which tried to take networks trained for a set of specific labels and generalise it so that it could be repurposed in a context with different labels. By the end of the 2010s, there were several off-the-shelf neural networks trained on large sets of labels that could easily be repurposed to predict different sets of labels with competitive performance. This can be seen as a natural bridge to the next phase of foundation models. Nevertheless, the principle stands that these networks were trained for a pre-specified set of labels.
+
+[^5]: The "P" in ChatGPT.
+
+Foundation models are essentially large and deep, state-of-the-art autoencoders. Here is where all the threads of this chapter so far come together. To be able to build foundation models that are truly general-purpose, one needs an architecture that can learn relevant patterns, distil statistical information from the images or snippets of text themselves, without additional labels. And the encoder-decoder approach does exactly that. It was an idea forty years in the making.
+
+Satellite embeddings are the latent variables ($h$) of the autoencoder in a foundation model pre-trained on satellite imagery. Although technically, the $h$ in @fig-autoencoder_schema is also called an _embedding_, more recently the term tends to refer to those generated by a foundation model. The eagle-eyed reader will perhaps start seeing why foundation models are becoming so popular in the context of satellite data. Satellites generate vast amounts of unlabelled data. Every day, satellites orbitting the Earth beam back to the ground petabytes of imagery. These are only readings from the sensors, there is no information on whether such readings correlate with specific labels such as land uses, geographic features such as building footprints, or ongoing events such as fires. But they represent the most accurate and up to date view of our planet we have. Being able to use _all_ this information before we worry about labels is an incredible advantage. Foundation models are also a great fit because of the flexibility they inherit from autoencoders. Satellites capture several types of information, from optical to thermal to radar. A magic machine that can take all of them and blend them into the same structure for later use comes in very handy indeed. And finally, embeddings represent another practical win: they make working with satellite a slightly more manageable undertaking. Satellites are traditionally very cumbersome to work with, in large part because of their volume. Remember that $h$ represents a compressed and dense version of the input data that retains as much information as possible. This compression makes satellites more accessible to larger audiences that do not have the technical chops to work with raw images.
+
+A final point on embeddings and how they relate to statistical techniques social scientists are very familiar with. We have already established tha parallel between autoencoders and PCA. Another parallel one can trace is between weights in a foundation models and parameters in a regression. One can think of the weights that need tuning in a foundation model as the parameters to be estimated in a linear regression. They are the numbers that make it possible to combine the input data in such a way that the output is as close as possible to the desired optimum. In regression, estimated coefficients minimise the error in predicting the dependent variable; in a foundation model, the weights minimise the difference between the input image and that reconstructed by the decoder block. A key difference is that regressions tend to have a small number of coefficients, while foundation models have a large number of weights. This makes sense if we think of what they are for and how they are used. Regressions are devices of understanding. Most social scientists run regressions to understand the process underlying the phenomenon they are interested in. In that context, a limited number of parameters is required to make sense of each of them, connect them to the theory, and understand the processes at work. Foundation models are devices of prediction. They are built so that a machine (not a human) can use it to produce the most accurate representation of a phenomenon so that it can be used for predicting something else. In this context, we do not need to be parsimonious in how much detail and parameters we introduce, so long as adding more makes the prediction better (spoiler alert: it generally does).
+
+## Why are satellite embeddings so powerful? (500 w) {#sec-embeddings_why}
+
+Now we have a better understanding of what satellite embeddings are and where they come from, we are in a better position to appreciate their relevance. But before that, it will help us to synthesise the main features of satellite embeddings. There is much excitement and activity around both geo-foundation models [see @Janowicz02092025 for a useful overview in this context] and derived embeddings [e.g., @gilman2025centralized]. @klemmer2025earthembeddings and @11636001 provide a useful characterisation of what makes embeddings valuable today. In particular, they highlight four core functions: _compression_ of high-dimensional data; _fusion_ of different types (”modalities”) of data, such as imagery and text, or imagery from different sensors such as optical and radar; _integration_ of satellite imagery with other foundation models such as LLMs; and _interpolation_ across space, time, or space-time.
+
+Let us put those traits in the context of the current social and data landscape. On the one hand, the defining social challenges of the XXIst Century such as climate change, economic disparities, or the disruption of new technologies demand more, better, and faster data than we are accustomed to. For example, we can’t address a phenomenon like neighborhood gentrification, which evolves rapidly and changes shape quickly, only with data like the Census, released every ten years. We need additional data feeds that allow us to triangulate with traditional sources and provide higher temporal and spatial resolution. This is true of gentrification, and of most societal challenges we face today. The good news is that we _have_ such data feeds. In the last two decades, an enormous amount of new forms of data have come online from sensors, devices and other anutomated systems. Many of them are increasingly available for research and policy in reliable ways. This is true of satellites, which are much older than twenty years, but have become so good in this period so as to be relevant for social questions[^6]. The challenge we are facing to square this growth in data needs and in data supply is to build the pipes, as it were, to connect the two. This requires being able to process and make sense of the data available and direct it to the areas of need. And this is where the real bottleneck is today.
+
+[^6]: It is not that satellite data were not good before, but the resolution they were available at, and the capabilities of the algorithms and computing of the time, precluded them from use cases in social contexts, where the focus is on smaller areas (e.g., cities) but the precision required is high.
+
+And this is where embeddings come in handy.
+Against this backdrop, embeddings emerge as a useful technology for social researchers and policy makers.
+
+## The Imago small area embeddings product (500w) {#sec-embeddings_product}
+
+- Let's talk about @imago2026satembedding.
+- We follow @brown2025alphaearthfoundationsembeddingfield.
+
+## Illustration (1k w) {#sec-embeddings_illustration}
+
+- Discuss w/ team
+- Potential ideas
+  - Similarity across space
+  - Similarity across time (change detection)
+  - Application as input. Options:
+    - Unsupervised classification (I don't like this because it's less conclusive and will take a lot of words to explain)
+    - Building density prediction
+    - Built-up area prediction (proportion of LSOA covered by OS Local buildings)
+
+::: {.column-margin .callout-note icon="false" title="Reproducibility Note"}
+Include code but hide it by default. This way it's reproducible but it's not on your face.
+:::
+
+## Conclusion (250w) {#sec-embeddings_conclusion}
+
+:::{refs}
+:::
+
+To do:
+
+- [ ] Cross-check refs with Readwise to see if I'm missing anything I've read recently
+- [ ] Run explanation section through Claude to check for errors
+- [ ] Questions for review:
+  - Is the tone too informal? In some ways, I think it needs to be. But, is there such a thing as _too informal_?
+  - Too many sub-headers?
+  - Are paragraphs too short?
