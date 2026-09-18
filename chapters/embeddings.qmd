@@ -66,11 +66,14 @@ A final point on embeddings and how they relate to statistical techniques social
 
 ## Why are satellite embeddings so powerful? (500 w) {#sec-embeddings_why}
 
-- Embeddings definition and features [see @klemmer2025earthembeddings] and @11636001
-- To understand the relevance of embeddings today, it is useful first to step
-  back and consider the current context.
-- Embeddings promise
-- What the promise offers up in the current context (and maybe how it stacks up with reality? include illustrations of current applications)
+Now we have a better understanding of what satellite embeddings are and where they come from, we are in a better position to appreciate their relevance. But before that, it will help us to synthesise the main features of satellite embeddings. There is much excitement and activity around both geo-foundation models [see @Janowicz02092025 for a useful overview in this context] and derived embeddings [e.g., @gilman2025centralized]. @klemmer2025earthembeddings and @11636001 provide a useful characterisation of what makes embeddings valuable today. In particular, they highlight four core functions: _compression_ of high-dimensional data; _fusion_ of different types (”modalities”) of data, such as imagery and text, or imagery from different sensors such as optical and radar; _integration_ of satellite imagery with other foundation models such as LLMs; and _interpolation_ across space, time, or space-time.
+
+Let us put those traits in the context of the current social and data landscape. On the one hand, the defining social challenges of the XXIst Century such as climate change, economic disparities, or the disruption of new technologies demand more, better, and faster data than we are accustomed to. For example, we can’t address a phenomenon like neighborhood gentrification, which evolves rapidly and changes shape quickly, only with data like the Census, released every ten years. We need additional data feeds that allow us to triangulate with traditional sources and provide higher temporal and spatial resolution. This is true of gentrification, and of most societal challenges we face today. The good news is that we _have_ such data feeds. In the last two decades, an enormous amount of new forms of data have come online from sensors, devices and other anutomated systems. Many of them are increasingly available for research and policy in reliable ways. This is true of satellites, which are much older than twenty years, but have become so good in this period so as to be relevant for social questions[^6]. The challenge we are facing to square this growth in data needs and in data supply is to build the pipes, as it were, to connect the two. This requires being able to process and make sense of the data available and direct it to the areas of need. And this is where the real bottleneck is today.
+
+[^6]: It is not that satellite data were not good before, but the resolution they were available at, and the capabilities of the algorithms and computing of the time, precluded them from use cases in social contexts, where the focus is on smaller areas (e.g., cities) but the precision required is high.
+
+And this is where embeddings come in handy.
+Against this backdrop, embeddings emerge as a useful technology for social researchers and policy makers.
 
 ## The Imago small area embeddings product (500w) {#sec-embeddings_product}
 
