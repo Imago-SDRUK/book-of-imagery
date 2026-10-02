@@ -28,11 +28,13 @@ book:
     - chapters/clive.qmd
     - chapters/psf.qmd
     - chapters/rgb.qmd
+    - chapters/embeddings.qmd
     # - chapters/synthesis.qmd
     # - chapters/way-forward.qmd
     - chapters/references.qmd
 
 bibliography: references.bib
+csl: style/harvard-cite-them-right.csl
 
 format:
   html:
