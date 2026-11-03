@@ -63,6 +63,8 @@ Ozone is different as the source data for this pollutant represents the number o
 
 ### Notes on interpreting the indicators
 
+We recommend users taking into account the following considerations for the interpretation of indicators:
+
 -   Area-weighted concentration and population-weighted exposure have different interpretations. The former describes the environment across a geographical area, based exclusively on the prevalence of the pollutant being measured. The latter gives more influence to smaller areas containing more residents. Their difference can help distinguish the spatial distribution of pollution from its distribution relative to the resident population.
 
 -   To count the exposed population, the pollutant concentration estimate of a small residential area is assigned to that area's population. Then, populations in areas above the reference threshold are summed. It is an estimate based on residential location rather than a measurement of each person's inhaled pollution. Dividing the count of exposed people belonging to a certain population group by its corresponding total count gives the estimated share of that group classified as exposed, provided the denominator is non-zero and both fields are available.
@@ -77,9 +79,9 @@ Ozone is different as the source data for this pollutant represents the number o
 
 ### Overview
 
-The methodology combines input data for pollution, population and geographic boundaries to describe residential exposure to air pollution. First, population totals and counts by population group are prepared for the relevant geographies and years. Pollution grids are then overlaid with the geographic boundaries of the areas of interest to calculate the area-weighted pollution indicators. These estimates are combined with population counts to calculate population-weighted exposure and threshold-based indicators. Population counts in smaller areas above the thresholds are also aggregated to estimate exposed populations. Finally, the indicators and population counts are brought together with geographic identifiers and boundaries to produce the output datasets for the census-year and longitudinal products. This methodological workflow is summarised in @fig-exhale-workflow.
+The methodological workflow is organised around four blocks. First, the inputs, which include pollution and population data, as well as geographic boundaries to describe residential exposure to air pollution. Second, the data preparation. Population totals and counts by population group are prepared for the relevant geographies and years. Pollution grids are then overlaid with the geographic boundaries of the areas of interest. Third, the pollution indicators are calculated, started with the area-weighted indicators. These are combined with population counts to calculate population-weighted exposure and threshold-based indicators. Population counts in smaller areas above the thresholds are also aggregated to estimate exposed populations. Fourth, the indicators and population counts are brought together with geographic identifiers and boundaries to produce the output datasets for the census-year and longitudinal products. This methodological workflow is summarised in @fig-exhale-workflow.
 
-![Methodological workflow for EXHALE’s static air pollution exposure indicators.](images/exhale-static/workflow-imago.png){#fig-exhale-workflow fig-alt="The workflow is organised in four blocks: inputs, data preparation, indicator computation and outputs. For ozone, the area-weighted indicator is based on exceedance days and no population-weighted exposure is computed. The availability of population-based indicators depends on the finer geographic inputs needed for computation." width="700"}
+![**Methodological workflow for EXHALE’s *Static Air Pollution Exposure Indicators*.** The workflow is organised in four blocks: inputs, data preparation, indicator computation and outputs. For ozone, the area-weighted indicator is based on exceedance days and no population-weighted exposure is computed. The availability of population-based indicators depends on the finer geographic inputs needed for computation.](images/exhale-static/workflow-imago.png){#fig-exhale-workflow fig-alt="The workflow is organised in four blocks: inputs, data preparation, indicator computation and outputs. For ozone, the area-weighted indicator is based on exceedance days and no population-weighted exposure is computed. The availability of population-based indicators depends on the finer geographic inputs needed for computation." width="700"}
 
 ### Input data
 
@@ -134,43 +136,50 @@ For example, the CSV file containing PM~2.5~ indicators for upper-level geograph
 
 ### Accessing the data
 
-The *Static Indicators* data is available for free download from the [Imago data catalogue](https://data.imago.ac.uk/) and [HASP data catalogue](https://data.hasp.ac.uk/). An interactive explorer allows users to visualise the *Static Indicators -- Census Year*, compare patterns of exposure across areas and explore differences between population groups. The explorer is available through [this link - TO BE COMPLETED!](To be completed). Furthermore, a dedicated [GitHub repository](https://github.com/Imago-SDRUK/DataProduct-EXHALE) containing the code used for the generation of the indicators will soon be made publicly available. Reproducing the full processing pipeline requires external input datasets that will not be included in the repository.
+The *Static Indicators* data is available for free download from the [Imago data catalogue](https://data.imago.ac.uk/) and [HASP data catalogue](https://data.hasp.ac.uk/). An interactive explorer allows users to visualise the *Static Indicators -- Census Year*, compare patterns of exposure across areas and explore differences between population groups. The explorer is available through [this link](https://imago-sdruk.github.io/exhale-uk-explorer/). Furthermore, a dedicated [GitHub repository](https://github.com/Imago-SDRUK/DataProduct-EXHALE) containing the code used for the generation of the indicators will soon be made publicly available. Reproducing the full processing pipeline requires external input datasets that will not be included in the repository.
 
 When performing analysis with EXHALE's *Static Indicators*, users should first determine which data product is most adequate for their question, i.e. census-year or longitudinal data, as well as the pollutant and geography level of interest. The downloaded GeoPackage files include geographic boundaries and can be used directly for mapping. For statistical analysis or modelling, we recommend using the smaller CSV files, which can be joined to other area-level datasets using geographic codes. Before joining, users should check that both datasets use the same boundary vintage, i.e. the same version of the statistical geographies, such as 2011 or 2021 Census boundaries. Reference years should also be chosen carefully to ensure that the exposure indicators and other variables relate to the intended period of analysis. For the *Static Indicators -- Census Year*, the UK-wide data combine 2021 observations for England, Wales and Northern Ireland with 2022 observations for Scotland. For the *Static Indicators -- Longitudinal*, the final outputs use 2021 Census boundaries for England and Wales and 2011 Census boundaries for Scotland. Although some earlier population inputs use different boundaries, these are harmonised during processing to support comparisons over time.
 
+### Illustrative use cases
 
-### An illustrative use case
+#### Mapping PM~2.5~ in Liverpool, UK
 
-To demonstrate the use of the datasets, we present an illustrative analysis of PM~2.5~ exposure in one UK urban region, Liverpool. We define these regions using the [Functional Urban Area boundaries](https://www.oecd.org/en/data/datasets/oecd-definition-of-cities-and-functional-urban-areas.html) provided by the OECD. Under the joint EU–OECD definition, a functional urban area comprises a city and its surrounding commuting zone, capturing the wider area connected to the city through everyday journeys to work. These delimitations provide a relevant context for examining urban air pollution exposure, as everyday urban transport connects urban corban cores to the surrounding areas, while also contributing to urban air pollution. We use the *Static Indicators* to describe variation in residence-based exposure in the functional urban areas corresponding to Liverpool.
+To demonstrate the use of the datasets, we present an illustrative analysis of PM~2.5~ exposure in one UK urban region, Liverpool. We define these regions using the [Functional Urban Area (FUA) boundaries](https://www.oecd.org/en/data/datasets/oecd-definition-of-cities-and-functional-urban-areas.html) provided by the OECD. Under the joint EU–OECD definition, a FUA comprises a city and its surrounding commuting zone, capturing the wider area connected to the city through everyday journeys to work. The FUA delimitations provide a relevant context for examining urban air pollution exposure, as everyday urban transport connects urban cores to the surrounding areas, and also contributes to urban air pollution. We use the *Static Indicators* to describe variation in residence-based exposure in the functional urban areas corresponding to Liverpool.
 
-The example uses data from the Static Indicators -- Census Year product for 2021. For each urban region, we select LSOAs whose population-weighted centroids fall within the corresponding functional urban area boundary. We then map the available indicators. These are shown in @fig-liverpool-pm25, where panel A shows the area-weighted indicator, panel B shows the population-weighted exposure (PWE) indicator, panel C shows the threshold flag indicator and panel D displays the quantile rank indicator.
+The example uses data from the *Static Indicators -- Census Year* product for 2021. For each urban region, we select LSOAs whose population-weighted centroids fall within the corresponding FUA boundary. We then map the available indicators. These are shown in @fig-liverpool-pm25, where panel A shows the area-weighted indicator, panel B shows the population-weighted exposure (PWE) indicator, panel C shows the threshold flag indicator and panel D displays the quantile rank indicator.
 
-![**Static Air Pollution Exposure Indicators for the Liverpool Functional Urban Area, 2021.** A) Area-weighted mean PM~2.5~ concentration; B) population-weighted exposure to PM~2.5~; C) areas above the annual PM~2.5~ reference threshold of 5 µg/m³; and D) quantile rank indicator based on UK-wide ranking, where 0 identifies areas at or below the threshold and ranks 1--4 indicate increasing concentrations among areas above it. All indicators are shown at LSOA level. Data is sources from EXHALE’s *Static Indicators -- Census Year* product, developed by the University of Liverpool and Imago in collaboration with the University of Leeds and HASP, using DEFRA modelled pollution data and HASP synthetic population data.](images/exhale-static/liverpool-pm25.png){#fig-liverpool-pm25 width="550" fig-alt="Map of area-weighted mean PM2.5 across Liverpool functional urban area LSOAs in 2021, showing spatial variation with higher concentrations in parts of the central urban area."}
+![***Static Air Pollution Exposure Indicators* for the Liverpool Functional Urban Area, 2021.** A) Area-weighted mean PM2.5 concentration; B) population-weighted exposure to PM2.5; C) areas above the annual PM2.5 reference threshold of 5 µg/m³; and D) quantile rank indicator based on UK-wide ranking, where 0 identifies areas at or below the threshold and ranks 1--4 indicate increasing concentrations among areas above it. All indicators are shown at LSOA level. Data is sourced from EXHALE’s Static Indicators -- Census Year product, developed by the University of Liverpool and Imago in collaboration with the University of Leeds and HASP, using DEFRA modelled pollution data and HASP synthetic population data.](images/exhale-static/liverpool-pm25.png){#fig-liverpool-pm25 fig-alt="Map of area-weighted mean PM2.5 across Liverpool functional urban area LSOAs in 2021, showing spatial variation with higher concentrations in parts of the central urban area."}
 
-A next question could be: **Do older residents have a higher estimated share living in areas above the PM~2.5~ reference threshold than the population overall?** The census-year files include total and exposed counts for people aged 65 and over, allowing the following analysis:
+#### Child exposure to NO~2~ across the UK
 
-1.  Select the LSOAs belonging to the study area, using the same boundary-selection rule as the map.
-2.  Sum the exposed counts for residents aged 65 and over and divide by the sum of their total counts. Calculate the equivalent share for the population overall.
-3.  Compare the shares alongside the concentration map and, where useful, repeat the calculation for other population groups.
+A next question could be: are children aged 0–15 more likely to live in areas with high NO~2~ levels? To explore this, we use the UK-wide NO~2~ *Static Indicators -- Census Year* dataset for upper geographies, combining 2021 observations for England, Wales and Northern Ireland with 2022 observations for Scotland. We define high NO~2~ levels as area-weighted annual mean concentrations greater than 10 µg/m³, the reference threshold used by EXHALE.
 
-These shares should be calculated from summed counts, rather than by taking an unweighted average of LSOA percentages. The result would describe the residential distribution of modelled exposure. It would not establish individual exposure, explain the causes of any difference, or demonstrate a causal effect on health.
+The exposed-population counts estimate how many residents within each upper geography live in smaller areas above this threshold. In England and Wales, the calculation sums the populations of Output Areas above the threshold into each MSOA. In Scotland and Northern Ireland, it sums the populations of Data Zones above the threshold into each Intermediate Zone and Super Data Zone, respectively.
 
-This is a proposed extension of the documented mapping example; no numerical result for the population-group comparison has yet been calculated for this chapter.
+The analysis involves three steps:
 
-```{=html}
-<!-- Draft provenance, inspected 27 October 2026:
-Local source project: /Users/carmen/Documents/github/DataProduct-EXHALE
-Source HEAD at inspection: ad6f6cf
-Sources: README.md; PROJECT_STATUS.md;
-code/static-indicators-census-year/setup.md;
-code/static-indicators-longitudinal/setup.md;
-notebooks/static-indicators-census-year-pm2.5-notebook.qmd;
-notebooks/static-indicators-longitudinal-pm2.5-notebook.qmd;
-outputs/Static-Census-Year/Consolidated-Datasets/PM2.5/PM2.5-Consolidated-Datasets-Metadata.json;
-census-year PM2.5 quantile, consolidation and exposed-population scripts;
-census-year O3 binary-flag script.
-Figure copied unchanged from outputs/Static-Census-Year/Visual-Outputs/Notebook-Assets/Case-Studies/01-1st-Indicator-Map-For-Liverpool-FUA.png.
-Confirm before publication: direct catalogue records and citation; longitudinal release coverage.
-Ozone flag definition follows the census-year code (>1), as agreed on 30 October 2026.
--->
-```
+1.  Select all upper geographies across the UK.
+2.  Sum the exposed counts for children aged 0–15 and divide by their total population count. Calculate the equivalent share for the population overall.
+3.  Compare the two shares.
+
+We obtain the following counts:
+
+| Population group | Residents in areas above the threshold | Total population | Share above the threshold |
+|------------------|------------------|------------------|------------------|
+| Children aged 0–15 | 6,552,221 | 12,315,084 | 53.20% |
+| All residents | 34,058,387 | 66,940,195 | 50.88% |
+
+Children aged 0–15 were more likely to live in areas above the NO~2~ reference threshold than the population overall, 53.20% compared with 50.88%, a difference of 2.32 percentage points. This finding has implications for public health because NO~2~ can irritate the airways and aggravate asthma and children are particularly susceptible to its effects [@epa2026no2; @belanger2013nitrogen]. Yet, it is important to note that the residence-based indicators describe potential environmental exposure, and do not measure individual exposure or indoor exposure.
+
+#### Evolution of exposure to air pollutants in Leeds, 2003–2024
+
+We also explore an application of the longitudinal dataset. How has residential exposure to air pollution changed over time in Leeds, UK? We use the *Static Indicators -- Longitudinal* product for 2003–2024, focusing on the area-weighted indicators for all six pollutants. In this case, we use the lower-geography dataset. The upper-geography dataset could support a similar analysis
+
+We select LSOAs whose 2021 population-weighted centroids fall within the Leeds FUA boundary as defined by [OECD](https://www.oecd.org/en/data/datasets/oecd-definition-of-cities-and-functional-urban-areas.html). This identifies 1,596 LSOAs. For each pollutant and year, we multiply each LSOA’s area-weighted indicator by its polygon area, sum these contributions and divide by the total area of the selected LSOAs. Larger LSOAs therefore contribute more to the regional estimate. The results represent annual mean concentrations in µg/m³ for five pollutants and the mean number of ozone exceedance days per year. The results are displayed in @fig-leeds-longitudinal.
+
+![**Air pollution levels across the Leeds Functional Urban Area, 2003–2024.** Annual values combine LSOA-level area-weighted indicators, weighted by the area of each LSOA. All panels show annual mean concentrations in µg/m³ except the ozone panel, which shows the area-weighted mean number of days when the daily maximum eight-hour mean concentration exceeded 120 µg/m³. The data source is EXHALE’s *Static Indicators -- Longitudinal* product.](images/exhale-static/leeds-area-weighted-2003-2024-imago.png){#fig-leeds-longitudinal fig-alt="Six line charts showing changes in air pollution levels across Leeds FUA from 2003 to 2024. Benzene, nitrogen dioxide, particulate matter and sulfur dioxide concentrations decline overall, while ozone exceedance days fluctuate substantially."}
+
+
+The results show an overall decline in concentrations between 2003 and 2024, although the trajectories include fluctuations between years. NO\~2\~ concentrations declined from 17.85 to 5.46 µg/m³, a reduction of approximately 69%. For example, benzene concentrations declined from 0.59 to 0.23 µg/m³, which is a reduction of approximately 61%. The corresponding reductions were 52% for PM\~2.5\~, 68% for SO\~2\~ and 36% for PM\~10\~. Ozone followed a more variable trajectory, with pronounced peaks in several years rather than a consistent decline. Its area-weighted mean number of exceedance days nevertheless fell from 11.82 in 2003 to 0.72 in 2024. These are days on which the daily maximum eight-hour mean ozone concentration exceeded 120 µg/m³.
+
+The observed trends are consistent with air quality statistics published by DEFRA [@@defra2026airquality], which report long-term improvements in the analysed pollutants across the UK. Similarly, DEFRA reports substantial yearly variability for ozone. This variability is associated with weather conditions, and complex chemical interactions involving precursor pollutants.
