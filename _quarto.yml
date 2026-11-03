@@ -33,6 +33,7 @@ book:
         - chapters/clive.qmd
         - chapters/spf.qmd
         - chapters/rgb.qmd
+        - chapters/exhale-static.qmd
     - part: "Social research and policy application"
     - chapters/references.qmd
 
