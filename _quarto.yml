@@ -36,7 +36,9 @@ book:
     - part: "Social research and policy application"
     - chapters/references.qmd
 
-bibliography: references.bib
+bibliography:
+  - references.bib
+  - chapters/clive-references.bib
 
 format:
   html:
