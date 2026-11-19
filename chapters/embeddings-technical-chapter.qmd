@@ -23,19 +23,19 @@ To illustrate the value of the dataset, this chapter demonstrates two ways these
 >
 > -   **Predicting social outcomes** – estimating social indicators, such as deprivation levels, using the embeddings.
 
-A key advantage of the embedding data product is its reusability. Instead of creating new image-derived variables for every study, the same embedding representation can support many different applications. This makes spatial analysis faster, more scalable, and more accessible to researchers and policymakers without specialist expertise in remote sensing or machine learning. As a result, satellite imagery becomes easier to use across a wide range of research and policy applications, helping researchers and policymakers better understand patterns of inequality, urban change, environmental conditions, and other characteristics of places.
+A key advantage of the embedding data product is its reusability. Instead of creating new image-derived variables for every study, the same embedding representation can support a wide range of applications. Designed to complement and enhance existing data sources rather than replace them, embeddings provide an additional layer of information about the characteristics of places that may not be fully captured by conventional datasets. This makes spatial analysis more efficient, scalable, and accessible to researchers and policymakers without specialist expertise in remote sensing or machine learning. As a result, satellite imagery can be more readily integrated into a wide range of research and policy applications, helping researchers and policymakers better understand patterns of inequality, urban change, environmental conditions, and other characteristics of places.
 
 ## 2. About the Embedding Data Product
 
-The embedding data product provides annual satellite image embeddings for small-area statistical geographies across England, Wales, Scotland, and Northern Ireland. Each area is represented by a set of 64 embedding variables (i.e., A00_mean, A01_mean, ..., A63_mean) that together provide a numerical description of its visual characteristics. Further information on the embedding data product, including the dataset structure, variables, formats, processing methodology, quality assurance, and validation procedures, is provided in Chapter X and the accompanying technical report \[HREF\]. The remainder of this chapter focuses on demonstrating how the embedding data product can be used for research and policy applications.
+The embedding data product provides annual satellite image embeddings for small-area statistical geographies across England, Wales, Scotland, and Northern Ireland. Each area is represented by a set of 64 embedding variables (i.e., A00_mean, A01_mean, ..., A63_mean) that together provide a numerical description of its visual characteristics. These representations can be integrated with existing datasets to support research, policy analysis, and evidence-based decision making. Potentional applications include understanding spatial enequalities, identifying areas with similar environmental and build characteristics, and informing placed-based policy and planning decision. Further information on the embedding data product, including the dataset structure, variables, formats, processing methodology, quality assurance, and validation procedures, is provided in Chapter X and the accompanying technical report \[HREF\]. The remainder of this chapter focuses on demonstrating how the embedding data product can be used for research and policy applications.
 
 ## 3. Loading and Exploring the Embedding Dataset
 
-This section demonstrates how to import the required libraries, load the embedding dataset, inspect its structure, and prepare it for subsequent analysis for our London, UK study area.
+This section introduces the practical steps for loading and preparing the embedding dataset. Using London, UK, as an example, we demonstrate how to import the required libraries, load the geospatial dataset, inspect its structure, and prepare the data for subsequent analysis.
 
 ### 3.1. Import Libraries
 
-The examples presented throughout this chapter use a range of Python libraries to support data handling, spatial analysis, visualisation, and the analyses presented in this chapter. These libraries provide the core functionality needed to load the embedding dataset, manipulate spatial data, identify spatial patterns, and perform predictive analyses. In addition to widely used Python packages, a small collection of custom helper `utils.embed_functions` is used to simplify common analytical tasks, allowing the focus to remain on the analytical workflow rather than implementation details. The following code imports the libraries and helper functions used in the examples presented throughout this chapter.
+The examples presented in this chapter use a range of Python libraries to support data handling, spatial analysis, visualisation, and machine learning. These libraries provide the core functionality needed to load the embedding dataset, manipulate spatial data, identify spatial patterns, and perform predictive analyses. In addition to widely used Python packages, a small collection of custom helper `utils.embed_functions` is used to simplify common analytical tasks and support workflows presented in the following parts. The following code imports the libraries and helper functions required for the analysis.
 
 Further details of the custom helper functions are provided in the accompanying `utils.embed_ functions.py` file.
 
@@ -72,7 +72,7 @@ from utils.embed_functions import (
 
 ### 3.2. Load data
 
-The embedding dataset is first loaded into the Python environment to make it available for the analyses presented in this chapter. In this example, the data are stored as a GeoJSON file and imported using GeoPandas, preserving both the embedding variables and the associated geographic boundaries.
+The embedding dataset is first loaded into the Python environment to make it available for the analysis presented in this chapter. In this example, the dataset is provided in GeoJSON format, which stores both the embedding variables and their associated geographic boundaries. We use GeoPandas to load the dataset, allowing the embedding information to be analysed alongside its spatial context.
 
 ```{python}
 gdf = gpd.read_file('datasets/uk_lsoa_london_embeds_2024.geojson')
@@ -80,18 +80,18 @@ gdf = gpd.read_file('datasets/uk_lsoa_london_embeds_2024.geojson')
 
 ### 3.3. Inspect the Data
 
-Once the dataset has been loaded, it is good practice to inspect its structure before beginning the analysis. Displaying the first few records provides a quick overview of the available variables and helps confirm that the data has been imported correctly.
+Once the dataset has been loaded, it is good practice to inspect its structure before beginning the analysis. Displaying the first few records provides a quick overview of the available variables and helps confirm that the data has been imported correctly. The following command displays the first few records.
 
 ```{python}
 #| colab: {base_uri: https://localhost:8080/, height: 508}
 gdf.head()
 ```
 
-Each row represents a small-area statistical geography (an LSOA in this example). Alongside geographic identifiers and geometry, the dataset contains 64 embedding variables (**A00_mean** to **A63_mean**). These variables collectively provide a numerical representation of the visual characteristics of each area.
+Each row represents a small-area statistical geography (an LSOA in this example). Alongside geographic identifiers and geometry, the dataset contains 64 embedding variables (**A00_mean** to **A63_mean**), which collectively provide a numerical representation of the visual characteristics of each area.
 
 ### 3.4. Prepare the Data for Analysis
 
-The dataset contains variables that are not required for the analyses presented in this chapter. To simplify subsequent analyses, the dataset is filtered to retain only the key variables, the 64 embedding variables, and the geometry. This reduces unnecessary information while preserving everything needed for both statistical analysis and spatial visualisation.
+The dataset contains variables that are not required for the analysis presented in this chapter. To simplify subsequent analysis, the dataset is filtered to retain only the key variables, the 64 embedding variables, and the geometry. This removes unnecessary information while preserving everything needed for both statistical analysis and spatial visualisation.
 
 ```{python}
 # Filter dataset to retain only relevant variables
@@ -221,14 +221,15 @@ display(HTML(
     f"<div style='width:50%'>{m2._repr_html_()}</div></div>"
 ))
 ```
+Comparing these neighbourhoods provides a visual assessment of the similarities identified through the embedding presentations. Although the areas may differ in their geographic location, their satellite imagery may reveal comparable patterns of urban form, vegetation, building density, or other environmental characteristics, supporting comparative assessments across different locations and providing evidence to inform place-based planning and policy interventions.
 
 ## 5. Use Case 2: Predicting Socioeconomic Outcomes
 
 ### 5.1. From Exploration to Prediction
 
-The previous example demonstrated how satellite image embeddings can be used to explore geographic space and identify places with similar visual characteristics. In this section, we explore a different application: predictive modelling. Predictive modelling uses existing observations to learn relationships between variables and then applies those relationships to estimate outcomes for new locations.
+The previous example demonstrated how satellite image embeddings can be used to explore geographic space and identify places with similar visual and environemntal characteristics. In this section, we explore a different application: predictive modelling. Predictive modelling uses existing observations to learn relationships between variables and then applies those relationships to estimate outcomes for different locations.
 
-The aim here is not to build the most sophisticated machine learning model possible. Instead, the objective is to demonstrate how the embedding data product can be integrated into a standard analytical workflow and to assess whether they contain useful information about socioeconomic conditions.
+The aim here is not to build the most sophisticated machine learning model. Instead, the objective is to demonstrate how the embedding data product can be integrated into a standard analytical workflow and to assess whether they contain useful information about socioeconomic conditions.
 
 Specifically, we investigate whether the information captured by the embeddings can help predict area deprivation levels.
 
@@ -245,7 +246,7 @@ Two datasets are used in this analysis.
 
 #### Embedding Dataset
 
-The first dataset is the embedding dataset, which was introduced earlier in this chapter. It provides a set of 64 embedding variables for each LSOA, representing the visual characteristics of the surrounding environment derived from satellite imagery.
+The first dataset is the embedding dataset introduced earlier in this chapter. It provides a set of 64 embedding variables for each LSOA, representing the visual characteristics of the surrounding environment derived from satellite imagery.
 
 #### Socioeconomic Dataset
 
@@ -349,7 +350,7 @@ m = make_webmap_general(
 m
 ```
 
-The map provides an interactive overview of deprivation across London. Users can zoom to different areas, inspect individual LSOAs, and explore the spatial distribution of IMD deciles through the interactive map and tooltips. This provides an important spatial context before evaluating the predictive models developed in the following sections.
+The map provides an interactive overview of deprivation across London. Users can zoom to different areas, inspect individual LSOAs, and explore the spatial distribution of IMD deciles through the interactive map and tooltips. This provides an important spatial context before evaluating the predictive models developed in the following parts.
 
 ### 5.6. Building a Baseline Model to Predict IMD Using Only Socioeconomic Variables
 
@@ -393,7 +394,7 @@ results = run_rf_classifier(
 
 ### 5.8. Predicting IMD Using Combined Information
 
-Embeddings are not intended to replace conventional socioeconomic datasets. Instead, they are designed to complement existing sources of information by capturing characteristics of places that may not be fully represented by traditional variables.
+Embeddings are not intended to replace conventional socioeconomic datasets. Instead, they are designed to complement existing sources of information by capturing characteristics of places that may not be fully represented by traditional variables. The previous analysis examined the predictive value of socioeconomic variables and satellite image embeddings, separately. We here investigate whether combining them can improve the prediction of area-level deprivation.
 
 To evaluate this, we combine the embedding variables with the socioeconomic variables in a single predictive model.
 
@@ -422,10 +423,11 @@ results = run_rf_classifier(
     class_weight="balanced", # Handle class imbalance
 )
 ```
+The resulting model allows us to assess whether satellite-derived embedding representations provide complementary predictive information when used alongside conventional socioeconomic variables. Its performance is compared with the two individual models in the following parts.
 
 ### 5.9. Comparing Model Performance
 
-Three models have now been created:
+Three models use different sets of predictors have now been created:
 
 | Model   | Predictors                           |
 |---------|--------------------------------------|
@@ -433,7 +435,7 @@ Three models have now been created:
 | Model 2 | Embeddings only                      |
 | Model 3 | Socioeconomic variables + embeddings |
 
-Their predictive results are shown below.
+We now compare the predictive performance of the created models, and their predictive results are shown below.
 
 | Model              | Accuracy | Mean Absolute Error |
 |--------------------|----------|---------------------|
@@ -443,7 +445,7 @@ Their predictive results are shown below.
 
 #### **Interpretation**
 
-Several important findings emerge:
+Several important findings from this comparison emerge:
 
 1.  The embedding variables alone demonstrate predictive value, indicating that the satellite imagery captures information associated with socioeconomic deprivation.
 
@@ -534,7 +536,7 @@ Together, these visualisations complement the predictive modelling results by sh
 
 ### 5.12 Key Takeaways
 
-This predictive modelling example demonstrates how a single embedding data product can support predictive modelling without requiring additional image processing or feature engineering.
+This predictive modelling example demonstrates the practical value of satellite image embedding data product that can support predictive modelling without requiring additional image processing or feature engineering.
 
 The analysis shows that:
 
@@ -544,9 +546,7 @@ The analysis shows that:
 
 -   the embedding variables can be used directly within standard machine-learning workflows;
 
--   the embeddings complement conventional socioeconomic datasets rather than replace them;
-
--   combining embedding variables with socioeconomic variables produces the strongest predictive performance; and
+-   embeddings provide complementary information for improving predictive performance when combined with conventional socioeconomic datasets; and
 
 -   spatial visualisation remains an important tool for interpreting model outputs and understanding geographic patterns.
 
@@ -580,15 +580,17 @@ The predictive examples presented in this chapter also highlight an important co
 
 The quality of embedding-based analysis is also influenced by the quality of the underlying imagery and the embedding model used to generate the representations. Different image sources, resolutions, acquisition dates, or model architectures may lead to different embedding characteristics.
 
-Finally, the usefulness of embeddings depends on the analytical question being addressed. Because the embeddings are designed as general-purpose representations of place, they are not optimised for any single application. In some applications they may provide substantial additional information, while in others traditional variables may already explain most of the variation of interest.
+Finally, the usefulness of embeddings depends on the analytical question being addressed. Because the embeddings are designed as general-purpose representations of place, they are not optimised for any single application. In some applications, they may provide substantial additional information, while in others traditional variables may already explain most of the variation of interest.
+
+These limitations have important implications for policy and decision-making. Embeddings can help identify areas with similar environmental and built characteristics, highlight neighbourhoods for further investigation, and provide additional evidence to support place-based planning and resource allocation. However, they should not be used without additional data sources to determine policy priorities, allocate resources, or just interventions. Such decisions require consideration of complementary data sources such as socioeconomic indicators and other relevant evidence. 
 
 For these reasons, embeddings are best viewed as complementary sources of information that can enrich existing analytical approaches rather than replace them. Their greatest strength lies in providing a reusable representation of place that can support a wide range of analytical tasks using the same underlying satellite imagery.
 
 ## 7. Conclusions
 
-This chapter has demonstrated how the embedding data product can be used as a general-purpose representation of geographic space. Unlike traditional remote sensing products that are often designed for a single application, embeddings provide a flexible description of place that can be reused across multiple analytical tasks. Using the embedding data product, we illustrated this principle through two complementary examples.
+This chapter has demonstrated how the embedding data product can be used as a general-purpose representation of geographic space. Unlike traditional remote sensing products that are often designed for a specific application, embeddings provide a flexible description of places that can be reused across multiple analytical tasks. We illustrated this principle through two complementary examples.
 
-First, semantic similarity analysis showed how embeddings can be used to explore places that share similar visual characteristics, regardless of their geographic location. By representing places within a high-dimensional semantic space, embeddings enable researchers to identify meaningful spatial relationships that may not be apparent from physical distance alone.
+First, semantic similarity analysis showed how embeddings can be used to explore places that share similar visual and environmental characteristics, regardless of their geographic location. By representing places within a high-dimensional semantic space, embeddings enable researchers to identify meaningful spatial relationships that may not be apparent from physical distance alone.
 
 Second, predictive modelling demonstrated how the same embeddings can be combined with conventional socioeconomic indicators to estimate deprivation levels. The results showed that embeddings capture information associated with neighbourhood context and can improve predictive performance when used alongside traditional datasets.
 
@@ -596,4 +598,5 @@ Taken together, these examples highlight the central value of embedding-based re
 
 As Earth observation archives continue to expand and foundation models become increasingly common, embedding-based data products like the one we used in this chapter are likely to play an increasingly important role in spatial data science. They provide a practical bridge between large-scale imagery resources and applied research in urban studies, social science, environmental monitoring, public health, and policy analysis.
 
-The embedding data product represents one example of this emerging paradigm, demonstrating how satellite imagery can be transformed into reusable representation of place that supports a wide range of analytical questions. Rather than replacing existing data sources, embeddings provide an additional layer of evidence that complements conventional datasets and helps researchers better understand the social, environmental, and spatial characteristics of places.
+Overall, the embedding data product represents one example of this emerging paradigm, demonstrating how satellite imagery can be transformed into reusable representation of place that supports a wide range of analytical questions. Rather than replacing existing data sources, embeddings provide an additional layer of evidence that complements conventional datasets, enriches existing alalytical approaches, supports research across geographical scales, and helps researchers and decision makers better understand the social, environmental, and spatial characteristics of places.
+
