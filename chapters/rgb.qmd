@@ -46,6 +46,7 @@ The resulting dataset provides a UK-wide classification of vegetated and non-veg
 
 ::: {#fig-workflow}
 ```{=latex}
+\usetikzlibrary{positioning,calc,arrows.meta}
 \begin{tikzpicture}[
   box/.style={draw, rounded corners=2pt, align=center, font=\small,
               minimum height=9mm, text width=34mm, inner sep=2mm},
@@ -76,6 +77,8 @@ The resulting dataset provides a UK-wide classification of vegetated and non-veg
 \node[stage] at (lx |- ml)   {PROCESS};
 \node[stage] at (lx |- prod) {OUTPUT};
 \end{tikzpicture}
+```
+:::
 
 ## How to use the data product
 
