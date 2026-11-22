@@ -34,6 +34,8 @@ book:
         - chapters/psf.qmd
         - chapters/rgb.qmd
     - part: "Social research and policy application"
+      chapters:
+        - chapters/embeddings-technical-chapter.qmd
     - chapters/references.qmd
 
 bibliography: references.bib
