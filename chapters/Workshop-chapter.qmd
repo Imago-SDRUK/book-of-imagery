@@ -19,9 +19,9 @@ The embedding data product aims to make this process much easier. It provides pr
 
 To illustrate the value of the dataset, this chapter demonstrates two ways these embeddings can be used:
 
-> -   **Exploring spatial patterns** – discovering naturally occurring groups of places with similar visual characteristics.
+> - **Exploring spatial patterns** – discovering naturally occurring groups of places with similar visual characteristics.
 >
-> -   **Predicting social outcomes** – estimating social indicators, such as deprivation levels, using the embeddings.
+> - **Predicting social outcomes** – estimating social indicators, such as deprivation levels, using the embeddings.
 
 A key advantage of the embedding data product is its reusability. Instead of creating new image-derived variables for every study, the same embedding representation can support many different applications. This makes spatial analysis faster, more scalable, and more accessible to researchers and policymakers without specialist expertise in remote sensing or machine learning. As a result, satellite imagery becomes easier to use across a wide range of research and policy applications, helping researchers and policymakers better understand patterns of inequality, urban change, environmental conditions, and other characteristics of places.
 
@@ -146,8 +146,8 @@ dist, neigh = nn.kneighbors(embeddings)
 
 The model searches for LSOAs with the most similar embedding values. The output includes:
 
--   dist – stores that distances between each LSOA and its nearest neighbours.
--   neigh – the positions (indices) of the corresponding LSOA within the dataset. These are converted to LSOA codes in the next step to make the results easier to interpret.
+- dist – stores that distances between each LSOA and its nearest neighbours.
+- neigh – the positions (indices) of the corresponding LSOA within the dataset. These are converted to LSOA codes in the next step to make the results easier to interpret.
 
 ### 4.4. Creating a Semantic Neighbour Table
 
@@ -234,10 +234,10 @@ Specifically, we investigate whether the information captured by the embeddings 
 
 This case demonstrates:
 
--   How embeddings can be combined with socioeconomic data.
--   How predictive models can be developed using different information sources.
--   Whether embeddings improve predictive performance.
--   How predictive results can be interpreted spatially.
+- How embeddings can be combined with socioeconomic data.
+- How predictive models can be developed using different information sources.
+- Whether embeddings improve predictive performance.
+- How predictive results can be interpreted spatially.
 
 ### 5.2. Data Used for Prediction
 
@@ -254,7 +254,7 @@ The second dataset contains socioeconomic variables linked to each LSOA. These v
 This dataset includes:
 
 | Variable | Description |
-|--------------------------------|----------------------------------------|
+|----|----|
 | IMD_decile | Index of Multiple Deprivation (target variable) |
 | Percent no qualifications 16 and over | Educational attainment |
 | Percent bad and very bad health | Health status |
@@ -538,17 +538,17 @@ This predictive modelling example demonstrates how a single embedding data produ
 
 The analysis shows that:
 
--   satellite image embeddings capture information associated with socioeconomic conditions;
+- satellite image embeddings capture information associated with socioeconomic conditions;
 
 <!-- -->
 
--   the embedding variables can be used directly within standard machine-learning workflows;
+- the embedding variables can be used directly within standard machine-learning workflows;
 
--   the embeddings complement conventional socioeconomic datasets rather than replace them;
+- the embeddings complement conventional socioeconomic datasets rather than replace them;
 
--   combining embedding variables with socioeconomic variables produces the strongest predictive performance; and
+- combining embedding variables with socioeconomic variables produces the strongest predictive performance; and
 
--   spatial visualisation remains an important tool for interpreting model outputs and understanding geographic patterns.
+- spatial visualisation remains an important tool for interpreting model outputs and understanding geographic patterns.
 
 Overall, the examples in this chapter demonstrate the central value of the embedding data product: a reusable representation of place that supports multiple analytical tasks, from exploratory analysis to predictive modelling, using the same underlying embedding dataset.
 
@@ -564,11 +564,11 @@ As demonstrated in this chapter, the same embeddings were first used to identify
 
 Embeddings also provide opportunities for:
 
--   Identifying similar places beyond geographic proximity;
--   Exploring patterns of urban form and land use;
--   Supporting predictive modelling of social, environmental, and economic indicators;
--   Integrating earth observation data into conventional statistical workflows;
--   Enabling large-scale analysis across cities, regions, and countries.
+- Identifying similar places beyond geographic proximity;
+- Exploring patterns of urban form and land use;
+- Supporting predictive modelling of social, environmental, and economic indicators;
+- Integrating earth observation data into conventional statistical workflows;
+- Enabling large-scale analysis across cities, regions, and countries.
 
 Because embeddings can be generated consistently across extensive geographic areas, they offer a scalable framework for analysing spatial patterns in a way that is difficult to achieve using traditional manually derived indicators. This combination of reusability, scalability, and flexibility makes the embedding data product well suited to a wide range of research and policy applications.
 

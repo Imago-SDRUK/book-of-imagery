@@ -9,23 +9,20 @@ editor_options:
 ## Abstract
 
 This report describes the development, methodology, and validation of
-the Imago Embedding data product, a UK-wide dataset of satellite-derived
-embedding vectors aggregated to small-area statistical geographies
-across the United Kingdom (UK), including Lower Layer Super Output Areas
-(England and Wales), Data Zones (Scotland), and Super Output Areas
-(Northern Ireland), for the years 2017–2024. The data product is derived
-from the [AlphaEarth Foundations Satellite Embedding Dataset
-V1](https://developers.google.com/earth-engine/datasets/catalog/GOOGLE_SATELLITE_EMBEDDING_V1_ANNUAL).
-The workflow consists of two automated pipelines: a Google Earth Engine
-export pipeline that retrieves and tiles 64-dimensional Embeddings
-across British National Grid tiles, and aggregation pipeline that
-computes mean embedding vectors for each of the small statistical areas
-in the UK. The resulting GeoPackage output provides 64-dimensional
-embedding vectors (range [−1, 1]) for each small area statistical
-geography and year. Validation confirms 100% range compliance across
-\~24 million values and near-perfect correlation (mean r = 0.997)
-without systematic bias. The data product is published via the [Imago
-Data
+the Satellite Embeddings for Small Area Statistical Geographies data
+product, a UK-wide dataset of satellite-derived embedding vectors
+aggregated to area statistical geographies across the United Kingdom,
+for the years 2017–2024. The data product is derived from the AlphaEarth
+Foundations Satellite Embedding Dataset V1. The workflow consists of two
+automated pipelines: a Google Earth Engine export pipeline that
+retrieves and tiles 64-dimensional Embeddings across British National
+Grid tiles, and aggregation pipeline that computes mean embedding
+vectors for each of the small statistical areas in the UK. The resulting
+GeoPackage output provides 64-dimensional embedding vectors (range \[−1,
+1\]) for each small area statistical geography and year. Validation
+confirms 100% range compliance across \~24 million values and
+near-perfect correlation (mean r = 0.997) without systematic bias. The
+data product is published via the [Imago Data
 Catalogue](https://data.imago.ac.uk/datasets/google-satellite-embedding-v1-small-areas-2017-2024)
 and is intended to support small-area analysis, spatial planning, urban
 research, and policy applications.
@@ -103,36 +100,36 @@ applications.
 This data product and the accompanying technical report have the
 following objectives:
 
--   To develop a reproducible, automated pipeline for extracting and
-    processing annual satellite embedding data from Google Earth Engine
-    **(GEE)** at UK national scale.
--   To aggregate pixel-level embedding vectors to UK small-area
-    statistical geographies using a tile-aware weighted averaging
-    procedure.
--   To validate the resulting data product against direct Earth Engine
-    extraction and confirm compliance with the theoretical embedding
-    data value range.
--   To publish the validated dataset via the Imago Data Catalogue in an
-    accessible, well-documented format for use by researchers and policy
-    professionals.
+- To develop a reproducible, automated pipeline for extracting and
+  processing annual satellite embedding data from Google Earth Engine
+  **(GEE)** at UK national scale.
+- To aggregate pixel-level embedding vectors to UK small-area
+  statistical geographies using a tile-aware weighted averaging
+  procedure.
+- To validate the resulting data product against direct Earth Engine
+  extraction and confirm compliance with the theoretical embedding data
+  value range.
+- To publish the validated dataset via the Imago Data Catalogue in an
+  accessible, well-documented format for use by researchers and policy
+  professionals.
 
 ### 1.4 Contributions
 
 The principal contributions of this work are:
 
--   A UK-wide annual embedding dataset providing 64-dimensional
-    satellite-derived embedding vectors for small-area statistical
-    geographies across England, Wales, Scotland, and Northern Ireland
-    between 2017 and 2024.
--   A reproducible aggregation framework implementing pixel-weighted,
-    multi-tile averaging for transforming pixel-level embedding data
-    into neighbourhood-scale representations.
--   A quantitative validation framework comparing pipeline outputs
-    against direct Earth Engine extraction.
--   A command-line tool for batch export of annual Google Earth Engine
-    image collections to tiled GeoTIFF format.
--   A scalable processing workflow that can be adapted to alternative
-    administrative, statistical, or custom geographies.
+- A UK-wide annual embedding dataset providing 64-dimensional
+  satellite-derived embedding vectors for small-area statistical
+  geographies across England, Wales, Scotland, and Northern Ireland
+  between 2017 and 2024.
+- A reproducible aggregation framework implementing pixel-weighted,
+  multi-tile averaging for transforming pixel-level embedding data into
+  neighbourhood-scale representations.
+- A quantitative validation framework comparing pipeline outputs against
+  direct Earth Engine extraction.
+- A command-line tool for batch export of annual Google Earth Engine
+  image collections to tiled GeoTIFF format.
+- A scalable processing workflow that can be adapted to alternative
+  administrative, statistical, or custom geographies.
 
 For further details on the original Embedding dataset, see [this
 blogpost](https://medium.com/google-earth/ai-powered-pixels-introducing-googles-satellite-embedding-dataset-31744c1f4650).
@@ -146,7 +143,7 @@ Satellite Embedding Dataset
 V1](https://developers.google.com/earth-engine/datasets/catalog/GOOGLE_SATELLITE_EMBEDDING_V1_ANNUAL),
 available on Google Earth Engine. This dataset provides annual 64-band
 raster dataset representing L2-normalised embedding vectors at 10-metre
-spatial resolution, with values bounded within [−1, 1]. The collection
+spatial resolution, with values bounded within \[−1, 1\]. The collection
 spans 2017 to 2024. An alternative distribution of the same underlying
 embeddings is available via [Source
 Cooperative](https://source.coop/tge-labs/aef). In that product,
@@ -177,19 +174,19 @@ Catalogue](https://data.imago.ac.uk/datasets/lsoa-boundaries-for-the-united-king
 The input data as received from Google Earth Engine has the following
 characteristics:
 
--   **Format:** GeoTIFF, optionally with COG (Cloud-Optimised GeoTIFF)
-    layout.
--   **Bands:** 64 bands, labelled A00 to A63.
--   **Data type:** Int16, LZW compression.
--   **CRS:** UTM zone projection
--   **Spatial resolution:** 10 m
--   **NoData:** The exported embedding tiles contain valid embedding
-    values throughout the image extent and do not define a separate
-    NoData value.
--   **Tile edge artefact:** Exported tiles may contain one additional
-    pixel along the northern and eastern edges due to pixel alignment
-    and boundary handling during export (e.g., expected 2000 × 2000
-    pixels yields 2001 × 2001 pixels in output).
+- **Format:** GeoTIFF, optionally with COG (Cloud-Optimised GeoTIFF)
+  layout.
+- **Bands:** 64 bands, labelled A00 to A63.
+- **Data type:** Int16, LZW compression.
+- **CRS:** UTM zone projection
+- **Spatial resolution:** 10 m
+- **NoData:** The exported embedding tiles contain valid embedding
+  values throughout the image extent and do not define a separate NoData
+  value.
+- **Tile edge artefact:** Exported tiles may contain one additional
+  pixel along the northern and eastern edges due to pixel alignment and
+  boundary handling during export (e.g., expected 2000 × 2000 pixels
+  yields 2001 × 2001 pixels in output).
 
 ## 3. Methodology
 
@@ -227,9 +224,9 @@ tool can also be used to export tiles to Google Drive.
 
 Main requirements are:
 
--   Polygonal area of interest, which can be tiled (for example, the UK
-    gridded by tiles of 20 × 20 km)
--   Year of interest
+- Polygonal area of interest, which can be tiled (for example, the UK
+  gridded by tiles of 20 × 20 km)
+- Year of interest
 
 The pipeline accesses the AlphaEarth embedding collection on Google
 Earth Engine, filters the data according to the specified area and year
@@ -265,9 +262,9 @@ throughout the remainder of the workflow.
 #### 3.3.2 Embedding Transformation and Scaling
 
 To reduce storage requirements while preserving precision, the pipeline
-optionally scales the native `float64` embedding values (range [−1, +1])
-to `Int16` representation (range [−32767, +32767]), reducing output size
-by approximately one third.
+optionally scales the native `float64` embedding values (range \[−1,
++1\]) to `Int16` representation (range \[−32767, +32767\]), reducing
+output size by approximately one third.
 
 To recover original decimal values (to "descale"), apply:
 
@@ -295,17 +292,17 @@ representation for embedding dimension A00, Tile SJ26 (2024).
 After reprojection and scaling, the intermediate data has the following
 characteristics:
 
--   **Format:** GeoTIFF (without COG layout).
--   **Bands:** 64 bands, labelled A00 to A63.
--   **Data type:** Int16, LZW compression.
--   **CRS:** EPSG:27700, OSGB36/British National Grid; spatial
-    resolution 10 m.
--   **NoData:** Undefined, with one extra pixel along the northern and
-    eastern tile edges. Pixels equal to 0 are filtered out during
-    further processing to avoid calculation distortions.
--   **Tiling:** Gridded by 20 × 20 km National Grid tiles.
--   **Value range:** −32767 to +32767 (scaled); equivalent to [−1, +1]
-    in original float64 space.
+- **Format:** GeoTIFF (without COG layout).
+- **Bands:** 64 bands, labelled A00 to A63.
+- **Data type:** Int16, LZW compression.
+- **CRS:** EPSG:27700, OSGB36/British National Grid; spatial resolution
+  10 m.
+- **NoData:** Undefined, with one extra pixel along the northern and
+  eastern tile edges. Pixels equal to 0 are filtered out during further
+  processing to avoid calculation distortions.
+- **Tiling:** Gridded by 20 × 20 km National Grid tiles.
+- **Value range:** −32767 to +32767 (scaled); equivalent to \[−1, +1\]
+  in original float64 space.
 
 ### 3.4 Small Area Aggregation
 
@@ -367,9 +364,7 @@ procedure is applied:
 
 For embedding dimension (j), the weighted average is calculated as:
 
-$$
-E_j=\frac{\sum_{i=1}^{n} p_iE_{ij}}{\sum_{i=1}^{n} p_i}
-$$
+$$E_j=\frac{\sum_{i=1}^{n} p_iE_{ij}}{\sum_{i=1}^{n} p_i}$$
 
 where $E_j$ denotes the final LSOA-level embedding value for dimension
 $j$, $E_{ij}$ denotes the mean embedding value for dimension $j$
@@ -381,7 +376,7 @@ This approach ensures that each tile contributes to the final embedding
 vector in proportion to its spatial contribution to the geographic unit
 being observed. This approach is necessary because some LSOAs,
 particularly in areas near tile boundaries, may cover two or more 20 ×
-20 km tiles. 
+20 km tiles.
 
 The current implementation uses `rasterio` for zonal statistics, which
 benefits from a parallelised implementation that offered practical
@@ -428,14 +423,14 @@ need to download the full dataset locally.
 
 Key implementation choices for performance:
 
--   **Chunked band processing:** Calculation is split into groups of
-    bands (e.g., 8 bands per chunk, 8 chunks for 64 bands total),
-    enabling processing without spilling to disk.
--   **LRU caching:** `functools.lru_cache` is used to cache tile
-    metadata from repeated `rasterio.open` calls, improving overall
-    performance by approximately 25%.
--   **Dask parallelisation:** `dask` is used to parallelise over LSOAs
-    in chunks, with 8 concurrent workers.
+- **Chunked band processing:** Calculation is split into groups of bands
+  (e.g., 8 bands per chunk, 8 chunks for 64 bands total), enabling
+  processing without spilling to disk.
+- **LRU caching:** `functools.lru_cache` is used to cache tile metadata
+  from repeated `rasterio.open` calls, improving overall performance by
+  approximately 25%.
+- **Dask parallelisation:** `dask` is used to parallelise over LSOAs in
+  chunks, with 8 concurrent workers.
 
 Using this configuration, the aggregation of a single annual dataset
 requires approximately 1.5 hours on average. Consequently, the complete
@@ -479,12 +474,12 @@ LZW-compressed) across all eight years.
 
 The output GeoPackage includes:
 
--   A unique statistical geography identifier.
+- A unique statistical geography identifier.
 
--   Polygon geometry representing the statistical geography boundary.
+- Polygon geometry representing the statistical geography boundary.
 
--   64 embedding attributes, each storing the mean embedding value for a
-    single embedding dimension.
+- 64 embedding attributes, each storing the mean embedding value for a
+  single embedding dimension.
 
 All embedding attributes are stored using double-precision
 floating-point data types.
@@ -492,7 +487,7 @@ floating-point data types.
 **Table 1 summarises the principal fields included in the GeoPackage.**
 
 | Field Type | Description |
-|---------------------|---------------------------------------------------|
+|------------------------------------|------------------------------------|
 | Geography ID | Unique identifier for the statistical geography |
 | Geometry | Polygon boundary geometry |
 | band1_mean – band64_mean | Mean embedding values for the 64 embedding dimensions |
@@ -510,7 +505,7 @@ Validation of the small-area statistical geography embedding datasets
 was conducted through two primary checks:
 
 1.  **Range validation** — verifying that all embedding values fall
-    within the theoretical [−1, 1] bounds.
+    within the theoretical \[−1, 1\] bounds.
 2.  **Random sampling validation** — comparing pipeline-generated mean
     embedding values against values extracted directly from Google Earth
     Engine for a random sample of geographic unit-year pairs.
@@ -522,18 +517,19 @@ Google Earth Engine (GEE).
 
 | Validation Task | Description | Status |
 |------------------------|------------------------|------------------------|
-| Range Check | Verify all embedding values are within [−1, 1] | ✅ PASSED |
+| Range Check | Verify all embedding values are within \[−1, 1\] | ✅ PASSED |
 | Random Sampling Validation | Compare pipeline with EE extraction (100 samples) | ✅ PASSED |
 
 ### 5.2 Range Validation
 
 The AlphaEarth embedding model produces values theoretically bounded
-within [−1, 1]. This check systematically inspected every numeric value
-across all 64 embedding dimensions for each year from 2017 to 2024.
+within \[−1, 1\]. This check systematically inspected every numeric
+value across all 64 embedding dimensions for each year from 2017 to
+2024.
 
--   Total values inspected per year: 46,844 geographic units × 64
-    dimensions = 2,998,016 values
--   Total values inspected across 8 years: \~24 million values
+- Total values inspected per year: 46,844 geographic units × 64
+  dimensions = 2,998,016 values
+- Total values inspected across 8 years: \~24 million values
 
 | Year | LSOAs  | Dimensions | Total Values | Out-of-Range | Status |
 |------|--------|------------|--------------|--------------|--------|
@@ -547,7 +543,7 @@ across all 64 embedding dimensions for each year from 2017 to 2024.
 | 2024 | 46,844 | 64         | 2,998,016    | 0            | ✅     |
 
 No out-of-range values were detected in any year or embedding dimension.
-Consequently, 100% compliance with the theoretical [−1, 1] constraint
+Consequently, 100% compliance with the theoretical \[−1, 1\] constraint
 was achieved across all 23,984,128 inspected values. These results
 confirm that the aggregation, scaling, and export procedures preserve
 the theoretical properties of the original AlphaEarth embeddings and do
@@ -663,7 +659,7 @@ confirming no single year exhibits systematic bias.
 
 | Validation Criterion            | Result                  |
 |---------------------------------|-------------------------|
-| Range check [−1, 1]             | 100% compliant          |
+| Range check \[−1, 1\]           | 100% compliant          |
 | Statistical consistency with EE | 100% pass rate          |
 | Systematic bias                 | None detected           |
 | Year-to-year consistency        | Stable across all years |
@@ -695,12 +691,12 @@ cloud computing resources.
 The pipeline achieves significant storage reduction through three
 complementary strategies:
 
--   **Tiling** (20 × 20 km BNG tiles), which enables parallel processing
-    and avoids loading the full national dataset into memory.
--   **Int16 scaling** (multiplying float64 values by 32,767), which
-    reduces per-file size by approximately one third compared to float32
-    or float64 representation.
--   **LZW compression**, applied automatically to all GeoTIFF outputs.
+- **Tiling** (20 × 20 km BNG tiles), which enables parallel processing
+  and avoids loading the full national dataset into memory.
+- **Int16 scaling** (multiplying float64 values by 32,767), which
+  reduces per-file size by approximately one third compared to float32
+  or float64 representation.
+- **LZW compression**, applied automatically to all GeoTIFF outputs.
 
 Together these reduce the total UK dataset from an estimated \~4 TiB
 (unscaled) to \~2.02 TiB across the full 2017–2024 period while
@@ -711,25 +707,25 @@ Appendix E).
 
 The pipeline is designed to be fully reproducible and extensible:
 
--   The aggregation pipeline accepts any input GeoPackage with an
-    appropriate tile ↔ polygon mapping, enabling aggregation to other
-    geographies. The same methodology can therefore be applied to
-    small-area statistical geographies, Middle Layer Super Output Areas
-    (MSOAs), local authority districts (LADs), wards, output areas,
-    bespoke study areas, and other administrative or analytical
-    geographies.
--   All processing parameters are stored within configuration files,
-    enabling automated year-by-year execution with minimal manual
-    intervention and ensuring that identical inputs produce identical
-    outputs. This supports reproducibility and facilitates the
-    reprocessing of future AlphaEarth releases or alternative geographic
-    boundary datasets.
--   The workflow is inherently parallelisable because geographic units
-    are processed independently. Consequently, runtime can be reduced
-    through the allocation of additional computational resources,
-    subject to available memory and storage constraints. Performance can
-    be improved by increasing the number of Dask workers, provided
-    sufficient virtual machine memory is available.
+- The aggregation pipeline accepts any input GeoPackage with an
+  appropriate tile ↔ polygon mapping, enabling aggregation to other
+  geographies. The same methodology can therefore be applied to
+  small-area statistical geographies, Middle Layer Super Output Areas
+  (MSOAs), local authority districts (LADs), wards, output areas,
+  bespoke study areas, and other administrative or analytical
+  geographies.
+- All processing parameters are stored within configuration files,
+  enabling automated year-by-year execution with minimal manual
+  intervention and ensuring that identical inputs produce identical
+  outputs. This supports reproducibility and facilitates the
+  reprocessing of future AlphaEarth releases or alternative geographic
+  boundary datasets.
+- The workflow is inherently parallelisable because geographic units are
+  processed independently. Consequently, runtime can be reduced through
+  the allocation of additional computational resources, subject to
+  available memory and storage constraints. Performance can be improved
+  by increasing the number of Dask workers, provided sufficient virtual
+  machine memory is available.
 
 ## 7. Usage Notes and Limitations
 
@@ -737,73 +733,72 @@ The pipeline is designed to be fully reproducible and extensible:
 
 The Imago Embedding data product is intended for use in:
 
--   Small-area socioeconomic and environmental analysis using
-    satellite-derived features.
+- Small-area socioeconomic and environmental analysis using
+  satellite-derived features.
 
--   Machine learning and statistical modelling tasks requiring
-    area-level environmental representations.
+- Machine learning and statistical modelling tasks requiring area-level
+  environmental representations.
 
--   Similarity analysis, clustering, and dimensionality reduction of
-    neighbourhood-scale environments.
+- Similarity analysis, clustering, and dimensionality reduction of
+  neighbourhood-scale environments.
 
--   Environmental and built-environment characterisation using latent
-    representations derived from Earth observation imagery.
+- Environmental and built-environment characterisation using latent
+  representations derived from Earth observation imagery.
 
--   Change detection and temporal trend analysis at small-area
-    statistical geography level (2017–2024).
+- Change detection and temporal trend analysis at small-area statistical
+  geography level (2017–2024).
 
--   Integration with administrative data (e.g., deprivation indices,
-    Census data, health statistics, and environmental indicators)
+- Integration with administrative data (e.g., deprivation indices,
+  Census data, health statistics, and environmental indicators)
 
--   Research and policy applications requiring a spatially
-    comprehensive, temporally consistent feature set for UK small-area
-    statistical geographies.
+- Research and policy applications requiring a spatially comprehensive,
+  temporally consistent feature set for UK small-area statistical
+  geographies.
 
 ### 7.2 Recommended Analytical Practices
 
--   When using the Int16-scaled intermediate data, apply the descaling
-    formula
+- When using the Int16-scaled intermediate data, apply the descaling
+  formula
 
-    $$x_\text{original} = \frac{x_\text{int16}}{32767}$$
+  $$x_\text{original} = \frac{x_\text{int16}}{32767}$$
 
-    before analysis to recover the original [−1, 1] range.
+  before analysis to recover the original \[−1, 1\] range.
 
--   Embedding dimensions should generally be interpreted collectively
-    rather than individually. Individual dimensions do not correspond to
-    specific physical, environmental, or socioeconomic variables, and
-    their analytical value arises primarily from the relationships among
-    dimensions within the full embedding vector.
+- Embedding dimensions should generally be interpreted collectively
+  rather than individually. Individual dimensions do not correspond to
+  specific physical, environmental, or socioeconomic variables, and
+  their analytical value arises primarily from the relationships among
+  dimensions within the full embedding vector.
 
--   For aggregation to other geographies (e.g., MSOA), ensure the input
-    GeoPackage contains an appropriate tile ↔ polygon mapping consistent
-    with the 20 × 20 km BNG tile grid.
+- For aggregation to other geographies (e.g., MSOA), ensure the input
+  GeoPackage contains an appropriate tile ↔ polygon mapping consistent
+  with the 20 × 20 km BNG tile grid.
 
--   Temporal changes in embedding values should be interpreted as
-    changes in the latent representation of the observed environment
-    rather than direct measurements of specific environmental,
-    land-cover, or socioeconomic changes.
+- Temporal changes in embedding values should be interpreted as changes
+  in the latent representation of the observed environment rather than
+  direct measurements of specific environmental, land-cover, or
+  socioeconomic changes.
 
 ### 7.3 Known Limitations
 
 Several limitations should be considered when using the data product.
 
--   **Partial-pixel boundary effects:** The current pipeline uses
-    `rasterio` for zonal statistics, which treats all overlapping pixels
-    as contributing equally (no partial-pixel weighting). This
-    introduces a small positive bias in mean values for small,
-    high-density geographies where the proportion of
-    boundary-intersecting pixels is higher. The 10-metre resolution
-    substantially mitigates this effect, but it remains a known source
-    of minor imprecision.
--   **Random sampling validation scope:** The sampling validation was
-    limited to 100 (geographic unit, year) pairs from 400 available, and
-    focuses on statistical consistency rather than exact pixel-level
-    matching. Different aggregation methods may produce slightly
-    different values.
--   **Data quality:** Although data quality issues affecting 2017
-    (related to Sentinel-1 image dropout) have been addressed in the
-    current GEE collection, users should be aware of this history when
-    using 2017 data.
+- **Partial-pixel boundary effects:** The current pipeline uses
+  `rasterio` for zonal statistics, which treats all overlapping pixels
+  as contributing equally (no partial-pixel weighting). This introduces
+  a small positive bias in mean values for small, high-density
+  geographies where the proportion of boundary-intersecting pixels is
+  higher. The 10-metre resolution substantially mitigates this effect,
+  but it remains a known source of minor imprecision.
+- **Random sampling validation scope:** The sampling validation was
+  limited to 100 (geographic unit, year) pairs from 400 available, and
+  focuses on statistical consistency rather than exact pixel-level
+  matching. Different aggregation methods may produce slightly different
+  values.
+- **Data quality:** Although data quality issues affecting 2017 (related
+  to Sentinel-1 image dropout) have been addressed in the current GEE
+  collection, users should be aware of this history when using 2017
+  data.
 
 ## 8. Discussion
 
@@ -847,24 +842,24 @@ alternative geographic boundaries.
 
 ### 8.3 Future Development Opportunities
 
--   **Expanded temporal coverage:** Extension of the pipeline to
-    accommodate new years of the Google Satellite Embedding dataset as
-    they become available.
--   **Additional geographies:** Production of equivalent datasets for
-    MSOAs, wards, local authority districts, and other administrative
-    units.
--   **Additional foundation models:** Extension of the workflow to
-    alternative Earth observation embedding products and foundation
-    models.
--   **Temporal consistency checks:** Year-over-year plausibility checks
-    and outlier detection for individual LSOA time series.
--   **Derived products and analytical tools**: Development of
-    dimensionality-reduced representations, similarity-search tools, and
-    derived indicators to support wider adoption by research and policy
-    communities.
--   **Windowed reads:** Implementation of true windowed rasterio reads
-    to reduce memory pressure and enable higher parallelism in the LSOA
-    aggregation step.
+- **Expanded temporal coverage:** Extension of the pipeline to
+  accommodate new years of the Google Satellite Embedding dataset as
+  they become available.
+- **Additional geographies:** Production of equivalent datasets for
+  MSOAs, wards, local authority districts, and other administrative
+  units.
+- **Additional foundation models:** Extension of the workflow to
+  alternative Earth observation embedding products and foundation
+  models.
+- **Temporal consistency checks:** Year-over-year plausibility checks
+  and outlier detection for individual LSOA time series.
+- **Derived products and analytical tools**: Development of
+  dimensionality-reduced representations, similarity-search tools, and
+  derived indicators to support wider adoption by research and policy
+  communities.
+- **Windowed reads:** Implementation of true windowed rasterio reads to
+  reduce memory pressure and enable higher parallelism in the LSOA
+  aggregation step.
 
 ------------------------------------------------------------------------
 
@@ -887,10 +882,10 @@ Github](https://github.com/Imago-SDRUK/EMBED2Social) repository.
 
 The pipeline comprises two main scripts:
 
--   `src/download_ee.py` — GEE export CLI tool (see Appendix A for full
-    usage)
--   `src/embed_to_lsoa.py` — small-area aggregation workflow aggregation
-    pipeline
+- `src/download_ee.py` — GEE export CLI tool (see Appendix A for full
+  usage)
+- `src/embed_to_lsoa.py` — small-area aggregation workflow aggregation
+  pipeline
 
 Supporting configuration files, templates, and workflow documentation
 are provided to facilitate reproducibility and adaptation to alternative
@@ -915,7 +910,7 @@ small-area statistical geographies annually, derived from the Google
 Satellite Embedding Dataset V1 through an automated workflow comprising
 Google Earth Engine data extraction, intermediate data preparation, and
 small-area aggregation. Validation confirmed 100% compliance with the
-theoretical [−1, 1] embedding value range across approximately 24
+theoretical \[−1, 1\] embedding value range across approximately 24
 million values and demonstrated near-perfect agreement (mean (r =
 0.997); mean difference = $-4.95 \times 10^{-5}$ with direct Google
 Earth Engine extraction. No evidence of systematic bias was detected,
@@ -949,16 +944,16 @@ Government AI Directorate.
 
 Key sources:
 
--   Google Satellite Embedding Dataset V1:
-    <https://developers.google.com/earth-engine/datasets/catalog/GOOGLE_SATELLITE_EMBEDDING_V1_ANNUAL>
--   Google Earth Engine blog post on the Satellite Embedding Dataset:
-    <https://medium.com/google-earth/ai-powered-pixels-introducing-googles-satellite-embedding-dataset-31744c1f4650>
--   Source Cooperative AlphaEarth Foundation Embeddings:
-    <https://source.coop/tge-labs/aef>
--   GEE Computation Overview (stability and predictability):
-    <https://developers.google.com/earth-engine/guides/computation_overview#stability_and_predictability>
--   London Datastore statistical GIS boundary files:
-    <https://data.london.gov.uk/dataset/statistical-gis-boundary-files-for-london-20od9/>
+- Google Satellite Embedding Dataset V1:
+  <https://developers.google.com/earth-engine/datasets/catalog/GOOGLE_SATELLITE_EMBEDDING_V1_ANNUAL>
+- Google Earth Engine blog post on the Satellite Embedding Dataset:
+  <https://medium.com/google-earth/ai-powered-pixels-introducing-googles-satellite-embedding-dataset-31744c1f4650>
+- Source Cooperative AlphaEarth Foundation Embeddings:
+  <https://source.coop/tge-labs/aef>
+- GEE Computation Overview (stability and predictability):
+  <https://developers.google.com/earth-engine/guides/computation_overview#stability_and_predictability>
+- London Datastore statistical GIS boundary files:
+  <https://data.london.gov.uk/dataset/statistical-gis-boundary-files-for-london-20od9/>
 
 ------------------------------------------------------------------------
 
@@ -1025,12 +1020,12 @@ Full GEE pipeline runtime and EECU time by year:
 
 Notes:
 
--   Pipeline runtime is client wall-clock time, while EECU time reflects
-    billable compute.
--   EECU variability factor is up to 2.8× for identical requests.
--   Total runtime variability factor is up to 8.8×.
--   LSOA aggregation runtime is \~1.5 hours per year (8 CPUs, 32 GB RAM,
-    GCS-mounted storage).
+- Pipeline runtime is client wall-clock time, while EECU time reflects
+  billable compute.
+- EECU variability factor is up to 2.8× for identical requests.
+- Total runtime variability factor is up to 8.8×.
+- LSOA aggregation runtime is \~1.5 hours per year (8 CPUs, 32 GB RAM,
+  GCS-mounted storage).
 
 ------------------------------------------------------------------------
 
@@ -1039,7 +1034,7 @@ Notes:
 **Range Validation Summary**
 
 All 24 million values (46,844 LSOAs × 64 dimensions × 8 years) passed
-the [−1, 1] range check with zero out-of-range values.
+the \[−1, 1\] range check with zero out-of-range values.
 
 **Random Sampling Validation — Full Results**
 
@@ -1084,8 +1079,8 @@ one LSOA × one year):
 | `band1_mean` … `band64_mean` | Float64 | Mean embedding value per dimension across all valid pixels in the LSOA |
 
 Additional fields (median, min, max, std, sum per dimension) can be
-produced by the pipeline on request. Embedding values are in the [−1, 1]
-range (after descaling if the Int16 intermediate format is used).
+produced by the pipeline on request. Embedding values are in the \[−1,
+1\] range (after descaling if the Int16 intermediate format is used).
 
 > Although 2017 featured data quality issues (see
 > [here](https://source.coop/tge-labs/aef)), they have been addressed in
@@ -1099,8 +1094,8 @@ range (after descaling if the Int16 intermediate format is used).
 
 ### Appendix E: Scaling Precision Analysis (Including Error Statistics)
 
-The Int16 scaling operation maps float64 values in [−1, +1] to integers
-in [−32767, +32767] via:
+The Int16 scaling operation maps float64 values in \[−1, +1\] to
+integers in \[−32767, +32767\] via:
 
 $$x_\text{int16} = \text{round}(x_\text{float64} \times 32767)$$
 
