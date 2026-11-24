@@ -161,7 +161,7 @@ neigh_codes = (
         neigh[:,1:],
         index=gdf["data_zone_code"]
     )
-    .map(lambda i: gdf["data_zone_code"][i])
+    .applymap(lambda i: gdf["data_zone_code"][i])
 )
 ```
 
@@ -598,5 +598,5 @@ Taken together, these examples highlight the central value of embedding-based re
 
 As Earth observation archives continue to expand and foundation models become increasingly common, embedding-based data products like the one we used in this chapter are likely to play an increasingly important role in spatial data science. They provide a practical bridge between large-scale imagery resources and applied research in urban studies, social science, environmental monitoring, public health, and policy analysis.
 
-Overall, the embedding data product represents one example of this emerging paradigm, demonstrating how satellite imagery can be transformed into reusable representation of place that supports a wide range of analytical questions. Rather than replacing existing data sources, embeddings provide an additional layer of evidence that complements conventional datasets, enriches existing alalytical approaches, supports research across geographical scales, and helps researchers and decision makers better understand the social, environmental, and spatial characteristics of places.
+Overall, the embedding data product represents one example of this emerging paradigm, demonstrating how satellite imagery can be transformed into a reusable and scalable representation of place that supports a wide range of analytical questions. Rather than replacing existing data sources, embeddings provide an additional layer of evidence that complements conventional datasets, enriches existing alalytical approaches, supports research across geographical scales, and helps researchers and decision makers better understand the social, environmental, and spatial characteristics of places.
 
