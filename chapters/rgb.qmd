@@ -15,9 +15,9 @@ Satellite imagery provides opportunities to measure vegetation consistently acro
 
 The initial release of RGB Green provides a UK-wide classification of vegetated and non-vegetated surfaces for 2024. The classification is derived from Sentinel-2 satellite imagery at a 10 m pixel resolution, providing consistent measurements of vegetation across different geographical contexts, from densely developed urban areas to suburban and rural landscapes.
 
-The resulting pixel-level classifications are aggregated to Local Super Output Areas (LSOAs) to produce neighbourhood-level indicators of vegetation coverage. This geographical structure allows users to compare vegetation coverage between neighbourhoods and integrate RGB with complementary datasets, including Census information, the Index of Multiple Deprivation (IMD), public health statistics, housing data and other environmental datasets. These linkages support research into relationships between neighbourhood environments, population characteristics and wider social, economic and health outcomes.
+The resulting pixel-level classifications are aggregated to small area statistical geographies to produce neighbourhood-level indicators of vegetation coverage. These comprise Lower Layer Super Output Areas (LSOAs) in England and Wales, Data Zones in Scotland, and Super Data Zones in Northern Ireland. This geographical structure allows users to compare vegetation coverage between neighbourhoods and integrate RGB with complementary datasets, including Census information, the Index of Multiple Deprivation (IMD), public health statistics, housing data and other environmental datasets. These linkages support research into relationships between neighbourhood environments, population characteristics and wider social, economic and health outcomes.
 
-While the initial release focuses on vegetation coverage, future development of RGB will extend its temporal and thematic coverage. Planned developments include extending the dataset to 2025 and subsequent years, introducing indicators of vegetation configuration and landscape characteristics, and incorporating additional indicators of the built environment at the LSOA level. These developments will broaden the range of environmental characteristics that can be examined through RGB and support comparisons across places and over time.
+While the initial release focuses on vegetation coverage, future development of RGB will extend its temporal and thematic coverage. Planned developments include extending the dataset to 2025 and subsequent years, introducing indicators of vegetation configuration and landscape characteristics, and incorporating additional indicators of the built environment across small area statistical geographies. These developments will broaden the range of environmental characteristics that can be examined through RGB and support comparisons across places and over time.
 
 
 ## Research and policy application of RGB
@@ -82,7 +82,7 @@ The resulting dataset provides a UK-wide classification of vegetated and non-veg
 
 ## How to use the data product
 
-RGB Green provides neighbourhood-level vegetation indicators that can be used alongside existing demographic, socioeconomic, health and environmental datasets. In England, the indicators are provided at the LSOA level and can be linked to other data using common geographical identifiers. This allows users to examine relationships between vegetation coverage and wider social and environmental conditions without having to process satellite imagery themselves.
+RGB Green provides neighbourhood-level vegetation indicators that can be used alongside existing demographic, socioeconomic, health and environmental datasets. The indicators are provided across small area statistical geographies and can be linked to other data using common geographical identifiers, enabling users to explore vegetation coverage alongside a range of social, demographic and environmental characteristics.
 
 The dataset can support several practical applications:
 
