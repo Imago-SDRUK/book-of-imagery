@@ -1,203 +1,84 @@
 # EXHALE: Exposure to Hazards using Activity, Location and Environment --- Static Air Pollution Exposure Indicators {#sec-exhale-static}
 
-<!--
-Word comment 1 — Rowe, Francisco
-Selected passage: Motivation and context
-I will add some of the text I used for the State of Imagery which could strengthen the case here: Introduction As global warming intensifies, the occurrence and severity of environmental hazards are predicted to increase. Understanding human exposure to environmental hazards is key to identifying affected communities and the interventions needed to mitigate their impacts. EXHALE (Exposure to Hazards using Activity, Location and Environment) seeks to develop a battery of small-area indicators to monitor and improve our understanding of the ways in which human exposure to environmental hazards varies across neighbourhoods and areas over time in the United Kingdom. Human exposure is generally measured at people’s residential locations. EXHALE recognises and addresses this limitation. It delivers a novel framework to measure dynamic exposure indicators based on the daily mobility trajectories of people using anonymised mobile phone data.The challenge[RF1] The UK lacks analysis-ready indicators to assess the extent, geography and temporal footprint of human exposure to air pollution. Three gaps stand out. First, we know little about who is exposed to what at granular geographic scales. Pollution estimates come as gridded data that do not match the official areas used to organise most social, health and administrative datasets, making it difficult to link pollution levels to the characteristics of residents and identify vulnerable groups. Second, we lack consistent evidence on how exposure changes over time, as both pollution levels and local populations change from year to year. Third, exposure is dynamic. Most people move throughout the day to go to work or school, shop or enjoy leisure activities, often passing through areas with very different pollution levels. Measures based on the place of residence therefore capture only part of people’s exposure, and integrating data on how people move during a typical day is key to measuring it more accurately. What does EXHALE offer?EXHALE addresses these gaps by providing small-area indicators of human exposure to air pollution at familiar geographies. [RF1]I think that this needs a better statement and highlight: (1) we have a gap in the UK understanding how human exposure to air pollution changes over time and identifying where it happens at granular scales. (2) measure the dynamic nature of human exposure to air pollutants. Most people move throughout the day to go to work, school, shopping or enjoy leisure activities. Hence, using the place of residence partly capture the level of air pollution exposure. Integrating data that record how people move during a typical day is key to more accurately capture human exposure to air pollution. (2)  understanding who is exposed to what; identifying vulnerable populations to pollution exposure.
--->
 
 ## Motivation and context
 
-<!-- Need paragraph here about the importance of studying exposure to air pollutants. It's an environmental hazard with important health impacts. Yet, exposure to different pollutants is not even, and the burden falls in specific groups and places. -->
-
-<!--
-Word comment 2 — Source editorial note
-Selected passage: Understanding spatial variation of the prevalence of environmental hazards can help us identify areas where a hazard may pose a greater risk. Yet, understanding risk also requires information about who is exposed.
-Need paragraph here about the importance of studying exposure to air pollutants. It's an environmental hazard with important health impacts. Yet, exposure to different pollutants is not even, and the burden falls in specific groups and places.
-
-Word comment 3 — Rowe, Francisco
-Selected passage: Understanding spatial variation of the prevalence of environmental hazards can help us identify areas where a hazard may pose a greater risk. Yet, understanding risk also requires information about who is exposed.
-Agree - it's good to start broad and then quickly narrow down as to why studying air pollution in particular.
--->
+### Why EXHALE?
 
 Understanding spatial variation of the prevalence of environmental hazards can help us identify areas where a hazard may pose a greater risk. Yet, understanding risk also requires information about who is exposed. **EXHALE, which stands for *Exposure to Hazards using Activity, Location and Environment***, brings together environmental hazard data and population information with the aim of producing indicators of exposure to environmental hazards across the UK. It draws on expertise in geographic data science through a collaboration between the University of Liverpool, Imago, the University of Leeds and the Healthy and Sustainable Places Data Service (HASP).
 
-<!--
-Word comment 4 — Rowe, Francisco
-Selected passage: static and dynamic indicators
-These indicators could be identified better. Also I think this should be framed to identify the advatanges and disadvantages of having both static and dynamic indicators. For example, dynamic indicators are considered to offer a more accurate representation of human exposure to air pollution but human mobility data to produce such indicators are not easily available, are complex, unstructured and generally lack of attributes about individuals. Instead information on the residential place where individuals live is more widely available at granular spatial scales and provide information about individuals living in those places. This can be used to justify why both data products are generated and available.
--->
+Three challenges motivate EXHALE. First, data about environmental hazards is commonly provided in geographies such as grids, that do not match the geographies at which population and administrative data are usually provided. Linking these sources is necessary to identify which population groups live in areas with higher hazard exposure. Second, examining changes in residential exposure requires accounting for changes in both the prevalence of environmental hazards and population over time. Third, residential location captures only part of exposure because people move between places during their daily activities. Therefore, in developing indicators of population exposure to environmental hazards, EXHALE recognises that people might be exposed to hazards where they live, but also where they play, study or work, in other words, in the places they visit in their everyday lives [@mobility25exposure].
 
-In developing indicators of population exposure to environmental hazards, EXHALE recognises that people might be exposed to hazards where they live, but also where they play, study or work, in other words, in the places they visit in their everyday lives [@mobility25exposure]. EXHALE therefore provides indicators based on residential location, as well as indicators that account for people's daily mobility patterns. These are referred to as *static* and *dynamic* indicators, respectively.
+To account for the three identified challenges, EXHALE collection comprises three types of data products for exposure to environmental hazards: *Static Indicators -- Census Year*, *Static Indicators -- Longitudinal* and *Dynamic Indicators*. Static indicators use population data available at detailed geographical scales, allowing potential exposure to be examined across different population groups. However, they do not capture exposure outside the residential area. Dynamic indicators account for daily mobility and can therefore represent a wider range of locations where exposure may occur. Their construction requires additional mobility data, which can be harder to obtain and may contain less information about individual characteristics.
 
-<!--
-Word comment 5 — Rowe, Francisco
-Selected passage: we present the first EXHALE data product, which focuses on exposure to air pollution
-This suggests that there will be more data products on exposure. While the framework that was developed for EXHALE could be applied to generating exposure indicators to other hazards, it may be safer to focus on the current data products on air pollution.
+This chapter presents the two static products, which describe potential exposure based on residential location. The dynamic product additionally considers people’s daily mobility patterns. EXHALE’s methodological framework extend to multiple types of environmental hazards. Its current data products focus on air pollution exposure.
 
-Word comment 6 — Rowe, Francisco
-Selected passage: pollution is the largest environmental health risk causing loss of healthy years of life and premature death
-need a reference
+### Why air pollution?
 
-Word comment 7 — Rowe, Francisco
-Selected passage: 29,000 and 43,000 deaths per year and costs more that £27 billion annually
-What year does this refer to?
+Globally, air pollution is the largest environmental health risk causing loss of healthy years of life and premature death [@RCP25]. In 2021, there were approximately 8.1 million preventable deaths linked to air pollution worldwide [@RCP25]. In the UK, the government estimates that the mortality burden of air pollution for 2019 ranged between 29,000 and 43,000 deaths, and costed more that £27 billion [@RCP25].
 
-Word comment 8 — Rowe, Francisco
-Selected passage: Despite its negative effects for public health and the economy, air pollution is present everywhere in our lives
-Suggest to either - elaborate this statement or drop it. It feels like an add-on.
--->
+Yet, exposure to air pollution is unevenly distributed across places and population groups. This is the result of two patterns. First, the sources and concentrations of pollutants vary geographically, reflecting differences in transport, industry, domestic heating, agriculture and other activities [@RCP25]. Broad distinctions between urban and rural areas can conceal substantial variation within them. Understanding exposure therefore requires examining patterns at finer geographical scales, including differences between neighbourhoods within the same city. Second, population groups differ in both their exposure and their vulnerability to air pollution. Where people live and spend their time can lead to some groups being systematically more exposed than others [@differentials-pollutant25]. The consequences of that exposure also depend on factors such as age, existing health conditions and socioeconomic circumstances [@RCP25]. Understanding these inequalities requires identifying where higher pollution levels coincide with populations that may be more vulnerable to their effects.
 
-Here, we present **the first EXHALE data product, which focuses on exposure to air pollution**. Globally, air pollution is the largest environmental health risk causing loss of healthy years of life and premature death. In 2021, there were approximately 8.1 million preventable deaths linked to air pollution worldwide [@RCP25]. In the UK, the mortality burden of air pollution is estimated to range between 29,000 and 43,000 deaths per year and costs more that £27 billion annually [@RCP25]. Despite its negative effects for public health and the economy, air pollution is present everywhere in our lives.
+## The *Static Indicators*
 
-<!--
-Word comment 9 — Rowe, Francisco
-Selected passage: Urban
-would make less of a binary geographical divide that we understand - as it invites the question so whyt we need to know more about this. We should suggest that we don't understand the patterns across the rural-urban hierarchy and we especially need a better understanding within cities.
+### What the indicators measure {#sec-exhale-indicator-measures}
 
-Word comment 10 — Rowe, Francisco
-Selected passage: population groups are not evenly distributed across these environments
-would frame this more about vulnerability. That is the key policy focus.
--->
+EXHALE contains two products for ***Static Air Pollution Exposure Indicators***, thereafter *Static Indicators*. These are the ***Static Indicators -- Census Year*** and ***Static Indicators -- Longitudinal***. Both describe potential exposure based on residential location. Here, *static* refers to where exposure is estimated, i.e. residential areas, rather than to pollution levels being constant over time. EXHALE also has a separate data product for *Dynamic Air Pollution Exposure Indicators*. The *Dynamic Indicators*, in addition to information relating to people's residential areas, also consider everyday mobility patterns. The workflow for dynamic indicators is explained in a different chapter. EXHALE's *Static Indicators* are available in the [Imago data catalogue](https://data.imago.ac.uk/) and [HASP data catalogue](https://data.hasp.ac.uk/).
 
-Yet, exposure to air pollution is unevenly distributed across places and population groups. This is the result of two interconnected patterns. First, the sources and concentrations of pollutants vary geographically. Urban areas often combine higher concentrations of pollution related to traffic. Rural areas also experience pollution from sources such as solid fuel and wood burning, agriculture, road transport, and forest and heathland fires [@RCP25]. Second, population groups are not evenly distributed across these environments. Differences in where people live and spend their time mean that some groups may be systematically more exposed than others [@differentials-pollutant25]. Understanding these inequalities requires examining the spatial distribution of both air pollution and the populations exposed to it.
 
-## The Static Indicators
+The *Static Indicators* are available at two levels of statistical geography, a lower and an upper level. These levels are nested, i.e. each lower-level area lies within a single upper-level area and each upper-level area is made up of a group of lower-level areas. These geographies serve similar purposes for reporting small-area statistics across the UK, although their names, population sizes and geographic extents differ between countries. For each UK country, these lower and upper levels correspond to the following official geographies:
 
-<!--
-Word comment 15 — Rowe, Francisco
-Selected passage: EXHALE’s Static Air Pollution Exposure Indicators
-somewhere before in the introduction we need to announce that we have three sets of indicators which are part of the EXHALE collection and that this chapter focuses on the first set of static indicators.
-
-Word comment 16 — Rowe, Francisco
-Selected passage: a longitudinal product for Static Air Pollution Exposure Indicators has been generated to provide a sequence of annual estimates.
-as per previous comment, we should announce this earlier so readers are familiar with what we are presenting at this stage of the text.
--->
-
-In this chapter, we focus on EXHALE's ***Static Air Pollution Exposure Indicators***. These indicators combine pollution levels with people's exposure based on their residential areas. Here, *static* describes the residential basis of the exposure. This term should not be interpreted as pollution being constant over time. In fact, a longitudinal product for *Static Air Pollution Exposure Indicators* has been generated to provide a sequence of annual estimates. EXHALE also has a separate data product for ***Dynamic Air Pollution Exposure Indicators***. These indicators, in addition to information relating to people's residential areas, also consider everyday mobility patterns. The workflow for dynamic indicators is explained in a different chapter.
-
-<!--
-Word comment 17 — Rowe, Francisco
-Selected passage: Static Air Pollution Exposure Indicators, thereafter Static Indicators,
-We need to consider that the *longitudinal indicators* are also *static* and we should ensure readers will follow the difference. So should this chapter focus on the two sets of static indicators. That would be my intuition. In that way we avoid more work describing and repeating much of the text.
-
-Word comment 18 — Rowe, Francisco
-Selected passage: support questions
-My intuition would be to present the indicators first and later describe what the data can and can't do.
--->
-
-The *Static Air Pollution Exposure Indicators*, thereafter *Static Indicators*, support questions such as:
-
--   Which residential areas have higher pollution levels?
--   How does accounting for the spatial distribution of residents within an are changes that area's exposure estimate?
--   Which population groups live in places above a specified pollution threshold?
-
-These questions can inform research on environmental inequality and help identify areas for further investigation.
-
-<!--
-Word comment 19 — Rowe, Francisco
-Selected passage: EXHALE contains two complementary Static Indicator products
-Good - we should announce this earlier in the introduction.
-
-Word comment 20 — Rowe, Francisco
-Selected passage: EXHALE GitHub repository
-Reader will  have no access to this. Better to refer them to the Imago Catalogue
--->
-
-EXHALE contains two complementary *Static Indicator* products, documented in the [EXHALE GitHub repository](https://github.com/Imago-SDRUK/DataProduct-EXHALE).
-
-<!--
-Word comment 21 — Rowe, Francisco
-Selected passage: Use
-Unclear what "use" means. It seems to be suggesting how it should be used. Would suggest to not do that. Let it to users to decide. What we should do it to advise on what the data allow or do not allow to say i.e. we need to delineate the limitations of the data. But I would not do this here, but later in the chapter.
--->
-
-<!--
-Word comment 22 — Rowe, Francisco
-Selected passage: provided
-suggest replacing this with "produced" or "created". Show it was a collaboration.
--->
-
-| Product | Population inputs and reference period | Use |
-|------------------------|------------------------|------------------------|
-| ***Static Indicators -- Census year*** | Synthetic population data provided by HASP for 2021 in England, Wales and Northern Ireland, and 2022 in Scotland | Comparing residential exposure across places and detailed population groups |
-| ***Static Indicators -- Longitudinal*** | Annual population estimates from ONS for England and Wales and Public Health Scotland for Scotland, with coverage depending on pollutant | Examining changes in residential exposure over time |
-
-<!--
-Word comment 23 — Rowe, Francisco
-Selected passage: following six air pollutants
-Should identify the source of these data
-
-Word comment 24 — Rowe, Francisco
-Selected passage: includes more detailed
-The HASP data are more detailed and that difference between the two data sets should be made explicit. The best way is to include a table identifying the data items they contain where they overlap and don't
--->
-
-Both products cover the following six air pollutants: benzene (C~6~H~6~), nitrogen dioxide (NO~2~), ozone (O~3~), particulate matter (PM~10~ and PM~2.5~) and sulfur dioxide (SO~2~). We use the *Static Indicators -- Census year* product for the main example in this chapter, as it includes more detailed demographic, socioeconomic, household and health attributes, such as age, sex, ethnicity, economic activity, occupation and general health. Both products contain four indicator types: area-weighted mean concentration, population-weighted exposure (PWE), threshold flag, quantile rank and exposed-population counts. These are explained in greater detail in [What the indicators measure](#sec-exhale-indicator-measures).
-
-<!--
-Word comment 25 — Rowe, Francisco
-Selected passage: two levels of statistical geography
-We should say that the geographies are different in name but equivalent in size and meaning.
--->
-
-The *Static Indicators -- Census year* are available at two levels of statistical geography, a lower and an upper level. These levels are nested, i.e. each lower-level area lies within a single upper-level area and each upper-level area is made up of a group of lower-level areas. For example, an MSOA comprises several LSOAs. For each UK country, these lower and upper levels correspond to the following official geographies:
-
-<!--
-Word comment 26 — Rowe, Francisco
-Selected passage: Census reference year
-The discrepancy in years should be noted and addressed in the text.
--->
-
-| Country | Lower geographies | Upper geographies | Census reference year |
-|------------------|------------------|------------------|------------------|
+| Country | Lower geographies | Upper geographies | Census year |
+|:------------------|:------------------|:------------------|:------------------|
 | England and Wales | Lower-layer Super Output Areas (LSOAs) | Middle-layer Super Output Areas (MSOAs) | 2021 |
 | Scotland | Data Zones (DZs) | Intermediate Zones (IZs) | 2022 |
 | Northern Ireland | Data Zones (DZs) | Super Data Zones (SDZs) | 2021 |
 
-<!--
-Word comment 32 — Rowe, Francisco
-Selected passage: indicators capturing population-weighted exposure and exposed-population counts
-would probably say this after the indicators are described. For now, I would say because population data at lower geographies were not available for Scotland and NI for the census years - and quickly move on.
--->
+: Statistical geographies and census reference years used in the census-year product. {#tbl-exhale-census-geographies}
 
-The geographic coverage of *Static Indicators -- Census year* extends across the whole of the UK. The availability of individual indicators varies by country and geography level as describe below. At the lower level, calculating indicators capturing population-weighted exposure and exposed-population counts requires population data for the finer Output Areas (OAs). These indicators are therefore available for England and Wales, but could not be calculated for Scotland and Northern Ireland, where equivalent OA-level population data were unavailable. Area-weighted pollution estimates and threshold-based indicators are available at the lower level in all four countries. At the upper level, all indicators are available across all UK countries, as population data from the constituent lower-level areas support the calculation of population-weighted exposure and exposed population counts. Ozone is an exception where the EXHALE workflow does not calculate population-weighted exposure at either geography level. The remaining ozone indicators are based on the number of days on which a specified concentration threshold was exceeded, rather than annual mean concentrations as for the other pollutants.
+
+Both *Static Indicators -- Census Year* and *Static Indicators -- Longitudinal* provide four indicators, as well as the total and exposed-population counts:
+
+| Indicator | Interpretation |
+|:------------------------------------|:------------------------------------|
+| **Area-weighted mean concentration** | An estimate of average pollution across an area's land surface; expressed in µg/m³ |
+| **Population-weighted exposure (PWE)** | An average of concentration estimates of small areas, weighted by their resident populations; expressed in µg/m³ |
+| **Threshold flag** | A binary indicator capturing whether the area-weighted concentration is above a pollutant-specific reference threshold |
+| **Quantile rank** | A relative classification of pollution among areas above the reference threshold using ranks 1–4 and areas at or below the threshold receive rank 0 |
+| **Exposed-population counts** | Estimated numbers of residents, including specified population groups, living in smaller areas classified as above the threshold |
+
+: Interpretation of the static indicators and accompanying exposed-population counts. {#tbl-exhale-indicator-interpretation}
+
+
+Exposed-population counts by age and sex are available for both *Static Indicator* products. The census-year product additionally includes counts by socioeconomic, household and health characteristics, as summarised in @tbl-exhale-population-attributes.
+
+| Population attribute | *Static Indicators -- Census year* | *Static Indicators -- Longitudinal* |
+|:---------------------|:-----------:|:------------:|
+| Age | ✓ | ✓ |
+| Sex | ✓ | ✓ |
+| Ethnic group | ✓ | — |
+| Country of birth | ✓ | — |
+| Approximated social grade | ✓ | — |
+| Economic activity status | ✓ | — |
+| Occupation | ✓ | — |
+| Industry | ✓ | — |
+| Full-time education status | ✓ | — |
+| Family type | ✓ | — |
+| Legal partnership status | ✓ | — |
+| General health | ✓ | — |
+
+: Population attributes available in the two static products. A tick indicates availability and a dash indicates that the attribute is not included. {#tbl-exhale-population-attributes}
+
+All the indicators are available for five of the six pollutants, i.e. benzene, NO~2~, PM~10~, PM~2.5~ and SO~2~, which are represented by annual mean concentrations. Each pollutant has its own reference threshold. For PM~2.5~, PM~10~ and NO~2~, the thresholds are 5, 15 and 10 µg/m³, respectively, corresponding to the annual guideline values in the [2021 WHO global air quality guidelines](https://www.who.int/publications/i/item/9789240034228/). For benzene, EXHALE uses 5 µg/m³, corresponding to the annual limit value established under Directive 2008/50/EC and listed in the [European Commission’s air quality standards](https://environment.ec.europa.eu/topics/air/air-quality/eu-air-quality-standards_en). For SO~2~, EXHALE uses 20 µg/m³, corresponding to the annual objective for protecting vegetation and ecosystems listed in [DEFRA’s national air quality objectives](https://uk-air.defra.gov.uk/assets/documents/Air_Quality_Objectives_Update_20230403.pdf).
+
+Ozone is different as the source data for this pollutant represents the number of days on which the daily maximum eight-hour concentration exceeds 120 µg/m³. EXHALE aggregates this to an area-weighted number of days, rather than an annual mean concentration. Therefore, its associated indicators include a binary threshold flag and quantile ranks, but not the PWE. The census-year ozone threshold flag is 'Yes' when the area-weighted mean number of exceedance days is greater than one and 'No' when it is one or less. This mean can take fractional values because it combines grid-cell day counts using area weights.
+
+### Geographic and temporal coverage
+
+The geographic coverage of *Static Indicators -- Census year* extends across the whole of the UK. The availability of individual indicators varies by country and geography level as described below. At the lower level, calculating indicators capturing population-weighted exposure and exposed-population counts requires population data for the finer Output Areas (OAs). These indicators are therefore available for England and Wales, but could not be calculated for Scotland and Northern Ireland, where equivalent OA-level population data were unavailable. Area-weighted pollution estimates and threshold-based indicators are available at the lower level in all four countries. At the upper level, all indicators are available across all UK countries, as population data from the constituent lower-level areas support the calculation of population-weighted exposure and exposed population counts. Ozone is an exception where the EXHALE workflow does not calculate population-weighted exposure at either geography level. The remaining ozone indicators are based on the number of days on which a specified concentration threshold was exceeded, rather than annual mean concentrations as for the other pollutants.
 
 The *Static Indicators -- Longitudinal* describe annual pollutant exposure beginning in 2001 for PM~10~ and NO~2~, 2002 for PM~2.5~ and SO~2~, and 2003 for benzene and ozone. All series extend to 2024. These longitudinal indicators are also available at lower and upper geography levels. However, their geographic coverage is limited to Great Britain, i.e. England, Wales and Scotland. Northern Ireland is not included in the consolidated longitudinal outputs due to limited data availability. The outputs use LSOAs and MSOAs in England and Wales, and Data Zones and Intermediate Zones in Scotland for lower and upper level geographies respectively. England and Wales use 2021 Census boundaries, and Scotland uses 2011 Census boundaries. Users should account for this difference when linking or comparing the two products. As in the census-year product, lower-level population-weighted exposure and exposed-population counts are unavailable for Scotland because the required population data below Data Zone level were not available. For ozone, the population-weighted exposure at either geography level is not provided.
 
-### What the indicators measure {#sec-exhale-indicator-measures}
-
-<!--
-Word comment 35 — Rowe, Francisco
-Selected passage: four main indicator types
-This could be confusing. Five items are listed. Clarify that there are four indicators plus exposed-population counts
--->
-
-Both *Static Indicators -- Census Year* and *Static Indicators -- Longitudinal* contain four main indicator types, supplemented by population counts:
-
-<!--
-Word comment 36 — Rowe, Francisco
-Selected passage: safe threshold
-Replace “safe threshold” with “reference threshold” throughout. A guideline or regulatory limit does not necessarily mean there is no risk below it.
--->
-
-| Indicator | Interpretation |
-|------------------------------------|------------------------------------|
-| **Area-weighted mean concentration** | An estimate of average pollution across an area's land surface; expressed in µg/m³ |
-| **Population-weighted exposure (PWE)** | An average of concentration estimates of small areas, weighted by their resident populations; expressed in µg/m³ |
-| **Threshold flag** | A binary indicator capturing whether the area-weighted concentration is above a pollutant-specific safe threshold |
-| **Quantile rank** | A relative classification of pollution among areas above the safe threshold using ranks 1–4 and areas at or below the threshold receive rank 0 |
-| **Exposed-population counts** | Estimated numbers of residents, including specified population groups, living in smaller areas classified as above the threshold |
-
-<!--
-Word comment 39 — Rowe, Francisco
-Selected passage: 2021 WHO global air quality guidelines.
-would be worth confirming if every refrence threshold is here.
--->
-
-All the indicators are available for five of the six pollutants, i.e. benzene, NO~2~, PM~10~, PM~2.5~ and SO~2~, which are represented by annual mean concentrations. Each pollutant has its own reference threshold values. So, for example, for PM~2.5~ a safe threshold value of 5 µg/m³ is used, corresponding to the annual guideline in the [2021 WHO global air quality guidelines](https://www.who.int/publications/i/item/9789240034228/).
-
-Ozone is different as the source data for this pollutant represents the number of days on which the daily maximum eight-hour concentration exceeds 120 µg/m³. EXHALE aggregates this to an area-weighted number of days, rather than an annual mean concentration. Therefore, its associated indicators include a binary threshold flag and quantile ranks, but not the PWE. The census-year ozone threshold flag is 'Yes' when the area-weighted mean number of exceedance days is greater than one and 'No' when it is one or less. This mean can take fractional values because it combines grid-cell day counts using area weights.
 
 ### Notes on interpreting the indicators
 
@@ -207,127 +88,41 @@ We recommend users taking into account the following considerations for the inte
 
 -   To count the exposed population, the pollutant concentration estimate of a small residential area is assigned to that area's population. Then, populations in areas above the reference threshold are summed. It is an estimate based on residential location rather than a measurement of each person's inhaled pollution. Dividing the count of exposed people belonging to a certain population group by its corresponding total count gives the estimated share of that group classified as exposed, provided the denominator is non-zero and both fields are available.
 
-<!--
-Word comment 41 — Rowe, Francisco
-Selected passage: Quantile ranks
-As ranks are recalculated each year, they show an area’s relative position in that year, not a fixed pollution level. We should flag this.
--->
-
--   Higher concentration values indicate higher modelled pollution and higher ozone values indicate more exceedance days. Quantile ranks describe relative levels of exposure among areas that are above the threshold.
+-   Higher concentration values indicate higher modelled pollution and higher ozone values indicate more exceedance days. Quantile ranks describe relative levels of exposure among areas that are above the threshold. In the longitudinal product, ranks are recalculated each year. Therefore, they describe the relative position of each area within that year and should not be used alone to assess whether pollution levels have increased or decreased over time.
 
 -   In the census-year lower-geography outputs, PWE and exposed-population counts are intentionally unavailable for Scotland and Northern Ireland because the required population inputs below Data Zone level were unavailable. Total population counts are still available in the dataset for those regions, since the regions are populated and therefore exposed. So if an exposure value is unavailable, it should not be replaced by a zero.
 
-<!--
-Word comment 42 — Rowe, Francisco
-Selected passage: indicators for smaller statistical areas inherit the value of the grid cell(s) where they are conatinedcontained.
-This should be elaborated. Some areas intersect more than one cell. Suggest: “The pollution data are modelled on a 1 km grid. Estimates for smaller areas are derived from the grid cells they intersect and should not be interpreted as measurements of local variation within a grid cell.”
--->
-
--   Cross-country comparisons must account for the different census reference years. Interpretation at very small scales must also recognise that the underlying pollution grid has a resolution of 1 km × 1 km, therefore, indicators for smaller statistical areas inherit the value of the grid cell(s) where they are contained.
+-   Cross-country comparisons must account for the different census reference years. The underlying pollution data are modelled on a 1 km × 1 km grid. Estimates for smaller statistical areas are derived from the grid cells they intersect and do not capture variation within individual grid cells.
 
 ## Methodology
 
 ### Overview
 
-The methodological workflow is organised around four blocks. First, the inputs, which include pollution and population data, as well as geographic boundaries to describe residential exposure to air pollution. Second, the data preparation. Population totals and counts by population group are prepared for the relevant geographies and years. Pollution grids are then overlaid with the geographic boundaries of the areas of interest. Third, the pollution indicators are calculated, started with the area-weighted indicators. These are combined with population counts to calculate population-weighted exposure and threshold-based indicators. Population counts in smaller areas above the thresholds are also aggregated to estimate exposed populations. Fourth, the indicators and population counts are brought together with geographic identifiers and boundaries to produce the output datasets for the census-year and longitudinal products. This methodological workflow is summarised in @fig-exhale-workflow.
+The workflow in @fig-exhale-workflow has three stages: inputs, process and outputs. Annual pollution grids, statistical boundaries and population data provide the inputs. During processing, pollution grids are overlaid with the geographic boundaries of the target areas and pollution levels are estimated for each statistical area. These estimates are matched with population data by area and year to account for where residents live. Pollution estimates are also compared with reference thresholds to classify areas according to the populations living above those thresholds. The results are the census-year and longitudinal data products.
 
-<!--
-Word comment 47 — Rowe, Francisco
-Selected passage: Figure
-can we go for a more visual graphical representation? and a simpler version identifying: inputs > process > outputs. No need to identify the indicators here. They are described below.
--->
+![**Workflow for producing EXHALE’s static air pollution exposure datasets.** The three stages include the input data, data processing and the census-year and longitudinal outputs.](images/exhale-static/workflow-imago-visual.png){#fig-exhale-workflow fig-alt="Three-stage workflow. Inputs are annual pollution grids, statistical boundaries and population data. Processing diagrams show a grid intersecting an irregular area, the intersecting pieces and a combined area estimate, followed by linking pollution and population data. Outputs are the UK census-year snapshot and the Great Britain annual series." width="700"}
 
-![**Methodological workflow for EXHALE’s *Static Air Pollution Exposure Indicators*.** The workflow is organised in four blocks: inputs, data preparation, indicator computation and outputs. For ozone, the area-weighted indicator is based on exceedance days and no population-weighted exposure is computed. The availability of population-based indicators depends on the finer geographic inputs needed for computation.](images/exhale-static/workflow-imago.png){#fig-exhale-workflow fig-alt="The workflow is organised in four blocks: inputs, data preparation, indicator computation and outputs. For ozone, the area-weighted indicator is based on exceedance days and no population-weighted exposure is computed. The availability of population-based indicators depends on the finer geographic inputs needed for computation." width="700"}
+### Input data {#sec-exhale-input-data}
 
-### Input data
+The construction of the *Static Indicators* relies on three types of input data. First, modelled **air pollutant grids** from the UK Department for Environment, Food & Rural Affairs (DEFRA), available from the [Air Quality Compliance Data Hub](https://compliance-data.defra.gov.uk/). To create the 1 km × 1 km pollution grids, DEFRA combines official data from the [National Atmospheric Emissions Inventory (NAEI)](https://naei.energysecurity.gov.uk/) with atmospheric dispersion and chemical models to simulate how pollutants spread across the UK. Computer simulations are calibrated against real-world data from the [Automatic Urban and Rural Network (AURN)](https://uk-air.defra.gov.uk/networks/network-info?view=aurn) monitoring stations to improve the accuracy of the estimated ground-level concentrations represented in the final grids.
 
-<!--
-Word comment 56 — Rowe, Francisco
-Selected passage: uses prepared GeoJSON files containing 1 km cell boundaries and pollutant level values
-not sure this level of detail is necessary. Let's keep it to the essential and more important processing steps.
+Second, **Population data**. For the *Static Indicators -- Census Year* product, EXHALE uses synthetic population records and attributes produced by [HASP](https://data.hasp.ac.uk/). The synthetic population data contain demographic, socioeconomic, household and health attributes, and is available at the level of Output Areas (OAs) in England and Wales and to Data Zones (DZs) in Scotland and Northern Ireland. HASP created this synthetic population specifically for EXHALE using the Flexible Modelling Framework [@harland2013fmf]. Individual records were drawn from the 1% public census microdata teaching files supplied by ONS, National Records of Scotland and NISRA. For each small area, combinatorial optimisation repeatedly swapped records into and out of a sample to reproduce published local Census counts as closely as possible. The resulting records represent simulated residents. Their value for EXHALE is that they bring multiple population attributes together in individual-level records for small areas. These records can then be aggregated to describe potential exposure across different population groups.
 
-Word comment 71 — Rowe, Francisco
-Selected passage: reflect actual ground-level conditions.
- I would elaborate and say: “The models use monitoring data to calibrate or evaluate estimates of ground-level concentrations.”  The data remain estimates.
--->
+For the *Static Indicators -- Longitudinal* product, EXHALE uses annual population estimates and associated age and sex breakdowns from the [Office for National Statistics (ONS)](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates) for England and Wales and [Public Health Scotland (PHS)](https://publichealthscotland.scot/resources-and-tools/health-intelligence-and-data-management/national-data-catalogue/national-datasets/search-the-datasets/national-records-of-scotland-nrs-small-area-population-estimates/) for Scotland. For both sources, the population estimates and age and sex breakdowns cover 2001–2024. The England and Wales inputs use 2011 Census OA boundaries for 2001–2014 and 2021 Census OA boundaries for 2015–2024. The earlier estimates are harmonised to the 2021 boundaries during processing. The Scottish inputs use 2011 Census DZ boundaries throughout 2001–2024. These inputs are aggregated to the lower and upper geographies used in the outputs. The richer breakdown by population group is a distinguishing feature of the *Static Indicators -- Census Year* product.
 
-The construction of the *Static Indicators* relies on three types of input data. First, modelled **air pollutant grids** from the UK Department for Environment, Food & Rural Affairs (DEFRA), available from the [Air Quality Compliance Data Hub](https://compliance-data.defra.gov.uk/). These pollution grids include estimates of pollution levels for a variety of air pollutants at resolution of 1 km × 1 km. EXHALE uses prepared GeoJSON files containing 1 km cell boundaries and pollutant level values. DEFRA creates these grids by combining official data from the [National Atmospheric Emissions Inventory (NAEI)](https://naei.energysecurity.gov.uk/) with atmospheric dispersion and chemical models to simulate how pollutants spread across the UK. Computer simulations are performed to calibrate the resulting estimates against real-world data from the [Automatic Urban and Rural Network (AURN)](https://uk-air.defra.gov.uk/networks/network-info?view=aurn) monitoring stations to ensure the final 1 km x 1 km grid maps reflect actual ground-level conditions.
-
-<!--
-Word comment 76 — Rowe, Francisco
-Selected passage: For the Static Indicators – Census Year product,
-And the HASP data?
-
-Word comment 79 — Rowe, Francisco
-Selected passage: HASP
-We should explain how HASP created these data - provide an intuition on how they are provided and what the addition / added value to the ONS census data is.
-
-Word comment 80 — Rowe, Francisco
-Selected passage: They refer to 2021 for England, Wales and Northern Ireland, and 2022 for Scotland
-This is on the table. Would  avoid duplication
--->
-
-**Population data**. For the *Static Indicators -- Census Year* product, EXHALE uses synthetic population records and attributes supplied by [HASP](https://data.hasp.ac.uk/). These records are assigned to Output Areas (OAs) in England and Wales and to Data Zones (DZs) in Scotland and Northern Ireland. They refer to 2021 for England, Wales and Northern Ireland, and 2022 for Scotland. The synthetic population data contain demographic, socioeconomic, household and health attributes, including age, sex, ethnic group, country of birth, approximated social grade, economic activity status, occupation, industry, full-time education status, family type, legal partnership status and general health. For the *Static Indicators -- Longitudinal* product, EXHALE uses annual population estimates and associated age and sex breakdowns from the [Office for National Statistics (ONS)](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates) for England and Wales and [Public Health Scotland (PHS)](https://publichealthscotland.scot/resources-and-tools/health-intelligence-and-data-management/national-data-catalogue/national-datasets/search-the-datasets/national-records-of-scotland-nrs-small-area-population-estimates/) for Scotland. For both sources, the population estimates and age and sex breakdowns cover 2001–2024. The England and Wales inputs use 2011 Census OA boundaries for 2001–2014 and 2021 Census OA boundaries for 2015–2024. The earlier estimates are harmonised to the 2021 boundaries during processing. The Scottish inputs use 2011 Census DZ boundaries throughout 2001–2024. These inputs are aggregated to the lower and upper geographies used in the outputs. The richer breakdown by population group is a distinguishing feature of the *Static Indicators -- Census Year* product.
-
-<!--
-Word comment 81 — Rowe, Francisco
-Selected passage: , supplied through Imago and based on official UK statistical geographies.
-Refer to ONS sources. They are used by Imago but not created by Imago.
-
-Word comment 83 — Rowe, Francisco
-Selected passage: the Imago data catalogue
-refer to ONS. I don't think they are available on the Imago catalogue. They are on github so people use exactly the same set of boundaries but they are the ONS ones.
-
-Word comment 84 — Rowe, Francisco
-Selected passage: Geographic lookups identify
-Not sure we need to describe these files in this way. I imagine they were used to identify boundary changes over time and that should be the key point to address here.
--->
-
-Third, **statistical boundaries and geographic lookups** and based on official UK statistical geographies. EXHALE uses boundary data for the geographies described above to define the areas for which exposure indicators are calculated. The [UK lower-level boundaries](https://data.imago.ac.uk/datasets/lsoa-boundaries-for-the-united-kingdom-2021) (LSOA-equivalent) and [UK upper-level boundaries](https://data.imago.ac.uk/datasets/msoa-boundaries-for-the-united-kingdom-2021) (MSOA-equivalent) are available through the Imago data catalogue. These boundaries allow the pollution grids to be linked to the areas represented in the population data. Geographic lookups identify which smaller areas belong to each larger area: which OAs form each LSOA and which LSOAs form each MSOA in England and Wales, which Data Zones (DZs) form each Intermediate Zone (IZ) in Scotland, and which Data Zones (DZs) form each Super Data Zone (SDZ) in Northern Ireland. This information allows population counts and exposure measures to be aggregated from smaller to larger geographies. The boundary and lookup versions are matched to those used in each product, including the different Census boundary years used for Scotland in the census-year and longitudinal products.
-
-<!--
-Word comment 86 — Rowe, Francisco
-Selected passage: Constructing indicators
-would expect some recognition of literature on exposure indicators, to ground the work.
--->
+Third, EXHALE uses **official statistical geographies** produced by the Office for National Statistics for England and Wales, the Scottish Government for Scotland, and the Northern Ireland Statistics and Research Agency for Northern Ireland. These boundaries define the areas for which exposure indicators are calculated. The [UK lower-level boundaries](https://data.imago.ac.uk/datasets/lsoa-boundaries-for-the-united-kingdom-2021) (LSOA-equivalent) and [UK upper-level boundaries](https://data.imago.ac.uk/datasets/msoa-boundaries-for-the-united-kingdom-2021) (MSOA-equivalent) are available through the Imago data catalogue. These boundaries allow the pollution grids to be linked to the areas represented in the population data.
 
 ### Constructing indicators
 
-<!--
-Word comment 87 — Rowe, Francisco
-Selected passage: For the Static Indicators – Census Year,
-I believe that the text would be more streamlined if there was a table capturing the main attributes of the indicators, particularly the overlaps so the text can focus on explaining the key differences and decisions. Now the text jumps from Static - census to static - longitudinal in the same paragraph. It's hard to follow the narrative or keep in memory their content and differences
+Combining modelled pollution concentrations with population data provides a way to examine inequalities in potential residential exposure. For example, @fecht2015airpollution used population-weighted concentrations to investigate differences by socioeconomic circumstances, ethnicity and age across neighbourhoods in England and the Netherlands. At a global scale, previous studies have combined gridded pollution estimates with population data to calculate population-weighted exposure and examine changes over time [@brauer2016exposure; @shaddick2018integration]. EXHALE follows this general approach by linking pollution grids with small-area population information and producing indicators for different population groups.
 
-Word comment 88 — Rowe, Francisco
-Selected passage: ()
-would identify these in brackets
+The construction of *Static Indicators* requires preparing resident totals, counts by population group and pollution data at the required geographical levels. For the *Static Indicators -- Census Year*, population counts are organised into 58 categories (e.g. children aged 0–15, residents aged 65 and over, female residents) across the 12 attributes listed in @tbl-exhale-population-attributes. These categories overlap across attributes, i.e. a resident can, for example, be counted in an age category, a sex category and an occupation category. Totals by population group are provided for both lower and upper level geographies across the UK. However, exposed population counts cannot be calculated at the lower level in Scotland and Northern Ireland because the finer population data at OA-equivalent level required for this calculation was unavailable. For the *Static Indicators -- Longitudinal*, population counts are available for nine categories across two attributes: seven age bands (0–15, 16–24, 25–34, 35–44, 45–54, 55–64 and 65 years and over) and two sex categories (female and male). These counts are prepared for each year in the series and aggregated to the relevant lower and upper geographies in Great Britain.
 
-Word comment 92 — Rowe, Francisco
-Selected passage: ()
-same - would identify them in brackets
--->
 
-The construction of *Static Indicators* requires, in the first place, preparing resident totals, counts by population group and pollution data at the required geographical levels: the lower and upper geographies described above, together with finer OAs in England and Wales for calculations that depend on the distribution of residents within lower-level areas. For the *Static Indicators -- Census Year*, population counts are organised into 58 categories () across 12 attributes (), covering the demographic, socioeconomic, household and health characteristics described in the input data section. These categories overlap across attributes, i.e. a resident can, for example, be counted in an age category, a sex category and an occupation category. Totals by population group are provided for both lower and upper level geographies across the UK. However, exposed population counts cannot be calculated at the lower level in Scotland and Northern Ireland because the finer population data at OA-equivalent level required for this calculation was unavailable. For the *Static Indicators -- Longitudinal*, population counts are available for nine categories across two attributes: seven age bands (0–15, 16–24, 25–34, 35–44, 45–54, 55–64 and 65 years and over) and two sex categories (female and male). These counts are prepared for each year in the series and aggregated to the relevant lower and upper geographies in Great Britain.
+For the pollution data, the boundaries of the relevant statistical geographies are overlaid with the annual pollution grids for each pollutant, as illustrated in @fig-exhale-workflow. A spatial join identifies the grid cells that intersect each geographical area, and the area of each intersection is then calculated.
 
-<!--
-Word comment 93 — Rowe, Francisco
-Selected passage: the boundaries of the relevant statistical geographies are overlaid with the annual pollution grids for each pollutant. A spatial join identifies the grid cells that intersect each geographical area, and the area of each intersection is then calculated.
-would be great if this can be illustrated on the main methodological diagram, as well as the process related to the indicators below. I appreciate that the latter may be too much work, but the former should be straightfoward.
--->
 
-For the pollution data, the boundaries of the relevant statistical geographies are overlaid with the annual pollution grids for each pollutant. A spatial join identifies the grid cells that intersect each geographical area, and the area of each intersection is then calculated.
-
-<!--
-Word comment 94 — Rowe, Francisco
-Selected passage: Static Indicators – Census Year, the final outputs are based on pollution data for the relevant census year, i.e. 2021 for England, Wales and Northern Ireland, and 2022 for Scotland. For the Static Indicators – Longitudinal
-This is what I mean that the text moves between the two indicators and becomes hard to keep up.
-
-Word comment 95 — Rowe, Francisco
-Selected passage: calculated as:
-Clarify how missing grid cells or incomplete coverage are handled in the implementation.
--->
-
-**Area-weighted indicator**. To construct these indicators, the pollutant value in each grid cell is multiplied by the proportion of the target geography covered by that cell. For example, if a cell covers 30% of an LSOA's area, its pollutant value receives a weight of 0.3. These contributions are summed across all intersecting cells to produce the area-weighted indicator. Both products use this calculation. For the *Static Indicators -- Census Year*, the final outputs are based on pollution data for the relevant census year, i.e. 2021 for England, Wales and Northern Ireland, and 2022 for Scotland. For the *Static Indicators -- Longitudinal*, the calculation is repeated for each available year, using the corresponding annual pollution grid and the boundaries selected for that product. For a given pollutant, the area-weighted indicator for geographical area $i$ in year $t$ is calculated as:
+**Area-weighted indicator**. To construct these indicators, the pollutant value in each grid cell is multiplied by the proportion of the target geography covered by that cell. For example, if a cell covers 30% of an LSOA's area, its pollutant value receives a weight of 0.3. These contributions are summed across all intersecting cells to produce the area-weighted indicator. Both static products use this calculation, matching each annual pollution grid to the statistical boundaries used in the corresponding product. For a given pollutant, the area-weighted indicator for geographical area $i$ in year $t$ is calculated as:
 
 $$
 \overline{C}_{i,t}^{\mathrm{AW}}
@@ -336,9 +131,12 @@ $$
 w_{ij} = \frac{A_{ij}}{A_i}
 $$ {#eq-exhale-area-weighted}
 
-where $J_i$ is the set of pollution-grid cells intersecting area $i$, $C_{j,t}$ is the pollutant value in grid cell $j$ in year $t$, $A_{ij}$ is the area of overlap between grid cell $j$ and geographical area $i$, and $A_i$ is the total area of geographical area $i$. The weight $w_{ij}$ therefore represents the share of the target area's surface covered by cell $j$. The weights sum to one $w_{ij}$ for each area $i$.
+where $J_i$ is the set of pollution-grid cells intersecting area $i$, $C_{j,t}$ is the pollutant value in grid cell $j$ in year $t$, $A_{ij}$ is the area of overlap between grid cell $j$ and geographical area $i$, and $A_i$ is the total area of geographical area $i$. The weight $w_{ij}$ therefore represents the share of the target area's surface covered by cell $j$. The weights $w_{ij}$ sum to one when grid cells with valid pollutant values fully cover area $i$.
+
+Missing pollutant values are absent from the grids used for the census-year product (2021–2022) and from all grids for 2019–2024. Data missingness is also very limited in 2013–2018, with five cells per pollutant per year out of approximately 255,000. Earlier years have more missing values, reaching approximately 4.5% for some years and pollutants. In those cases, missing values are excluded from the calculation and if coverage is incomplete, the total geographical area is retained as the weighting denominator, so estimates may be lower in affected areas.
 
 For ozone, the same weighting method is applied, but $C_{j,t}$ represents the number of days when the highest eight-hour average ozone concentration exceeds 120 µg/m³. The result is therefore an area-weighted mean number of exceedance days, which can take fractional values, rather than a concentration in µg/m³.
+
 
 **Population-weighted exposure (PWE) indicator**. The population-weighted exposure (PWE) indicator adds information about where people live by weighting the pollutant concentration in each smaller area by its share of the population in the target area. For the upper-geography calculation, the area-weighted pollutant concentration estimates for LSOAs are combined with their population counts to calculate PWE for MSOAs in England and Wales. The same approach uses Data Zone estimates and population counts to calculate PWE for Intermediate Zones in Scotland and Super Data Zones in Northern Ireland. Component areas that are more populous therefore contribute more to the final estimate. For the lower-geography calculation in England and Wales, OA concentration estimates and population counts are used to calculate PWE for each LSOA. For Scotland and Northern Ireland, this calculation is not included as OA-equivalent information is not available. Mathematically, PWE for geographical area $i$ in year $t$ is calculated as:
 
@@ -354,71 +152,53 @@ where $K_i$ is the set of smaller areas nested within geographical area $i$, $P_
 
 **Quantile rank indicators**. For the quantile rank indicators, areas that are above the threshold, are then ordered by their area-weighted pollutant estimates and divided into four groups, ranked from 1 to 4, with rank 1 representing the lowest values among these areas and rank 4 the highest. Areas below the threshold receive rank 0. For ozone, the ranking uses the area-weighted mean number of exceedance days. Ranks are calculated separately for each pollutant and geography level. For the *Static Indicators -- Census Year*, the relevant census-year observations are ranked together, combining 2021 for England, Wales and Northern Ireland with 2022 for Scotland. For the *Static Indicators -- Longitudinal*, ranks are recalculated separately for each year across Great Britain. The observations above the threshold are classified into groups as evenly as possible, so ranks 1–4 contain approximately the same number of areas. Areas with the same values may fall into different ranks. Rank 0 is not part of this grouping into equally sized groups, so it can contain any number of areas.
 
-### Outputs
-
-<!--
-Word comment 106 — Rowe, Francisco
-Selected passage: CSV and GeoPackage formats
-would be good to confirm if this is the case. Would suggest to avoid being this specific, in case these data formats change or new data formats are added.
-
-Word comment 107 — Rowe, Francisco
-Selected passage: The datasets are documented as version 1.0.0 and released under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence.
-Suggest not to include this level of detail
--->
-
-The *Static Indicators -- Census Year* product provides 24 files, covering six pollutants at two geography levels, with each dataset available in CSV and GeoPackage formats. The CSV files contain the indicators and population counts in tabular form, while the GeoPackage files also include the geographic boundaries for mapping. The datasets are documented as version 1.0.0 and released under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence.
-
-<!--
-Word comment 108 — Rowe, Francisco
-Selected passage: the CSV file
-again - would suggest to remove five formats. Make the chapter fragile to changes.
--->
-
-For example, the CSV file containing PM~2.5~ indicators for upper-level geographies is named UK-Upper-Geogs-Consolidated-Dataset-PM2.5-2021-&-2022.csv. Each row represents a geographical area and includes its code, name, geography type, country and reference year. These identifiers are followed by the area-weighted mean concentration, population-weighted exposure, threshold flag and quantile rank, together with total and exposed-population counts. Additional columns provide counts for the different population groups. The accompanying metadata describe the fields and their availability for each pollutant and geography level.
 
 ## Using the *Static Indicators*
 
 ### Accessing the data
 
-<!--
-Word comment 115 — Rowe, Francisco
-Selected passage: An interactive explorer allows users to visualise the Static Indicators – Census Year, compare patterns of exposure across areas and explore differences between population groups. The explorer is available through this link. Furthermore, a dedicated GitHub repository containing the code used for the generation of the indicators will soon be made publicly available. Reproducing the full processing pipeline requires external input datasets that will not be included in the repository.
-would suggest not to include this as many of the explorer may be moved and the github repo is private.
--->
+The *Static Indicators* data is openly available for download from the [Imago data catalogue](https://data.imago.ac.uk/) and [HASP data catalogue](https://data.hasp.ac.uk/).
 
-The *Static Indicators* data is openly available for download from the [Imago data catalogue](https://data.imago.ac.uk/) and [HASP data catalogue](https://data.hasp.ac.uk/). An interactive explorer allows users to visualise the *Static Indicators -- Census Year*, compare patterns of exposure across areas and explore differences between population groups. The explorer is available through [this link](https://imago-sdruk.github.io/exhale-uk-explorer/). Furthermore, a dedicated [GitHub repository](https://github.com/Imago-SDRUK/DataProduct-EXHALE) containing the code used for the generation of the indicators will soon be made publicly available. Reproducing the full processing pipeline requires external input datasets that will not be included in the repository.
 
-<!--
-Word comment 116 — Rowe, Francisco
-Selected passage: When performing analysis with EXHALE’s Static Indicators, users should first determine which data product is most adequate for their question
-would skip this and show users how to get the data and show them the data - using head(df) or str(df) in R for example and describe the content in that way. Describe the columns it contains and where they can find the metadata,
+The following example loads a sample of the PM~2.5~ census-year dataset for upper geographies. This sample retains all columns from the original dataset, but only the first three rows. We load it in R and display only some selected columns:
 
-Word comment 117 — Rowe, Francisco
-Selected passage: downloaded GeoPackage files include geographic boundaries and can be used directly for mapping. For statistical analysis or modelling, we recommend using the smaller CSV files,
-Not sure these kinds of descriptions are necessary. Would focus on telling people quite straightforward how to access the data and their content. The chapter should be practical, direct and as visual as possible,
--->
+```{r}
 
-When performing analysis with EXHALE's *Static Indicators*, users should first determine which data product is most adequate for their question, i.e. census-year or longitudinal data, as well as the pollutant and geography level of interest. The downloaded GeoPackage files include geographic boundaries and can be used directly for mapping. For statistical analysis or modelling, we recommend using the smaller CSV files, which can be joined to other area-level datasets using geographic codes. Before joining, users should check that both datasets use the same boundary vintage, i.e. the same version of the statistical geographies, such as 2011 or 2021 Census boundaries. Reference years should also be chosen carefully to ensure that the exposure indicators and other variables relate to the intended period of analysis. For the *Static Indicators -- Census Year*, the UK-wide data combine 2021 observations for England, Wales and Northern Ireland with 2022 observations for Scotland. For the *Static Indicators -- Longitudinal*, the final outputs use 2021 Census boundaries for England and Wales and 2011 Census boundaries for Scotland. Although some earlier population inputs use different boundaries, these are harmonised during processing to support comparisons over time.
+pm25 <- read.csv(
+  "images/exhale-static/pm25-upper-geographies-first-three-rows.csv",
+  check.names = FALSE
+)
 
-<!--
-Word comment 119 — Rowe, Francisco
-Selected passage: Illustrative use cases
-This is good but should go after showing and describing the data frame. I would also include a section on what how they data should be interpreted - correct use and how they data should not be interpreted - limitations. For example, the data can only give us an estimate of potential population exposure based on where people live. They don't tell us their real level of air pollution exposure. I would focus this section on issues that have been highlighted in the literature and that we know are prominent. I would not aim to add a exhaustive list.
--->
+knitr::kable(
+  pm25[c(
+    "geog_code", "year", "area_weighted_mean_PM2.5", "PWE_to_PM2.5"
+  )],
+  digits = 2,
+  row.names = FALSE
+)
+```
+
+Each row represents an upper-level statistical area. Here, `geog_code` identifies the area and `year` records the reference year. The columns `area_weighted_mean_PM2.5` and `PWE_to_PM2.5` contain the area-weighted mean concentration and population-weighted exposure, respectively, both in µg/m³. Other identifier columns include `geog_name`, `geog_type` and `country`.
+
+The dataset also contains `above_WHO_threshold`, with values `Yes` or `No`, and `quantile_rank`, with values 0–4, as described in [What the indicators measure](#sec-exhale-indicator-measures). The columns `total_population_count` and `exposed_population_count` give the resident population and the estimated number living in smaller areas above the reference threshold. Columns beginning with `total_` and `exposed_` also provide counts for individual population groups; for example, `total_age_15_under` and `exposed_age_15_under` refer to children aged 0–15. The dataset's catalogue metadata describe its sources, geographical and temporal coverage, indicators and limitations.
+
+
 
 ### Illustrative use cases
 
-<!--
-Word comment 121 — Rowe, Francisco
-Selected passage: Mapping PM2.5 in Liverpool, UK
-Would be a good idea to lead this example with a policy question like the two examples below. I really like them.
--->
+The *Static Indicators* support questions such as:
+
+-   Which residential areas have higher pollution levels?
+-   How do exposure estimates change when we account for where residents live within an area?
+-   Which population groups live in places above a specified pollution threshold?
+
+These questions can inform research on environmental inequality and help identify areas for further investigation.
 
 #### Mapping PM~2.5~ in Liverpool, UK
 
-To demonstrate the use of the datasets, we present an illustrative analysis of PM~2.5~ exposure in one UK urban region, Liverpool. We define these regions using the [Functional Urban Area (FUA) boundaries](https://www.oecd.org/en/data/datasets/oecd-definition-of-cities-and-functional-urban-areas.html) provided by the OECD. Under the joint EU–OECD definition, a FUA comprises a city and its surrounding commuting zone, capturing the wider area connected to the city through everyday journeys to work. The FUA delimitations provide a relevant context for examining urban air pollution exposure, as everyday urban transport connects urban cores to the surrounding areas, and also contributes to urban air pollution. We use the *Static Indicators* to describe variation in residence-based exposure in the functional urban areas corresponding to Liverpool.
+Which neighbourhoods in the Liverpool urban region should be prioritised for action to reduce PM~2.5~ pollution? To explore this question, we examine variation in pollution levels and potential residential exposure across the Liverpool urban region. We define the region using the [Functional Urban Area (FUA) boundaries](https://www.oecd.org/en/data/datasets/oecd-definition-of-cities-and-functional-urban-areas.html) provided by the OECD. Under the joint EU–OECD definition, a FUA comprises a city and its surrounding commuting zone, capturing the wider area connected to the city through everyday journeys to work. The FUA delimitations provide a relevant context for examining urban air pollution exposure, as everyday urban transport connects urban cores to the surrounding areas, and also contributes to urban air pollution. We use the *Static Indicators* to describe variation in residence-based exposure in the functional urban areas corresponding to Liverpool.
 
-The example uses data from the *Static Indicators -- Census Year* product for 2021. For each urban region, we select LSOAs whose population-weighted centroids fall within the corresponding FUA boundary. We then map the available indicators. These are shown in @fig-liverpool-pm25, where panel A shows the area-weighted indicator, panel B shows the population-weighted exposure (PWE) indicator, panel C shows the threshold flag indicator and panel D displays the quantile rank indicator.
+The example uses data from the *Static Indicators -- Census Year* product for 2021. For each urban region, we select LSOAs whose population-weighted centroids fall within the corresponding FUA boundary. We then map the available indicators. These are shown in @fig-liverpool-pm25, where panel A shows the area-weighted indicator, panel B shows the population-weighted exposure (PWE) indicator, panel C shows the threshold flag indicator and panel D displays the quantile rank indicator. The maps suggest that neighbourhoods in the central and southern parts of the Liverpool FUA, particularly those east of the Mersey, may be prioritised for action. These areas show higher area-weighted concentrations and population-weighted exposure, and many fall within the highest UK-wide concentration rank. However, almost all neighbourhoods exceed the reference threshold of 5 µg/m³, indicating that reducing PM~2.5~ pollution is relevant across the wider region.
 
 ![***Static Air Pollution Exposure Indicators* for the Liverpool Functional Urban Area, 2021.** A) Area-weighted mean PM2.5 concentration; B) population-weighted exposure to PM2.5; C) areas above the annual PM2.5 reference threshold of 5 µg/m³; and D) quantile rank indicator based on UK-wide ranking, where 0 identifies areas at or below the threshold and ranks 1--4 indicate increasing concentrations among areas above it. All indicators are shown at LSOA level. Data is sourced from EXHALE’s Static Indicators -- Census Year product, developed by the University of Liverpool and Imago in collaboration with the University of Leeds and HASP, using DEFRA modelled pollution data and HASP synthetic population data.](images/exhale-static/liverpool-pm25.png){#fig-liverpool-pm25 fig-alt="Map of area-weighted mean PM2.5 across Liverpool functional urban area LSOAs in 2021, showing spatial variation with higher concentrations in parts of the central urban area."}
 
@@ -440,6 +220,8 @@ We obtain the following counts:
 |------------------|------------------|------------------|------------------|
 | Children aged 0–15 | 6,552,221 | 12,315,084 | 53.20% |
 | All residents | 34,058,387 | 66,940,195 | 50.88% |
+
+: Estimated populations living in smaller areas with area-weighted annual mean NO~2~ concentrations above 10 µg/m³ across the UK, using 2021 data for England, Wales and Northern Ireland and 2022 data for Scotland. {#tbl-exhale-child-no2}
 
 Children aged 0–15 were more likely to live in areas above the NO~2~ reference threshold than the population overall. An estimated 53.20% of children lived in smaller areas above the reference threshold, compared with 50.88% of all residents, a difference of 2.32 percentage points. This finding has implications for public health because NO~2~ can irritate the airways and aggravate asthma and children are particularly susceptible to its effects [@epa2026no2; @belanger2013nitrogen]. Yet, it is important to note that the residence-based indicators describe potential environmental exposure, and do not measure individual exposure or indoor exposure.
 
