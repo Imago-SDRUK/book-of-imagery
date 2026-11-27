@@ -6,10 +6,9 @@ The text in this chapter has also been included in the State of Imagery.
 
 ## Introduction
 
-*RGB* (Resources in Green and Built environments) aims to transform how researchers and policymakers understand, measure and compare green and built environments across the UK. As cities are increasingly exposed to environmental hazards from climate change, the greening of urban areas has become central for climate adaptation and urban resilience [@gill2007adapting]. The presence of nature and the configuration of built environments are critical determinants of health, wellbeing, and sustainability across the UK. Exposure to green environments has been shown to support physical activity, reduce stress, and mitigate the impacts of air pollution and extreme heat [@nguyen2021green; @james2015review; @lafortezza2009benefits]. Understanding how vegetation is distributed across neighbourhoods is therefore important for examining environmental inequalities and informing interventions that support healthier and more sustainable communities.
+*RGB* (Resources in Green and Built Environments) aims to transform how researchers and policymakers understand, measure and compare green and built environments across the UK. As cities are increasingly exposed to environmental hazards from climate change, the greening of urban areas has become central for climate adaptation and urban resilience [@gill2007adapting]. The presence of nature and the configuration of built environments are critical determinants of health, wellbeing, and sustainability across the UK. Exposure to green environments has been shown to support physical activity, reduce stress, and mitigate the impacts of air pollution and extreme heat [@nguyen2021green; @james2015review; @lafortezza2009benefits]. Understanding how vegetation is distributed across neighbourhoods is therefore important for examining environmental inequalities and informing interventions that support healthier and more sustainable communities.
 
-Satellite imagery provides opportunities to measure vegetation consistently across large geographical areas. However, processing these datasets requires specialist geospatial expertise, substantial computational resources and additional analysis to produce indicators compatible with demographic, socioeconomic and health data. RGB (Resources in Green and Built Environments) addresses these barriers by transforming Sentinel-2 imagery into accessible, neighbourhood-level environmental indicators. Through its initial product, RGB Green, delivers an open, nationwide greenspace dataset for 2024 for small-area statistical geographies. This enables researchers and policymakers to examine geographical differences in vegetation coverage and integrate environmental information with wider social and economic datasets without undertaking complex satellite image processing.
-
+Satellite imagery provides opportunities to measure vegetation consistently across large geographical areas. However, processing these datasets requires specialist geospatial expertise, substantial computational resources and additional analysis to produce indicators compatible with demographic, socioeconomic and health data. RGB addresses these barriers by transforming Sentinel-2 imagery into accessible, neighbourhood-level environmental indicators. Through its initial product, RGB Green, delivers an open, nationwide greenspace dataset for 2024 for small-area statistical geographies. This enables researchers and policymakers to examine geographical differences in vegetation coverage and integrate environmental information with wider social and economic datasets without undertaking complex satellite image processing.
 
 ## What does RGB offer?
 
@@ -18,7 +17,6 @@ The initial release of RGB Green provides a UK-wide classification of vegetated 
 The resulting pixel-level classifications are aggregated to small area statistical geographies to produce neighbourhood-level indicators of vegetation coverage. These comprise Lower Layer Super Output Areas (LSOAs) in England and Wales, Data Zones in Scotland, and Super Data Zones in Northern Ireland. This geographical structure allows users to compare vegetation coverage between neighbourhoods and integrate RGB with complementary datasets, including Census information, the Index of Multiple Deprivation (IMD), public health statistics, housing data and other environmental datasets. These linkages support research into relationships between neighbourhood environments, population characteristics and wider social, economic and health outcomes.
 
 While the initial release focuses on vegetation coverage, future development of RGB will extend its temporal and thematic coverage. Planned developments include extending the dataset to 2025 and subsequent years, introducing indicators of vegetation configuration and landscape characteristics, and incorporating additional indicators of the built environment across small area statistical geographies. These developments will broaden the range of environmental characteristics that can be examined through RGB and support comparisons across places and over time.
-
 
 ## Research and policy application of RGB
 
@@ -30,7 +28,7 @@ While the initial release focuses on vegetation coverage, future development of 
 
 ## Building RGB Green
 
-The development of RGB Green consists of three main stages: input data preparation, processing and classification, and generation of the final data products. Figure @fig-workflow provides an overview of the workflow.
+The development of RGB Green consists of three main stages: input data preparation, processing and classification, and generation of the final data products. @fig-workflow provides an overview of the workflow.
 
 **Input**
 
@@ -38,56 +36,20 @@ The primary inputs consist of Sentinel-2 satellite imagery and official UK green
 
 **Processing**
 
-RGB Green uses supervised machine learning to identify vegetated and non-vegetated surfaces across the UK, detectable at a 10 m pixel scale. Rather than relying on a single measure of vegetation, the model combines information from satellite imagery to recognise vegetation across different landscapes. Existing threshold-based methods for detecting greenspace such as NDVI have issues when applied in a UK-wide context, since there are a wide variety of vegetation and urban regimes across the whole UK, which require different thresholds. RGB uses a supervised machine learning approach, which avoids these issues as the model learns from labelled greenspace data, allowing to incorporate the diversity of UK-wide greenspace datasets into the learning process. A tree-based classification algorithm is trained using locations where vegetation is already known and tested on separate geographical areas to assess its accuracy. For each pixel, the model estimates how likely it is to contain vegetation. A classification threshold is then selected to determine when a pixel should be labelled as vegetated or non-vegetated. This threshold is chosen using validation data to optimise classification performance and is applied consistently across the UK to produce the final vegetation classification.
+RGB Green uses machine learning to identify vegetated and non-vegetated surfaces across the UK at a 10 m pixel scale. Simpler methods using satellite imagery typically rely on a single measure of greenery, such as NDVI, and apply one fixed threshold to decide what counts as vegetation. However, because the UK spans a wide variety of landscapes, plant types and urban environments, a single threshold rarely works well everywhere. Instead, RGB Green combines multiple signals from the imagery and learns from examples of known greenspaces across the country, enabling it to recognise vegetation reliably across different settings. To check how well it performs, the model is tested on separate areas that were not used during training. For each pixel, the model estimates how likely that location is to contain vegetation. A single cut-off, chosen to give the most accurate results, is then applied consistently across the UK to classify each pixel as either vegetated or non-vegetated.
 
 **Output**
 
 The resulting dataset provides a UK-wide classification of vegetated and non-vegetated surfaces at 10 m spatial resolution for 2024. These pixel-level classifications are aggregated to small area statistical geographies to produce indicators of vegetation coverage. The resulting indicators allow users to compare vegetation across neighbourhoods and combine this information with demographic, socioeconomic, health and other administrative datasets without requiring specialist satellite image processing expertise.
 
-::: {#fig-workflow}
-```{=latex}
-\usetikzlibrary{positioning,calc,arrows.meta}
-\begin{tikzpicture}[
-  box/.style={draw, rounded corners=2pt, align=center, font=\small,
-              minimum height=9mm, text width=34mm, inner sep=2mm},
-  input/.style={box, fill=gray!12},
-  proc/.style={box, fill=white},
-  outbox/.style={box, fill=gray!25},
-  arr/.style={-{Stealth[length=2mm]}, thick, gray!70},
-  stage/.style={rotate=90, anchor=south, font=\footnotesize\bfseries,
-                text=gray!60!black}
-]
-% ---- inputs ----
-\node[input] (sat) {Sentinel-2\\satellite imagery};
-\node[input, right=12mm of sat] (lab) {Labelled\\greenspace data};
-% ---- process ----
-\coordinate (mid) at ($(sat.south)!0.5!(lab.south)$);
-\node[proc, text width=60mm, anchor=north] (ml) at ([yshift=-10mm]mid)
-  {Supervised machine learning\\model (tree-based)};
-% ---- output ----
-\node[outbox, below=10mm of ml, text width=60mm] (prod)
-  {UK-wide prediction:\\open greenspace dataset};
-% ---- arrows ----
-\draw[arr] (sat.south) -- (sat.south |- ml.north);
-\draw[arr] (lab.south) -- (lab.south |- ml.north);
-\draw[arr] (ml) -- (prod);
-% ---- stage labels on the left ----
-\coordinate (lx) at ([xshift=-7mm]current bounding box.west);
-\node[stage] at (lx |- sat)  {INPUT};
-\node[stage] at (lx |- ml)   {PROCESS};
-\node[stage] at (lx |- prod) {OUTPUT};
-\end{tikzpicture}
-```
-:::
+![**Overview of the RGB Green workflow**. *Satellite imagery and labelled greenspace data are combined in a machine learning model to produce an open, UK-wide greenspace dataset.*](images/rgb-chp/rgb_workflow.png){#fig-workflow width="75%"}
 
 ## How to use the data product
-
-RGB Green provides neighbourhood-level vegetation indicators that can be used alongside existing demographic, socioeconomic, health and environmental datasets. The indicators are provided across small area statistical geographies and can be linked to other data using common geographical identifiers, enabling users to explore vegetation coverage alongside a range of social, demographic and environmental characteristics.
 
 The dataset can support several practical applications:
 
 - **Health and environmental inequality:** Linking vegetation indicators with health and deprivation data to investigate whether differences in neighbourhood vegetation coverage are associated with unequal health outcomes across socioeconomic groups.
-- **Heat, air quality and climate adaptation:** Combining RGB Green with environmental datasets, such as CLiVE, to identify neighbourhoods where limited vegetation coverage coincides with higher heat exposure or poorer air quality. This can help inform priorities for urban greening and climate adaptation (see the [CLiVE chapter in the Book of Imagery]).
+- **Heat, air quality and climate adaptation:** Combining RGB Green with environmental datasets, such as CLiVE, to identify neighbourhoods where limited vegetation coverage coincides with higher heat exposure or poorer air quality. This can help inform priorities for urban greening and climate adaptation (see the [CLiVE chapter](clive.qmd)).
 - **Deprivation, economy and social cohesion:** Linking vegetation indicators with property and socioeconomic data to investigate relationships between neighbourhood vegetation, housing values and neighbourhood change, including green gentrification.
 
 These examples demonstrate how RGB Green can be integrated into existing research and policy workflows. As additional indicators and years become available, the dataset will support more detailed analyses of environmental change and relationships between green and built environments.
