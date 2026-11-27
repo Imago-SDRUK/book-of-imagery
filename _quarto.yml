@@ -28,6 +28,7 @@ book:
       chapters:
         - chapters/intro.qmd
         - chapters/image-data.qmd
+        - chapters/chapter3_pixels_to_metrics.qmd
     - part: "Data products"
       chapters:
         - chapters/clive.qmd
