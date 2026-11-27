@@ -145,8 +145,6 @@ $$ {#eq-exhale-area-weighted}
 
 where $J_i$ is the set of pollution-grid cells intersecting area $i$, $C_{j,t}$ is the pollutant value in grid cell $j$ in year $t$, $A_{ij}$ is the area of overlap between grid cell $j$ and geographical area $i$, and $A_i$ is the total area of geographical area $i$. The weight $w_{ij}$ therefore represents the share of the target area's surface covered by cell $j$. The weights $w_{ij}$ sum to one when grid cells with valid pollutant values fully cover area $i$.
 
-Where valid grid cells cover only part of an area, cells without a value contribute nothing to the numerator, but their overlap remains in the denominator. This can bias area-weighted estimates downwards, including the ozone exceedance-days indicator, and can affect threshold flags and estimated exposed-population counts. The extent of incomplete coverage and its effects on the published products are still being checked. A correction is planned to normalise the estimate by the area covered by valid cells and report the share of each area with valid data.
-
 For ozone, the same weighting method is applied, but $C_{j,t}$ represents the number of days when the highest eight-hour average ozone concentration exceeds 120 µg/m³. The result is therefore an area-weighted mean number of exceedance days, which can take fractional values, rather than a concentration in µg/m³.
 
 
